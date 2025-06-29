@@ -51,7 +51,7 @@ $redirect_url = "https://glhomesltd.com/index.php?id=$insert_id"; // Update to y
 $paymentData = [
     "tx_ref" => $tx_ref,
     "amount" => $amount,
-    "currency" => "NGN",
+    "currency" => "USD",
     "redirect_url" => $redirect_url,
     "payment_options" => "card,banktransfer",
     "customer" => [

@@ -10,9 +10,9 @@ $conn = new mysqli($host, $user, $pass, $db);
 $swal_success = "";
 $swal_error = "";
 
-if (isset($_GET['ref']) && isset($_GET['id'])) {
+if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
     $id = (int) $_GET['id'];
-    $ref = $_GET['ref'];
+    $ref = $_GET['tx_ref'];
 
     $curl = curl_init();
     curl_setopt_array($curl, [
@@ -36,7 +36,7 @@ if (isset($_GET['ref']) && isset($_GET['id'])) {
             $conn->query("UPDATE masterclass_registrations_01 SET payment_status = 1, payment_reference = '$ref' WHERE id = $id");
 
             // Retrieve user info for email
-            $result = $conn->query("SELECT fullname, email FROM your_table WHERE id = $id");
+            $result = $conn->query("SELECT fullname, email FROM masterclass_registrations_01 WHERE id = $id");
             $user = $result->fetch_assoc();
             $name = $user['fullname'];
             $email = $user['email'];
@@ -52,7 +52,7 @@ if (isset($_GET['ref']) && isset($_GET['id'])) {
             Best regards,\n
             GL Homes Team";
 
-            $headers = "From: no-reply@glhomesltd.com\r\n" .
+            $headers = "From: support@glhomesltd.com\r\n" .
                     "Reply-To: support@glhomesltd.com\r\n" .
                     "X-Mailer: PHP/" . phpversion();
 
@@ -238,7 +238,7 @@ if (isset($_GET['ref']) && isset($_GET['id'])) {
     </div>
 
     <div>
-        <button class="btn btn-primary btn-block">Pay now</button>
+        <button class="btn btn-primary btn-block" id="pn">Pay now</button>
     </div>
 </form>
 
@@ -409,7 +409,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
         state,
         gender,
         city,
-        payment_amount: 10000
+        payment_amount: 0.1
     };
 
     fetch("process.php", {
