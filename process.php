@@ -46,7 +46,7 @@ $insert_id = $conn->insert_id; // Get inserted ID for redirect
 
 // Prepare for Flutterwave payment
 $tx_ref = "GLHOMES_" . time() . "_" . rand(1000, 9999);
-$redirect_url = "https://glhomesltd.com/index.php?id=$insert_id"; // Update to your real redirect
+$redirect_url = "https://glhomesltd.com?id=$insert_id"; // Update to your real redirect
 
 $paymentData = [
     "tx_ref" => $tx_ref,
