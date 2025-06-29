@@ -65,6 +65,9 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
         else {
             $swal_error = "Transaction failed or was not completed.";
         }
+    }
+    else {
+        $swal_error = "Failed to verify transaction. Please try again.";
     } 
 }
 ?>
