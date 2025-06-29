@@ -382,7 +382,9 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
     });
 </script>
 <script>
-document.querySelector("form").addEventListener("submit", function (e) {
+    //adding async to the form submission script
+
+document.querySelector("form").addEventListener("submit", async function (e) {
     e.preventDefault();
 
     const fullname = document.getElementById("name").value.trim();
@@ -412,10 +414,14 @@ document.querySelector("form").addEventListener("submit", function (e) {
         state,
         gender,
         city,
-        payment_amount: 50
+        payment_amount: 1
     };
+    // pay now button should be disabled to prevent multiple clicks and show please wait message
+    const payNowButton = document.getElementById("pn");
+    payNowButton.disabled = true;
+    payNowButton.textContent = "Please wait...";
 
-    fetch("process.php", {
+    await fetch("process.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
@@ -432,6 +438,9 @@ document.querySelector("form").addEventListener("submit", function (e) {
         console.error(err);
         alert("An error occurred. Please try again.");
     });
+
+    payNowButton.disabled = false;
+    payNowButton.textContent = "Pay now";
 });
 </script>
 
