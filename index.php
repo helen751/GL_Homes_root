@@ -52,8 +52,8 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
             Best regards,\n
             GL Homes Team";
 
-            $headers = "From: support@glhomesltd.com\r\n" .
-                    "Reply-To: support@glhomesltd.com\r\n" .
+            $headers = "From: masterclass@glhomesltd.com\r\n" .
+                    "Reply-To: masterclass@glhomesltd.com\r\n" .
                     "X-Mailer: PHP/" . phpversion();
 
             // Send email
