@@ -60,7 +60,7 @@ $paymentData = [
         "name" => $fullname
     ],
     "customizations" => [
-        "title" => "GL Homes Masterclass",
+        "title" => "GL Homes Business Masterclass",
         "description" => "Payment for masterclass registration"
     ]
 ];
