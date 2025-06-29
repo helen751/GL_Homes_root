@@ -412,7 +412,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
         state,
         gender,
         city,
-        payment_amount: 0.1
+        payment_amount: 50
     };
 
     fetch("process.php", {
