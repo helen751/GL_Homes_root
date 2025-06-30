@@ -241,7 +241,8 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
     </div>
 
     <div>
-        <button class="btn text-white bg-blue-600 hover:bg-blue-700 btn-block" id="pn">Pay now</button>
+        <button class="btn text-white bg-blue-600 hover:bg-blue-700 btn-block" id="pn">Pay with Naira</button>
+         <button class="btn text-white bg-blue-600 hover:bg-blue-700 btn-block" id="pn">Pay in USD</button>
     </div>
 </form>
 
