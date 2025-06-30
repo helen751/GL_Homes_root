@@ -32,7 +32,7 @@ $currency       = trim($data["currency"]);
 $amount       = 0; // Default amount
 
 if ($currency == "USD") {
-    $amount = 25; // USD amount
+    $amount = 1; // USD amount
 } elseif ($currency == "NGN") {
     $amount = 500; // NGN amount
 } else {
