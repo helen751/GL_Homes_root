@@ -28,7 +28,7 @@ $country      = $conn->real_escape_string($data["country"]);
 $state        = $conn->real_escape_string($data["state"]);
 $city         = $conn->real_escape_string($data["city"]);
 $gender       = $conn->real_escape_string($data["gender"]);
-$currency       = $data["currency"];
+$currency       = trim($data["currency"]);
 $amount       = 0; // Default amount
 
 if ($currency == "USD") {
@@ -61,7 +61,7 @@ $redirect_url = "https://glhomesltd.com?id=$insert_id"; // Update to your real r
 $paymentData = [
     "tx_ref" => $tx_ref,
     "amount" => $amount,
-    "currency" => "USD",
+    "currency" => $currency,
     "redirect_url" => $redirect_url,
     "payment_options" => "card,banktransfer",
     "customer" => [

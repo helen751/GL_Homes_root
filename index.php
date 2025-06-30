@@ -387,6 +387,8 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
 </script>
 <script>
     //adding async to the form submission script
+  const payNairaButton = document.getElementById("pn");
+    const payUsdButton = document.getElementById("pn2");
 
 async function pay_now(button, currency) {
 
@@ -421,7 +423,10 @@ async function pay_now(button, currency) {
     };
     // pay now button should be disabled to prevent multiple clicks and show please wait message
     
-    button.disabled = true;
+    //disabling the 2 buttons of pay with Naira and USD
+  
+    payNairaButton.disabled = true;
+    payUsdButton.disabled = true;
     button.textContent = "Please wait...";
 
     await fetch("process.php", {
@@ -442,7 +447,8 @@ async function pay_now(button, currency) {
         alert("An error occurred. Please try again.");
     });
 
-    button.disabled = false;
+    payNairaButton.disabled = false;
+    payUsdButton.disabled = false;
     button.textContent = "Pay in " + currency;
 }
 </script>
