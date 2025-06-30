@@ -241,11 +241,11 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
     </div>
 
     <div class="row">
-        <button class="btn text-white bg-blue-600 hover:bg-blue-700 btn-block col-xl-4 col-lg-4 col-md-4 col-12" id="pn">Pay in Naira</button>
-        <div class="line col-xl-4 col-lg-4 col-12 col-md-4 mt-3 mb-3">
+        <button class="btn text-white bg-blue-600 hover:bg-blue-700 btn-block col-xl-4 col-lg-4 col-md-4 col-12" id="pn" type="button" onclick="pay_now(this, 'NGN');">Pay in Naira</button>
+        <div class="line col-xl-4 col-lg-4 col-12 col-md-4 mt-5 mb-3">
                 <span>or </span>
             </div>
-         <button class="btn text-white bg-blue-600 hover:bg-blue-700 btn-block col-4 col-xl-4 col-lg-4 col-12 col-md-4" id="pn2">Pay in USD</button>
+         <button class="btn text-white bg-blue-600 hover:bg-blue-700 btn-block col-4 col-xl-4 col-lg-4 col-12 col-md-4" id="pn2" type="button" onclick="pay_now(this, 'USD');">Pay in USD</button>
     </div>
 </form>
 
@@ -388,8 +388,7 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
 <script>
     //adding async to the form submission script
 
-document.querySelector("form").addEventListener("submit", async function (e) {
-    e.preventDefault();
+async function pay_now(button, currency) {
 
     const fullname = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
@@ -418,12 +417,12 @@ document.querySelector("form").addEventListener("submit", async function (e) {
         state,
         gender,
         city,
-        payment_amount: 1
+        currency: currency,
     };
     // pay now button should be disabled to prevent multiple clicks and show please wait message
-    const payNowButton = document.getElementById("pn");
-    payNowButton.disabled = true;
-    payNowButton.textContent = "Please wait...";
+    
+    button.disabled = true;
+    button.textContent = "Please wait...";
 
     await fetch("process.php", {
         method: "POST",
@@ -443,9 +442,9 @@ document.querySelector("form").addEventListener("submit", async function (e) {
         alert("An error occurred. Please try again.");
     });
 
-    payNowButton.disabled = false;
-    payNowButton.textContent = "Pay now";
-});
+    button.disabled = false;
+    button.textContent = "Pay in " + currency;
+}
 </script>
 
 <script>

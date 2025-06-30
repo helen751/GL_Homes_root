@@ -28,7 +28,17 @@ $country      = $conn->real_escape_string($data["country"]);
 $state        = $conn->real_escape_string($data["state"]);
 $city         = $conn->real_escape_string($data["city"]);
 $gender       = $conn->real_escape_string($data["gender"]);
-$amount       = (int) $data["payment_amount"]; // e.g. 10000
+$currency       = $data["currency"];
+$amount       = 0; // Default amount
+
+if ($currency == "USD") {
+    $amount = 25; // USD amount
+} elseif ($currency == "NGN") {
+    $amount = 500; // NGN amount
+} else {
+    echo json_encode(["status" => "error", "message" => "Unsupported currency"]);
+    exit;
+}
 
 // Insert into database (initial payment_status = 0)
 $sql = "INSERT INTO masterclass_registrations_01 
