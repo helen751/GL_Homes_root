@@ -240,9 +240,9 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
         <div class="col-6 d-flex align-items-center"></div>
     </div>
 
-    <div class="d-inline-block">
-        <button class="btn text-white bg-blue-600 hover:bg-blue-700 btn-block" id="pn">Pay with Naira</button>
-         <button class="btn text-white bg-blue-600 hover:bg-blue-700 btn-block" id="pn">Pay in USD</button>
+    <div class="row">
+        <button class="btn text-white bg-blue-600 hover:bg-blue-700 btn-block col-6" id="pn">Pay with Naira</button>
+         <button class="btn text-white bg-blue-600 hover:bg-blue-700 btn-block col-6" id="pn2">Pay in USD</button>
     </div>
 </form>
 
