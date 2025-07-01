@@ -355,7 +355,21 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
             }
         }
     </script>
+<script>
+let userCountry = '';
 
+// Detect country
+fetch('https://ipapi.co/json/')
+  .then(res => res.json())
+  .then(data => {
+    userCountry = data.country_name;
+    console.log("User is at:", userCountry); // Optional debug
+  })
+  .catch(err => {
+    console.error("Geolocation error:", err);
+    userCountry = 'Unknown';
+  });
+</script>
 <!-- Phone Input Script -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
 <script>
@@ -444,32 +458,42 @@ async function pay_now(button, currency) {
     // pay now button should be disabled to prevent multiple clicks and show please wait message
     
     //disabling the 2 buttons of pay with Naira and USD
-  
-    payNairaButton.disabled = true;
-    payUsdButton.disabled = true;
-    button.textContent = "Please wait...";
+  if (userCountry !== "Nigeria") {
+        Swal.fire({
+            icon: 'warning',
+            title: 'Unavailable',
+            text: 'Payment in Naira is only available to users located in Nigeria. Please use the USD option.',
+            confirmButtonColor: '#d33'
+        });
+        return;
+    }
+    else{
+        payNairaButton.disabled = true;
+        payUsdButton.disabled = true;
+        button.textContent = "Please wait...";
 
-    await fetch("process.php", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-    })
-    .then(res => res.json())
-    .then(response => {
-        if (response.status === "success") {
-            window.location.href = response.payment_link;
-        } else {
-            alert("Error: " + response.message);
-        }
-    })
-    .catch(err => {
-        console.error(err);
-        alert("An error occurred. Please try again.");
-    });
+        await fetch("process.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(response => {
+            if (response.status === "success") {
+                window.location.href = response.payment_link;
+            } else {
+                alert("Error: " + response.message);
+            }
+        })
+        .catch(err => {
+            console.error(err);
+            alert("An error occurred. Please try again.");
+        });
 
-    payNairaButton.disabled = false;
-    payUsdButton.disabled = false;
-    button.textContent = "Pay in " + currency;
+        payNairaButton.disabled = false;
+        payUsdButton.disabled = false;
+        button.textContent = "Pay in " + currency;
+    }
 }
 </script>
 
