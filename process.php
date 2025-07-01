@@ -34,7 +34,7 @@ $amount       = 0; // Default amount
 if ($currency == "USD") {
     $amount = 25; // USD amount
 } elseif ($currency == "NGN") {
-    $amount = 10000; // NGN amount
+    $amount = 5000; // NGN amount
 } else {
     echo json_encode(["status" => "error", "message" => "Unsupported currency"]);
     exit;
