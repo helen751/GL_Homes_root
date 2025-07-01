@@ -173,7 +173,7 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
                         Your next level is not behind you… it’s BEYOND THE HORIZON!
 
                     </p>
-                    <a class="w-auto inline-flex items-center font-semibold gap-2 px-6 py-2.5 rounded-full transition-all duration-300 text-white bg-blue-600 hover:bg-blue-700" target="_blank"
+                    <a class="w-auto inline-flex items-center font-semibold gap-2 px-6 py-2.5 rounded-full transition-all duration-300 text-white bg-blue-600 hover:bg-blue-700"
                         href="#register">
                         Register below <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
