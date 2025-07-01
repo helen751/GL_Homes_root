@@ -465,7 +465,6 @@ async function pay_now(button, currency) {
             text: 'Payment in Naira is only available to users located in Nigeria. Please use the USD option.',
             confirmButtonColor: '#d33'
         });
-        return;
     }
     else{
         payNairaButton.disabled = true;
