@@ -148,14 +148,33 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
             <div class="grid lg:grid-cols-2 gap-10 items-center">
                 <div class="mx-2">
                     <h1 class="text-5xl/snug font-semibold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-blue-600 to-blue-400 mb-4">
-                        GL HOMES MASTER CLASS
+                        GL HOMES PRESENTS: BEYOND THE HORIZON 2025 
+                        <span class="text-2xl text-gray-600">A Business Masterclass Like No Other!
+                        </span>
                     </h1>
                     <p class="text-base text-zinc-800 max-w-lg mb-6">
-                        The GL Properties Partnership Masterclass is an exclusive program designed for individuals interested in delving deeper into the intricacies of real estate partnerships and investment opportunities. Tailored to meet the needs of seasoned investors as well as newcomers to the real estate arena, this masterclass offers a comprehensive understanding of partnership structures, strategies for successful collaborations, and insights into maximizing returns in the ever-evolving real estate market.
+                        Are you ready to break limits and unlock new levels in business?
+                        Join GL Homes for BEYOND THE HORIZON 2025,  a power-packed masterclass designed to equip entrepreneurs, aspiring business leaders, and visionaries with the tools to build, scale, and dominate in today’s marketplace!
+
+                        ✓ Learn from top industry experts
+                        ✓ Discover proven strategies for business growth
+                        ✓ Network with forward-thinking minds
+                        ✓ Gain clarity, confidence, and direction for 2025 and beyond!
+
+                    </p>
+                    <strong class="text-2xl text-blue-600 mb-4">Date: SUNDAY, 20<sup>th</sup> July, 2025</strong>
+                    <strong class="text-2xl text-blue-600 mb-4">Time: 7:00PM WAT</strong>
+                    <strong class="text-2xl text-blue-600 mb-4">Venue: Google Meet</strong>
+                    <strong class="text-2xl text-blue-600 mb-4">Registration Fee: 10,000 NGN or $25 USD</strong>
+                    <strong class="text-2xl text-blue-600 mb-4">Limited Seats Available!</strong>
+                    <p class="text-base text-zinc-800 max-w-lg mb-6">
+                        Don’t miss this opportunity to transform your business mindset and strategies for the year ahead.
+                        Your next level is not behind you… it’s BEYOND THE HORIZON!
+
                     </p>
                     <a class="w-auto inline-flex items-center font-semibold gap-2 px-6 py-2.5 rounded-full transition-all duration-300 text-white bg-blue-600 hover:bg-blue-700" target="_blank"
-                        href="https://realestate.glhomesltd.com/partnership-master-class/">
-                        Learn more <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        href="#register">
+                        Register below <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                             stroke-linejoin="round" data-lucide="eye" class="lucide lucide-eye h-5 w-5">
                             <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
@@ -174,7 +193,7 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
     <div class="forny-container">
         
 <div class="forny-inner">
-    <div class="forny-form">
+    <div class="forny-form" id="register">
         <div class="text-center">
             <h2 class="text-4xl/snug font-semibold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-blue-600 to-blue-400 mb-2">Register for GLHOMES BMC</h2>
             <p class="text-1xl text-center font-semibold mb-5">Fill in your details and proceed to payment. <br>
