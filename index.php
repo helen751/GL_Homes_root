@@ -166,7 +166,7 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
                     <strong class="text-2xl text-blue-600 mb-4">Date: SUNDAY, 20<sup>th</sup> July, 2025</strong><br>
                     <strong class="text-2xl text-blue-600 mb-4">Time: 7:00PM WAT</strong><br>
                     <strong class="text-2xl text-blue-600 mb-4">Venue: Google Meet</strong><br>
-                    <strong class="text-2xl text-blue-600 mb-4">Registration Fee: 10,000 NGN or $25 USD</strong><br>
+                    <strong class="text-2xl text-blue-600 mb-4">Registration Fee: 5,000 NGN or $25 USD</strong><br>
                     <strong class="text-2xl text-blue-600 mb-4">Limited Seats Available!</strong><br><br>
                     <p class="text-base text-zinc-800 max-w-lg mb-6">
                         Don’t miss this opportunity to transform your business mindset and strategies for the year ahead.
