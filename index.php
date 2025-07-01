@@ -147,11 +147,12 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
         <div class="container mx-auto px-10">
             <div class="grid lg:grid-cols-2 gap-10 items-center">
                 <div class="mx-2">
-                    <h1 class="text-5xl/snug font-semibold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-blue-600 to-blue-400 mb-4">
+                    <h1 class="text-4xl/snug font-semibold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-blue-600 to-blue-400 mb-4">
                         GL HOMES PRESENTS: BEYOND THE HORIZON 2025 
+                        </h1>
                         <span class="text-2xl text-gray-600">A Business Masterclass Like No Other!
                         </span>
-                    </h1>
+                    
                     <p class="text-base text-zinc-800 max-w-lg mb-6">
                         Are you ready to break limits and unlock new levels in business?
                         Join GL Homes for BEYOND THE HORIZON 2025,  a power-packed masterclass designed to equip entrepreneurs, aspiring business leaders, and visionaries with the tools to build, scale, and dominate in today’s marketplace!
@@ -162,11 +163,11 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
                         ✓ Gain clarity, confidence, and direction for 2025 and beyond!
 
                     </p>
-                    <strong class="text-2xl text-blue-600 mb-4">Date: SUNDAY, 20<sup>th</sup> July, 2025</strong>
-                    <strong class="text-2xl text-blue-600 mb-4">Time: 7:00PM WAT</strong>
-                    <strong class="text-2xl text-blue-600 mb-4">Venue: Google Meet</strong>
-                    <strong class="text-2xl text-blue-600 mb-4">Registration Fee: 10,000 NGN or $25 USD</strong>
-                    <strong class="text-2xl text-blue-600 mb-4">Limited Seats Available!</strong>
+                    <strong class="text-2xl text-blue-600 mb-4">Date: SUNDAY, 20<sup>th</sup> July, 2025</strong><br>
+                    <strong class="text-2xl text-blue-600 mb-4">Time: 7:00PM WAT</strong><br>
+                    <strong class="text-2xl text-blue-600 mb-4">Venue: Google Meet</strong><br>
+                    <strong class="text-2xl text-blue-600 mb-4">Registration Fee: 10,000 NGN or $25 USD</strong><br>
+                    <strong class="text-2xl text-blue-600 mb-4">Limited Seats Available!</strong><br><br>
                     <p class="text-base text-zinc-800 max-w-lg mb-6">
                         Don’t miss this opportunity to transform your business mindset and strategies for the year ahead.
                         Your next level is not behind you… it’s BEYOND THE HORIZON!
@@ -183,7 +184,7 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
                     </a>
                 </div>
                 <div class="max-w-lg mx-auto">
-                    <img src="images/pc.webp" alt="GL Homes class" class="max-w-full w-auto">
+                    <img src="images/bms-july.webp" alt="GL Homes class" class="max-w-full w-auto">
                 </div>
             </div>
 
