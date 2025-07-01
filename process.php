@@ -44,7 +44,7 @@ if ($currency == "USD") {
 $sql = "INSERT INTO masterclass_registrations_01 
 (fullname, email, phone, phone_full, country, state, city, gender, payment_amount, currency, payment_status)
 VALUES 
-('$fullname', '$email', '$phone', '$phone_full', '$country', '$state', '$city', '$gender', $amount, '$currency' 0)";
+('$fullname', '$email', '$phone', '$phone_full', '$country', '$state', '$city', '$gender', $amount, '$currency', 0)";
 
 if (!$conn->query($sql)) {
     echo json_encode(["status" => "error", "message" => "Failed to insert data into database"]);
