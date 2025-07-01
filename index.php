@@ -155,12 +155,12 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
                     
                     <p class="text-base text-zinc-800 max-w-lg mb-6">
                         Are you ready to break limits and unlock new levels in business?
-                        Join GL Homes for BEYOND THE HORIZON 2025,  a power-packed masterclass designed to equip entrepreneurs, aspiring business leaders, and visionaries with the tools to build, scale, and dominate in today’s marketplace!
+                        Join GL Homes for BEYOND THE HORIZON 2025,  a power-packed masterclass designed to equip entrepreneurs, aspiring business leaders, and visionaries with the tools to build, scale, and dominate in today’s marketplace!<br>
 
-                        ✓ Learn from top industry experts
-                        ✓ Discover proven strategies for business growth
-                        ✓ Network with forward-thinking minds
-                        ✓ Gain clarity, confidence, and direction for 2025 and beyond!
+                        ✓ Learn from top industry experts<br>
+                        ✓ Discover proven strategies for business growth<br>
+                        ✓ Network with forward-thinking minds<br>
+                        ✓ Gain clarity, confidence, and direction for 2025 and beyond!<br>
 
                     </p>
                     <strong class="text-2xl text-blue-600 mb-4">Date: SUNDAY, 20<sup>th</sup> July, 2025</strong><br>
