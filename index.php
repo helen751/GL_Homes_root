@@ -438,7 +438,7 @@ async function pay_now(button, currency) {
     // Validation
     if (!fullname) return alert("Please enter your full name.");
     if (!email || !/^\S+@\S+\.\S+$/.test(email)) return alert("Please enter a valid email.");
-    if (!phoneInput.isValidNumber()) return alert("Please enter a valid phone number.");
+    if (!phone) return alert("Please enter a valid phone number.");
     if (!gender) return alert("Please select your gender.");
     if (!country) return alert("Please select a country.");
     if (!state) return alert("Please select a state.");
