@@ -163,16 +163,16 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
                         ✓ Gain clarity, confidence, and direction for 2025 and beyond!<br>
 
                     </p>
-                    <strong class="text-2xl text-blue-600 mb-4">Date: SUNDAY, 20<sup>th</sup> July, 2025</strong><br>
-                    <strong class="text-2xl text-blue-600 mb-4">Time: 7:00PM WAT</strong><br>
-                    <strong class="text-2xl text-blue-600 mb-4">Venue: Google Meet</strong><br>
-                    <strong class="text-2xl text-blue-600 mb-4">Registration Fee: 
+                    <strong class="text-2xl text-zinc-600 mb-4">Date: SUNDAY, 20<sup>th</sup> July, 2025</strong><br>
+                    <strong class="text-2xl text-zinc-600 mb-4">Time: 7:00PM WAT</strong><br>
+                    <strong class="text-2xl text-zinc-600 mb-4">Venue: Google Meet</strong><br>
+                    <strong class="text-2xl text-zinc-600 mb-4">Registration Fee: 
                         <strong class="text-red-600 line-through">₦25,000 NGN</strong>
-                        <strong class="text-green-600">₦5,000 (Nigerians only)</strong> <br>
-                        <strong class="text-green-600">or</strong>
+                        <strong class="text-blue-600">₦2,500 (Nigerians only)</strong> <br>
+                        <strong class="text-zinc-600">or</strong>
                         <strong class="text-red-600 line-through">25 USD</strong>
-                        <strong class="text-green-600">$10 USD(outside Nigeria)</strong> 
-                    </strong>
+                        <strong class="text-blue-600">$10 USD(outside Nigeria)</strong> 
+                    </strong><br>
                     <strong class="text-2xl text-blue-600 mb-4">Limited Seats Available!</strong><br><br>
                     <p class="text-base text-zinc-800 max-w-lg mb-6">
                         Don’t miss this opportunity to transform your business mindset and strategies for the year ahead.
