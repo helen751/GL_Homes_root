@@ -236,7 +236,19 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
         </select>
     </div>
 </div>
-
+<!-- Gender Dropdown -->
+<div class="form-group">
+    <div class="input-group">
+        <select id="category" class="form-control" required>
+            <option value="">Which Category can you Identify in?</option>
+             <option value="Startup Owner">Startup Owner</option>
+            <option value="Business Aspirant">Business Aspirant</option>
+            <option value="Business Scale-up">Business Scale-up</option>
+            <option value="Business Consultancy">Business Consultancy</option>
+             <option value="Business Mentorship">Business Mentorship</option>
+        </select>
+    </div>
+</div>
     <!-- Country Dropdown -->
     <div class="form-group">
         <div class="input-group">
@@ -440,12 +452,14 @@ async function pay_now(button, currency) {
     const state = document.getElementById("state").value;
     const city = document.getElementById("city").value.trim();
     const gender = document.getElementById("gender").value;
+    const category = document.getElementById("category").value;
 
     // Validation
     if (!fullname) return alert("Please enter your full name.");
     if (!email || !/^\S+@\S+\.\S+$/.test(email)) return alert("Please enter a valid email.");
     if (!phone) return alert("Please enter a valid phone number.");
     if (!gender) return alert("Please select your gender.");
+    if (!category) return alert("Please choose a category you belong!");
     if (!country) return alert("Please select a country.");
     if (!state) return alert("Please select a state.");
     if (!city) return alert("Please enter your city.");
@@ -459,6 +473,7 @@ async function pay_now(button, currency) {
         state,
         gender,
         city,
+        category,
         currency
     };
     // pay now button should be disabled to prevent multiple clicks and show please wait message

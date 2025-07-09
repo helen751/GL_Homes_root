@@ -28,6 +28,7 @@ $country      = $conn->real_escape_string($data["country"]);
 $state        = $conn->real_escape_string($data["state"]);
 $city         = $conn->real_escape_string($data["city"]);
 $gender       = $conn->real_escape_string($data["gender"]);
+$category       = $conn->real_escape_string($data["category"]);
 $currency       = trim($data["currency"]);
 $amount       = 0; // Default amount
 
@@ -42,9 +43,9 @@ if ($currency == "USD") {
 
 // Insert into database (initial payment_status = 0)
 $sql = "INSERT INTO masterclass_registrations_01 
-(fullname, email, phone, phone_full, country, state, city, gender, payment_amount, currency, payment_status)
+(fullname, email, phone_full, country, state, city, gender, payment_amount, currency, category_group, payment_status)
 VALUES 
-('$fullname', '$email', '$phone', '$phone_full', '$country', '$state', '$city', '$gender', $amount, '$currency', 0)";
+('$fullname', '$email', '$phone_full', '$country', '$state', '$city', '$gender', $amount, '$currency','$category', 0)";
 
 if (!$conn->query($sql)) {
     echo json_encode(["status" => "error", "message" => "Failed to insert data into database"]);
