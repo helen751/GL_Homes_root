@@ -277,6 +277,7 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
     <div class="row mt-6 mb-6">
         <div class="col-6 d-flex align-items-center"></div>
     </div>
+    <strong class="text-2xl text-blue-600 mb-4">Any issue? message glhomesmedia2@gmail.com</strong><br><br>
 
     <div class="row">
         <button class="btn text-white bg-blue-600 hover:bg-blue-700 btn-block col-xl-4 col-lg-4 col-md-4 col-12" id="pn" type="button" onclick="pay_now(this, 'NGN');">Pay in Naira</button>
