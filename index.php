@@ -168,10 +168,10 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
                     <strong class="text-2xl text-zinc-600 mb-4">Venue: Google Meet</strong><br>
                     <strong class="text-2xl text-zinc-600 mb-4">Registration Fee: 
                         <strong class="text-red-600 line-through">₦25,000 NGN</strong>
-                        <strong class="text-blue-600">₦2,500 (Nigerians only)</strong> <br>
+                        <!-- <strong class="text-blue-600">₦5,000 (Nigerians only)</strong> <br>
                         <strong class="text-zinc-600">or</strong>
                         <strong class="text-red-600 line-through">25 USD</strong>
-                        <strong class="text-blue-600">$10 USD(outside Nigeria)</strong> 
+                        <strong class="text-blue-600">$10 USD(outside Nigeria)</strong>  -->
                     </strong><br>
                     <strong class="text-2xl text-blue-600 mb-4">Limited Seats Available!</strong><br><br>
                     <p class="text-base text-zinc-800 max-w-lg mb-6">
@@ -278,14 +278,14 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
         <div class="col-6 d-flex align-items-center"></div>
     </div>
     <strong class="text-1xl text-blue-600 mb-3">Any issue? message glhomesmedia2@gmail.com</strong><br><br>
-
-    <div class="row">
-        <button class="btn text-white bg-blue-600 hover:bg-blue-700 btn-block col-xl-4 col-lg-4 col-md-4 col-12" id="pn" type="button" onclick="pay_now(this, 'NGN');">Pay in Naira</button>
-        <div class="line col-xl-4 col-lg-4 col-12 col-md-4 mt-5 mb-3">
+<button class="btn text-white bg-blue-600 hover:bg-blue-700 btn-block col-xl-4 col-lg-4 col-md-4 col-12" id="pn" type="button" onclick="pay_now(this, 'NGN');">Pay in Naira</button>
+    <!-- <div class="row"> -->
+        
+        <!-- <div class="line col-xl-4 col-lg-4 col-12 col-md-4 mt-5 mb-3">
                 <span>or </span>
             </div>
-         <button class="btn text-white bg-blue-600 hover:bg-blue-700 btn-block col-4 col-xl-4 col-lg-4 col-12 col-md-4" id="pn2" type="button" onclick="pay_now(this, 'USD');">Pay in USD</button>
-    </div>
+         <button class="btn text-white bg-blue-600 hover:bg-blue-700 btn-block col-4 col-xl-4 col-lg-4 col-12 col-md-4" id="pn2" type="button" onclick="pay_now(this, 'USD');">Pay in USD</button> -->
+    <!-- </div> -->
 </form>
 
     </div>
@@ -480,15 +480,15 @@ async function pay_now(button, currency) {
     // pay now button should be disabled to prevent multiple clicks and show please wait message
     
     //disabling the 2 buttons of pay with Naira and USD
-  if (currency == "NGN" && userCountry !== "Nigeria") {
-        Swal.fire({
-            icon: 'warning',
-            title: 'Unavailable',
-            text: 'Payment in Naira is only available to users located in Nigeria. Please use the USD option.',
-            confirmButtonColor: '#d33'
-        });
-    }
-    else{
+//   if (currency == "NGN" && userCountry !== "Nigeria") {
+//         Swal.fire({
+//             icon: 'warning',
+//             title: 'Unavailable',
+//             text: 'Payment in Naira is only available to users located in Nigeria. Please use the USD option.',
+//             confirmButtonColor: '#d33'
+//         });
+//     }
+//     else{
         payNairaButton.disabled = true;
         payUsdButton.disabled = true;
         button.textContent = "Please wait...";
@@ -514,7 +514,7 @@ async function pay_now(button, currency) {
         payNairaButton.disabled = false;
         payUsdButton.disabled = false;
         button.textContent = "Pay in " + currency;
-    }
+    //}
 }
 </script>
 
