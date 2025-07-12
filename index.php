@@ -168,8 +168,8 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
                     <strong class="text-2xl text-zinc-600 mb-4">Venue: Google Meet</strong><br>
                     <strong class="text-2xl text-zinc-600 mb-4">Registration Fee: 
                         <strong class="text-red-600 line-through">₦25,000 NGN</strong>
-                        <!-- <strong class="text-blue-600">₦5,000 (Nigerians only)</strong> <br>
-                        <strong class="text-zinc-600">or</strong>
+                        <strong class="text-blue-600">₦5,000 (Nigerians only)</strong> 
+                        <!-- <strong class="text-zinc-600">or</strong>
                         <strong class="text-red-600 line-through">25 USD</strong>
                         <strong class="text-blue-600">$10 USD(outside Nigeria)</strong>  -->
                     </strong><br>
