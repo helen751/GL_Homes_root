@@ -441,7 +441,7 @@ fetch('https://ipapi.co/json/')
 <script>
     //adding async to the form submission script
   const payNairaButton = document.getElementById("pn");
-    const payUsdButton = document.getElementById("pn2");
+    // const payUsdButton = document.getElementById("pn2");
 
 async function pay_now(button, currency) {
 
@@ -490,7 +490,7 @@ async function pay_now(button, currency) {
 //     }
 //     else{
         payNairaButton.disabled = true;
-        payUsdButton.disabled = true;
+        //payUsdButton.disabled = true;
         button.textContent = "Please wait...";
 
         await fetch("process.php", {
@@ -512,7 +512,7 @@ async function pay_now(button, currency) {
         });
 
         payNairaButton.disabled = false;
-        payUsdButton.disabled = false;
+        //payUsdButton.disabled = false;
         button.textContent = "Pay in " + currency;
     //}
 }
