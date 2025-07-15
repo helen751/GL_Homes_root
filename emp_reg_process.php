@@ -65,7 +65,7 @@ $message = '
   <meta charset="UTF-8">
   <title>GL Homes Masterclass Registration Confirmation</title>
 </head>
-<body style="font-family: Arial, sans-serif; background-color: #f6f6f6; padding: 40px;">
+<body style="font-family: Arial, sans-serif; background-color: #f6f6f6; padding: 20px;">
   <table width="100%" style="max-width: 600px; margin: auto; background: #fff; border-radius: 10px; box-shadow: 0 2px 8px #eee;">
     <tr>
       <td style="padding: 32px;">
@@ -85,7 +85,7 @@ $message = '
         </ul>
         <h3 style="color: #003366;">Didn&rsquo;t get the invite?</h3>
         <ul style="font-size: 16px; color: #222;">
-          <li>If you do not receive the invite by <b>19th July</b>, send an email to <a href="mailto:tech@glhomesltd.com">tech@glhomesltd.com</a>.</li>
+          <li>If you do not receive the invite by <b>19th July</b>, send an email to <a href="mailto:masterclass@glhomesltd.com">masterclass@glhomesltd.com</a>.</li>
           <li>Include your registration code (below) in your email.</li>
         </ul>
         <p style="margin: 24px 0; font-size: 18px;">
@@ -98,7 +98,7 @@ $message = '
         </p>
         <br>
         <p style="font-size: 16px; color: #222;">Best regards,<br>
-        <b>GL Homes Team</b></p>
+        <b>GL Homes Masterclass Team</b></p>
       </td>
     </tr>
   </table>
