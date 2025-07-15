@@ -190,7 +190,7 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
                     </a>
                 </div>
                 <div class="max-w-lg mx-auto">
-                    <img src="images/bms-july2.webp" alt="GL Homes class" class="max-w-full w-auto">
+                    <img src="images/bms-july3.webp" alt="GL Homes class" class="max-w-full w-auto">
                 </div>
             </div>
 
