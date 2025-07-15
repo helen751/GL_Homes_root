@@ -123,7 +123,7 @@
         <div class="col-6 d-flex align-items-center"></div>
     </div>
     <strong class="text-1xl text-blue-600 mb-3">Any issue? message glhomesmedia2@gmail.com</strong><br><br>
-<button class="btn text-white bg-blue-600 hover:bg-blue-700 btn-block col-xl-4 col-lg-4 col-md-4 col-12" id="pn" type="button" onclick="pay_now(this, 'NGN');">Register now</button>
+<button class="btn text-white bg-blue-600 hover:bg-blue-700 btn-block col-xl-4 col-lg-4 col-md-4 col-12" id="pn" type="button" onclick="pay_now(this);">Register now</button>
 </form>
 
     </div>
@@ -217,18 +217,19 @@ async function pay_now(button) {
         })
         .then(res => res.json())
         .then(response => {
+        var msg = $response.message
             if (response.status === "success") {
                 Swal.fire({
         icon: 'success',
         title: 'Success',
-        text: '<?= addslashes($response.message) ?>',
+        text: '<?= addslashes($msg) ?>',
         confirmButtonColor: '#3085d6'
     });
             } else {
                  Swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: '<?= addslashes($response.message) ?>',
+        text: '<?= addslashes($msg) ?>',
         confirmButtonColor: '#d33'
     });
             }
