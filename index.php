@@ -141,7 +141,7 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
             </div>
         </nav>
     </div>
-        <div class="container mx-auto bg-dark">
+        <div class="container mx-auto">
             <div class="text-center text-dark relative">
                 <h2 class="text-5xl font-semibold capitalize">Are you ready?</h2>
                 <p class="text-base mt-5 mb-7">Countdown to Beyond the Horison Business Masterclass</p>
