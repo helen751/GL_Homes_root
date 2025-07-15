@@ -142,9 +142,9 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
         </nav>
     </div>
 <div class="container mx-auto">
-            <div class="text-center text-white relative">
-                <h2 class="text-5xl font-semibold capitalize">Stay tuned</h2>
-                <p class="text-base mt-5 mb-7">Working on blogs web development and security.</p>
+            <div class="text-center text-dark relative">
+                <h2 class="text-5xl font-semibold capitalize">Are you ready?</h2>
+                <p class="text-base mt-5 mb-7">Countdown to Beyond the Horison Business Masterclass</p>
     <div id="countdown" class="my-10 z-30">
                     <div class="flex flex-wrap items-center justify-center">
                         <div>
