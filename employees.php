@@ -229,7 +229,7 @@ async function pay_now(button) {
         })
         .then(res => res.json())
         .then(response => {
-        var msg = $response.message
+        var msg = response.message
             if (response.status === "success") {
                 Swal.fire({
         icon: 'success',
