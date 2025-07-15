@@ -145,6 +145,45 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
     <!-- Section Start -->
     <section class="section py-14 bg-white" id="home">
         <div class="container mx-auto px-10">
+            <div id="countdown" class="my-10 z-30">
+                    <div class="flex flex-wrap items-center justify-center">
+                        <div>
+                            <div class="sm:h-40 sm:w-48 h-32 w-32 flex items-center justify-center bg-white/10 border border-white/20">
+                                <div>
+                                    <span id="days" class="text-3xl md:text-6xl"></span>
+                                    <p class="text-xs font-semibold uppercase mt-5">days</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="sm:h-40 sm:w-48 h-32 w-32 flex items-center justify-center bg-white/10 border border-white/20">
+                                <div>
+                                    <span id="hours" class="text-3xl md:text-6xl"></span>
+                                    <p class="text-xs font-semibold uppercase mt-5">Hours</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="sm:h-40 sm:w-48 h-32 w-32 flex items-center justify-center bg-white/10 border border-white/20">
+                                <div>
+                                    <span id="minutes" class="text-3xl md:text-6xl"></span>
+                                    <p class="text-xs font-semibold uppercase mt-5">Minutes</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="sm:h-40 sm:w-48 h-32 w-32 flex items-center justify-center bg-white/10 border border-white/20">
+                                <div>
+                                    <span id="seconds" class="text-3xl md:text-6xl"></span>
+                                    <p class="text-xs font-semibold uppercase mt-5">Seconds</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             <div class="grid lg:grid-cols-2 gap-10 items-center">
                 <div class="mx-2">
                     <h1 class="text-4xl/snug font-semibold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-blue-600 to-blue-400 mb-4">
