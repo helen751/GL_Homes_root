@@ -141,11 +141,11 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
             </div>
         </nav>
     </div>
-
-    <!-- Section Start -->
-    <section class="section py-14 bg-white" id="home">
-        <div class="container mx-auto px-10">
-            <div id="countdown" class="my-10 z-30">
+<div class="container mx-auto">
+            <div class="text-center text-white relative">
+                <h2 class="text-5xl font-semibold capitalize">Stay tuned</h2>
+                <p class="text-base mt-5 mb-7">Working on blogs web development and security.</p>
+    <div id="countdown" class="my-10 z-30">
                     <div class="flex flex-wrap items-center justify-center">
                         <div>
                             <div class="sm:h-40 sm:w-48 h-32 w-32 flex items-center justify-center bg-white/10 border border-white/20">
@@ -184,6 +184,13 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+    <!-- Section Start -->
+    <section class="section py-14 bg-white" id="home">
+        <div class="container mx-auto px-10">
+            
             <div class="grid lg:grid-cols-2 gap-10 items-center">
                 <div class="mx-2">
                     <h1 class="text-4xl/snug font-semibold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-blue-600 to-blue-400 mb-4">
