@@ -234,14 +234,14 @@ async function pay_now(button) {
                 Swal.fire({
         icon: 'success',
         title: 'Success',
-        text: '<?= addslashes($msg) ?>',
+        text: msg,
         confirmButtonColor: '#3085d6'
     });
             } else {
                  Swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: '<?= addslashes($msg) ?>',
+        text: msg,
         confirmButtonColor: '#d33'
     });
             }
