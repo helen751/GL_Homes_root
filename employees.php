@@ -179,6 +179,18 @@
         }
     </script>
 
+<!-- Phone Input Script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+<script>
+    const phoneInput = document.querySelector("#phone");
+    window.intlTelInput(phoneInput, {
+        separateDialCode: true,
+        preferredCountries: ["ng", "us", "gb"],
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.min.js"
+    });
+</script>
+
+
 <script>
    
 
