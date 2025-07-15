@@ -581,7 +581,7 @@ async function pay_now(button, currency) {
     });
 <?php endif; ?>
 </script>
-
+<script src="js/theme.js"></script>
 </body>
 
 </html>
