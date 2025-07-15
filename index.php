@@ -143,7 +143,7 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
     </div>
         <div class="container mx-auto">
             <div class="text-center text-dark relative">
-                <h2 class="text-5xl font-semibold capitalize text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-blue-600 to-blue-400 mt-2">Are you ready?</h2>
+                <h2 class="text-5xl font-semibold capitalize text-transparent bg-clip-text bg-gradient-to-r from-red-100 via-blue-200 to-blue-400 mt-2">Are you ready?</h2>
                 <p class="text-base mt-2 mb-7">Countdown to Beyond the Horison Business Masterclass</p>
                 <div id="countdown" class="my-10 z-30">
                     <div class="flex flex-wrap items-center justify-center">
