@@ -26,7 +26,7 @@ $phone    = $conn->real_escape_string($data["phone"]);
 $gender   = $conn->real_escape_string($data["gender"]);
 $crole    = $conn->real_escape_string($data["crole"]);
 
-$reg_code = "GLHOMES_EMP" . time() . "_" . rand(100, 999);
+$reg_code = "GLHOMES_FREE" . time() . "_" . rand(100, 999);
 
 // 1. Check if user already registered
 $sql_check = "SELECT id FROM employees_masterclass_registrations_01 WHERE email = '$email' LIMIT 1";
