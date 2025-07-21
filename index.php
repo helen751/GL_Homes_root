@@ -398,6 +398,23 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
     <script src="js2/bootstrap.min.js"></script>
     <script src="js2/main.js"></script>
     <script src="js2/demo.js"></script>
+
+    <script>
+        var accepting_registration = false
+
+        if (!accepting_registration){
+            document.querySelector('.forny-container').innerHTML = `
+                <div class="text-center">
+                    <h2 class="text-2xl font-semibold text-red-600">Masterclass Registration is currently closed.</h2>
+                    <p class="text-gray-600">Please check back later for updates.</p>
+                </div>
+            `;
+
+            countdown.style.display = 'none'; // Hide countdown if registration is closed
+        }
+
+        </script>
+        
     <script>
 
         //Show and hide hamburguer menu in small screens 
