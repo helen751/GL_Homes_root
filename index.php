@@ -143,8 +143,8 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
     </div>
         <div class="container mx-auto">
             <div class="text-center text-dark relative">
-                <h2 class="text-5xl font-semibold capitalize text-transparent bg-clip-text bg-gradient-to-r from-red-700 via-blue-600 to-blue-400 mt-2">Are you ready?</h2>
-                <p class="text-base mt-2 mb-7">Countdown to Beyond the Horison Business Masterclass</p>
+                <h2 class="text-5xl font-semibold capitalize text-transparent bg-clip-text bg-gradient-to-r from-red-700 via-blue-600 to-blue-400 mt-2" id="ready-text">Are you ready?</h2>
+                <p class="text-base mt-2 mb-7" id="ready-text2">Countdown to Beyond the Horison Business Masterclass</p>
                 <div id="countdown" class="my-10 z-30">
                     <div class="flex flex-wrap items-center justify-center">
                         <div>
@@ -406,11 +406,13 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
             document.querySelector('.forny-container').innerHTML = `
                 <div class="text-center">
                     <h2 class="text-2xl font-semibold text-red-600">Masterclass Registration is currently closed.</h2>
-                    <p class="text-gray-600">Please check back later for updates.</p>
+                    <p class="text-gray-600 mb-2">Please keep an eye on your email to get our notifications.</p>
                 </div>
             `;
 
             countdown.style.display = 'none'; // Hide countdown if registration is closed
+            document.getElementById('ready-text').innerText = "Beyond the Horizon Masterclass Ended.";
+            document.getElementById('ready-text2').innerText = "We are not accepting any registrations at this time. We will let you know when the next masterclass is available.";
         }
 
         </script>
