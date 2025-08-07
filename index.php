@@ -287,7 +287,7 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
 							</small>
 						</div>
 						<div class="testimonial-content">
-							<div class="hero-info mb-60">
+							<div class="hero-info mb-5">
 								<h4 class="hero-name">Innocent Sharon Chidinma</h4>
 								<span class="hero-title">BML Attendee</span>
 								<div class="rating-star ul-li clearfix">
@@ -322,7 +322,7 @@ Overall, this session was a valuable experience. I left feeling more informed, i
 							</small>
 						</div>
 						<div class="testimonial-content">
-							<div class="hero-info mb-60">
+							<div class="hero-info mb-5">
 								<h4 class="hero-name">Evelyn Ogonna Okereke</h4>
 								<span class="hero-title">BML Attendee</span>
 								<div class="rating-star ul-li clearfix">
@@ -353,7 +353,7 @@ Overall, this session was a valuable experience. I left feeling more informed, i
 							</small>
 						</div>
 						<div class="testimonial-content">
-							<div class="hero-info mb-60">
+							<div class="hero-info mb-5">
 								<h4 class="hero-name">Chinwuba Onyinye</h4>
 								<span class="hero-title">BML Attendee</span>
 								<div class="rating-star ul-li clearfix">
