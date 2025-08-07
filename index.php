@@ -113,6 +113,23 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
     <!-- SweetAlert2 CSS + JS -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <!-- icon - css include -->
+		<link rel="stylesheet" type="text/css" href="assets/css/unicons.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/flaticon.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/fontawesome-all.css">
+
+
+    <!-- carousel - css include -->
+		<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/owl.theme.default.min.css">
+
+		<!-- magnific popup - css include -->
+		<link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
+
+		<!-- scroll animation - css include -->
+		<link rel="stylesheet" type="text/css" href="assets/css/aos.css">
+
 </head>
 
 <body class="font-body">
@@ -243,6 +260,124 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
             
         </div>
     </section>
+
+    <!-- testimonial-section - start
+		================================================== -->
+		<section id="testimonial-section" class="testimonial-section sec-ptb-160 pb-0 clearfix">
+			<div class="container">
+
+				<div class="section-title mb-100 text-center">
+					<span class="sub-title mb-15">Partcipants Testimonials</span>
+					<h2 class="title-text mb-0">Stories of some of Our Participants</h2>
+				</div>
+
+				<div id="testimonial-carousel" class="testimonial-carousel owl-carousel owl-theme">
+					<div class="item item-style-2 clearfix">
+						<div class="hero-image">
+							<img src="assets/images/testimonial/img-4.png" alt="image_not_found">
+							<span class="icon" data-aos="zoom-in" data-aos-duration="450"><i class="flaticon-quotation"></i></span>
+							<small class="design-image">
+								<img src="assets/images/testimonial/design-image-1.png" alt="image_not_found">
+							</small>
+							<small class="shape-image">
+								<img src="assets/images/testimonial/shape-1.png" alt="image_not_found">
+							</small>
+						</div>
+						<div class="testimonial-content">
+							<div class="hero-info mb-60">
+								<h4 class="hero-name">Innocent Sharon Chidinma</h4>
+								<span class="hero-title">BML Attendee</span>
+								<div class="rating-star ul-li clearfix">
+									<ul class="clearfix">
+										<li class="rated"><i class="fas fa-star"></i></li>
+										<li class="rated"><i class="fas fa-star"></i></li>
+										<li class="rated"><i class="fas fa-star"></i></li>
+										<li class="rated"><i class="fas fa-star"></i></li>
+										<li class="rated"><i class="fas fa-star"></i></li>
+									</ul>
+								</div>
+							</div>
+							<p class="paragraph-text mb-0">
+								I attended the (Beyond the Horizon) and I must say it was both awesome and impactful.
+
+What stood out the most was the practical approach the team adopted throughout the session. Rather than overwhelming participants with theory, they focused on actionable insights and real-world examples that made the concepts easy to grasp, regardless of one’s prior investment knowledge.
+
+Overall, this session was a valuable experience. I left feeling more informed, inspired, and ready to take smarter steps toward financial independence. I highly recommend any future sessions by GLHomes  to anyone looking to grow their investment awareness.
+							</p>
+						</div>
+					</div>
+
+					<div class="item item-style-2 clearfix">
+						<div class="hero-image">
+							<img src="assets/images/testimonial/img-5.png" alt="image_not_found">
+							<span class="icon" data-aos="zoom-in" data-aos-duration="450"><i class="flaticon-quotation"></i></span>
+							<small class="design-image">
+								<img src="assets/images/testimonial/design-image-1.png" alt="image_not_found">
+							</small>
+							<small class="shape-image">
+								<img src="assets/images/testimonial/shape-1.png" alt="image_not_found">
+							</small>
+						</div>
+						<div class="testimonial-content">
+							<div class="hero-info mb-60">
+								<h4 class="hero-name">Evelyn Ogonna Okereke</h4>
+								<span class="hero-title">BML Attendee</span>
+								<div class="rating-star ul-li clearfix">
+									<ul class="clearfix">
+										<li class="rated"><i class="fas fa-star"></i></li>
+										<li class="rated"><i class="fas fa-star"></i></li>
+										<li class="rated"><i class="fas fa-star"></i></li>
+										<li class="rated"><i class="fas fa-star"></i></li>
+										<li class="rated"><i class="fas fa-star"></i></li>
+									</ul>
+								</div>
+							</div>
+							<p class="paragraph-text mb-0">
+								Attending the Business mastreclass helped me gain insights into key business concepts, developing strategic thinking, enhancing leadership capabilities, and learning actionable techniques for problem-solving and decision-making. 
+							</p>
+						</div>
+					</div>
+
+					<div class="item item-style-2 clearfix">
+						<div class="hero-image">
+							<img src="assets/images/testimonial/img-6.png" alt="image_not_found">
+							<span class="icon" data-aos="zoom-in" data-aos-duration="450"><i class="flaticon-quotation"></i></span>
+							<small class="design-image">
+								<img src="assets/images/testimonial/design-image-1.png" alt="image_not_found">
+							</small>
+							<small class="shape-image">
+								<img src="assets/images/testimonial/shape-1.png" alt="image_not_found">
+							</small>
+						</div>
+						<div class="testimonial-content">
+							<div class="hero-info mb-60">
+								<h4 class="hero-name">Chinwuba Onyinye</h4>
+								<span class="hero-title">BML Attendee</span>
+								<div class="rating-star ul-li clearfix">
+									<ul class="clearfix">
+										<li class="rated"><i class="fas fa-star"></i></li>
+										<li class="rated"><i class="fas fa-star"></i></li>
+										<li class="rated"><i class="fas fa-star"></i></li>
+										<li class="rated"><i class="fas fa-star"></i></li>
+										<li class="rated"><i class="fas fa-star"></i></li>
+									</ul>
+								</div>
+							</div>
+							<p class="paragraph-text mb-0">
+								I appreciate the power packed insight of the class, and mostly I appreciate the brains behind the success of the class infact, the team deserves an accolade.
+                                <br>
+                                I am so grateful for the opportunity to be part of this class, it was a great experience and I look forward to more of such classes.
+							</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<!-- testimonial-section - end
+		================================================== -->
+
+
     <div class="forny-container">
         
 <div class="forny-inner">
@@ -398,6 +533,15 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
     <script src="js2/bootstrap.min.js"></script>
     <script src="js2/main.js"></script>
     <script src="js2/demo.js"></script>
+    <!-- carousel - jquery include -->
+		<script src="assets/js/owl.carousel.min.js"></script>
+
+		<!-- magnific popup - jquery include -->
+		<script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+		<!-- scroll animation - jquery include -->
+		<script src="assets/js/aos.js"></script>
+		<script src="assets/js/parallax.min.js"></script>
 
     <script>
         var accepting_registration = false

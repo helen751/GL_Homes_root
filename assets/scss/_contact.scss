@@ -1,0 +1,71 @@
+/* 16 - contact pages - start
+==================================================================================================== */
+.contact-section {
+	.contact-info-item {
+		padding: 50px 30px;
+		border-radius: 2px;
+		border: 1px solid $deep-gray;
+		.item-icon {
+			width: 105px;
+			height: 105px;
+			display: table;
+			font-size: 36px;
+			color: $pure-white;
+			position: relative;
+			text-align: center;
+			margin: 0 auto 30px;
+			background-repeat: no-repeat;
+			background-position: center center;
+			>i {
+				top: 65%;
+				left: 50%;
+				position: absolute;
+				transform: translate(-50%,-65%);
+			}
+		}
+		>ul {
+			>li {
+				color: #687596;
+				font-size: 18px;
+				margin-bottom: 10px;
+				font-weight: $fw-medium;
+				&:last-child {
+					margin-bottom: 0px;
+				}
+			}
+		}
+	}
+	.contact-info-item.phone-item {
+		border-color: #7a49ff;
+	}
+	.contact-info-item.address-item {
+		border-color: #31c8e9;
+	}
+	.contact-info-item.email-item {
+		border-color: #ff718e;
+	}
+}
+
+/* map-section - start */
+.map-section {
+	position: relative;
+	.google-map {
+		height: 930px;
+		position: relative;
+	}
+
+	.contact-form {
+		z-index: 1;
+		bottom: 0px;
+		width: 512px;
+		right: 366px;
+		padding: 80px;
+		position: absolute;
+		background-color: $pure-white;
+		.title-text {font-size: 30px;}
+	}
+}
+/* map-section - end */
+
+/* 16 - contact pages - end
+==================================================================================================== */

@@ -1,0 +1,282 @@
+/* 17 - others pages - start
+==================================================================================================== */
+.common-page {
+	.common-container {
+		width: 50%;
+		float: left;
+		height: 100vh;
+		display: flex;
+		position: relative;
+		.image-container {
+			margin: auto;
+			display: table;
+		}
+
+		.shape-1 {
+			top: 47%;
+			left: 60px;
+			position: absolute;
+			animation: spin 4s infinite linear;
+		}
+		.shape-2 {
+			top: 19%;
+			left: 32%;
+			position: absolute;
+			animation: zoominout 1.5s alternate infinite ease-in;
+		}
+		.shape-3 {
+			top: 110px;
+			right: 200px;
+			position: absolute;
+			animation: spin 4s infinite linear;
+		}
+		.shape-4 {
+			top: 30%;
+			left: 68%;
+			position: absolute;
+			animation: zoominout 1.5s alternate infinite ease-in;
+		}
+		.shape-5 {
+			top: 29%;
+			right: 30px;
+			position: absolute;
+			animation: spin 4s infinite linear;
+		}
+		.shape-6 {
+			top: 63%;
+			left: 46%;
+			position: absolute;
+			animation: spin 4s infinite linear;
+		}
+		.shape-7 {
+			top: 55%;
+			right: 110px;
+			position: absolute;
+			animation: updown 1s infinite alternate;
+		}
+		.shape-8 {
+			top: 80%;
+			left: 30%;
+			position: absolute;
+			animation: zoominout 1.5s alternate infinite ease-in;
+		}
+		.shape-9 {
+			right: 282px;
+			bottom: 135px;
+			position: absolute;
+			animation: spin 4s infinite linear;
+		}
+
+		.item-content {
+			z-index: 1;
+			display: table;
+			margin: auto 0px;
+			.title-text {
+				font-size: 48px;
+				color: $pure-white;
+				text-transform: uppercase;
+			}
+			>p {
+				font-size: 18px;
+				line-height: 30px;
+				color: $pure-white;
+			}
+			.custom-btn {
+				background-color: $default-black;
+			}
+
+		}
+	}
+}
+
+
+/* header & footer - start
+================================================== */
+.common-page {
+	.brand-logo {
+		top: 50px;
+		left: 100px;
+		z-index: 999;
+		position: absolute;
+	}
+	.social-links {
+		left: 100px;
+		bottom: 50px;
+		z-index: 999;
+		position: absolute;
+		.title-text {
+			font-size: 18px;
+			color: $default-black;
+			font-weight: $fw-medium;
+		}
+	}
+}
+/* header & footer - end
+================================================== */
+
+
+
+/* 17.1 - 404 page - start
+================================================== */
+.error-section {
+	.common-container {
+		padding: 0px 215px;
+		.item-content {
+			width: 325px;
+		}
+	}
+}
+/* 17.1 - 404 page - end
+================================================== */
+
+
+
+/* 17.2 - coming soon page - start
+================================================== */
+.coming-soon-section {
+	.common-container {
+		padding: 0px 170px;
+		.item-content {
+			width: 585px;
+			.title-text {
+				text-transform: initial;
+			}
+			.countdown-timer {
+				ul {
+					li {
+						color: $pure-white;
+						text-align: center;
+						margin-right: 40px;
+						position: relative;
+						padding-right: 40px;
+						&:before {
+							top: 25px;
+							right: -4px;
+							content: ':';
+							font-size: 66px;
+							position: absolute;
+						}
+						&:last-child {
+							margin-right: 0px;
+							padding-right: 0px;
+							&:before {
+								display: none;
+							}
+						}
+						strong {
+							width: 100%;
+							display: table;
+							font-size: 72px;
+							font-weight: $fw-regular;
+						}
+						small {
+							font-size: 14px;
+							letter-spacing: 2px;
+							text-transform: uppercase;
+						}
+					}
+				}
+			}
+
+			.email-form {
+				.form-item {
+					width: 430px;
+					margin-bottom: 15px;
+					input {
+						height: 60px;
+					}
+					.submit-btn {
+						top: 5px;
+						z-index: 1;
+						right: 5px;
+						width: auto;
+						height: 50px;
+						padding: 0px 40px;
+						line-height: 50px;
+						position: absolute;
+						border-radius: 3px;
+						color: $pure-white;
+					}
+				}
+				>p {
+					color: $pure-white;
+					font-weight: $fw-medium;
+				}
+			}
+		}
+	}
+}
+/* 17.2 - coming soon page - end
+================================================== */
+
+
+
+/* 17.3 - register page - start
+================================================== */
+.register-section {
+	.common-container {
+		padding: 0px 160px;
+		.item-content {
+			width: 400px;
+			.title-text {
+				text-transform: initial;
+			}
+			.register-form {
+				.custom-btn {
+					background-color: $default-pink;
+				}
+				.form-item {
+					label {
+						top: 50%;
+						left: 20px;
+						cursor: text;
+						position: absolute;
+						font-weight: $fw-medium;
+						text-transform: capitalize;
+						transform: translateY(-50%);
+						transition: $default-transition;
+					}
+					input {
+						&:focus {
+							+label {
+								left: 0px;
+								top: -10px;
+								color: $pure-white;
+								transform: translateY(-10px);
+							}
+						}
+					}
+				}
+				.tearm-condition {
+					input {
+						float: left;
+						margin-top: 6px;
+					}
+					label {
+						color: $pure-white;
+						padding-left: 15px;
+						position: relative;
+						font-weight: $fw-medium;
+					}
+				}
+				.forgot-password {
+					a {
+						color: $pure-white
+					}
+				}
+				p {
+					color: $pure-white;
+					font-weight: $fw-medium;
+					a {
+						color: $pure-white;
+					}
+				}
+			}
+		}
+	}
+}
+/* 17.3 - register page - end
+================================================== */
+
+/* 17 - others pages - end
+==================================================================================================== */

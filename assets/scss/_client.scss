@@ -1,0 +1,40 @@
+/* 4 - client section - start
+==================================================================================================== */
+.client-section {
+	padding: 60px 0px;
+	.client-carousel {
+		.item {
+			.client-logo {
+				width: 100%;
+				height: 60px;
+				overflow: hidden;
+				position: relative;
+				.after-image,
+				.before-image {
+					left: 50%;
+					width: 85%;
+					position: absolute;
+					transition: $default-transition;
+				}
+				.before-image {
+					top: 50%;
+					transform: translate(-50%,-50%);
+				}
+				.after-image {
+					top: 150%;
+					transform: translate(-50%,-50%);
+				}
+				&:hover {
+					.before-image {
+						top: -50%;
+					}
+					.after-image {
+						top: 50%;
+					}
+				}
+			}
+		}
+	}
+}
+/* 4 - client section - end
+==================================================================================================== */

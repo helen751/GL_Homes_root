@@ -1,0 +1,86 @@
+/* table of content - start
+==================================================================================================== */
+/* ==================================================
+Project Name 	:  Appal
+File 			:  CSS Base
+Version 		:  1.0.0
+Last change 	:  23 February 2019
+Author 			:  Marvel Theme
+Developer:		:  Rakibul Islam Dewan
+
+--------------------------------------------------
+
+* 1 - global area
+
+* 2 - header section
+* 3 - footer section
+
+* 4 - client section
+* 5 - sidebar section
+* 6 - breadcrumb section
+
+- All home pages
+* 7 - mobile app home page
+    - 7.1 - home page 1
+    - 7.2 - home page 2
+    - 7.3 - home page 3
+    - 7.4 - home page 4
+    - 7.5 - home page 5
+    - 7.6 - home page 6
+
+* 8 - sass landing home page
+    - 8.1 - home page 7
+    - 8.2 - home page 8
+    - 8.3 - home page 9
+    - 8.4 - home page 10
+
+* 9 - app store home page
+    - 8.1 - home page 11
+    - 8.2 - home page 12
+
+- All Inner Pages
+* 10 - App Page
+     - 10.1 - app page content 
+     - 10.2 - app details page
+
+* 11 - about page
+
+* 12 - blog page
+	 - 12.1 - blog page
+	 - 12.2 -blog details page
+
+* 13 - team page
+* 14 - pricing plan page
+* 15 - testimonial / review page
+* 16 - contact pages
+
+* 17 - others pages
+	 - 17.1 - 404 page
+	 - 17.2 - coming soon page
+	 - 17.3 - register page
+================================================== */
+/* table of content - end
+==================================================================================================== */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i');
+
+@import "variable";
+@import "reset";
+@import "header";
+@import "footer";
+
+@import "_client.scss";
+@import "_sidebar.scss";
+@import "_breadcrumb.scss";
+
+@import "_home.scss";
+
+@import "_app.scss";
+@import "_about.scss";
+@import "_blog.scss";
+@import "_team.scss";
+@import "_pricing.scss";
+@import "_testimonial.scss";
+@import "_contact.scss";
+@import "_others.scss";
+
+@import "_responsive.scss";

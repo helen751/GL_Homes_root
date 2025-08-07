@@ -1,0 +1,142 @@
+/* 3 - footer section - start
+==================================================================================================== */
+.footer-section {
+	background-size: 100% 59%;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+
+	.item-title {
+		font-size: 24px;
+		margin-bottom: 40px;
+		text-transform: capitalize;
+	}
+
+	.newsletter-section {
+		.section-title {
+			.title-text {
+				margin: 0 auto;
+				font-size: 30px;
+				max-width: 370px;
+			}
+		}
+		.newsletter-form {
+			overflow: hidden;
+			border-radius: 5px;
+			padding: 45px 70px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			.form-item {
+				#email-input {
+					width: 100%;
+					height: 70px;
+					display: table;
+					padding: 0px 30px;
+					border-radius: 3px;
+					border: 1px solid $deep-gray;
+					background-color: $pure-white;
+				}
+				.form-item-btn {
+					top: 50%;
+					right: 10px;
+					width: auto;
+					height: 50px;
+					line-height: 50px;
+					padding: 0px 40px;
+					color: $pure-white;
+					text-align: center;
+					border-radius: 3px;
+					position: absolute;
+					transform: translateY(-50%);
+				}
+			}
+		}
+		p {
+			color: #687596;
+			font-size: 16px;
+			font-weight: $fw-medium;
+		}
+	}
+
+	.btns-group {
+		>ul {
+			>li {
+				margin-right: 30px;
+				&:last-child {margin-right: 0px;}
+			}
+		}
+	}
+
+	.footer-content {
+		.about-content {
+			>p {
+				font-weight: $fw-medium;
+			}
+		}
+		.useful-links {
+			>ul {
+				>li {
+					margin-bottom: 15px;
+					&:last-child {margin-bottom: 0px;}
+					>a {
+						color: $default-color;
+						&:hover {
+							color: $default-blue;
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+		.contact-info {
+			>ul {
+				>li {
+					margin-bottom: 20px;
+					&:last-child {margin-bottom: 0px;}
+					>a {
+						.icon {
+							float: left;
+							font-size: 24px;
+							margin: -5px 0px;
+							margin-right: 15px;
+							color: $default-blue;
+						}
+						.info-text {
+							display: table;
+							line-height: 24px;
+							color: $default-color;
+							font-weight: $fw-medium;
+							&:hover {
+								color: $default-blue;
+								text-decoration: underline;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.footer-bottom {
+		padding: 50px 0px;
+		border-top: 2px solid #eef1ff;
+		.useful-links {
+			>ul {
+				>li {
+					margin-right: 35px;
+					&:last-child {margin-right: 0px;}
+					>a {
+						color: $default-color;
+						&:hover {
+							color: $default-blue;
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+/* 3 - footer section - end
+==================================================================================================== */
