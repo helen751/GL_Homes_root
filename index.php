@@ -514,6 +514,120 @@ Overall, this session was a valuable experience. I left feeling more informed, i
         </div>
     </section>
 
+<!-- testimonial-section - start
+		================================================== -->
+		<section id="testimonial-section" class="testimonial-section sec-ptb-160 pb-0 clearfix">
+			<div class="container">
+
+				<div class="section-title mb-100 text-center">
+					<span class="sub-title mb-15">Customer Review</span>
+					<h2 class="title-text mb-0">Some of our stories of product appal</h2>
+				</div>
+
+				<div id="testimonial-carousel" class="testimonial-carousel owl-carousel owl-theme">
+					<div class="item item-style-2 clearfix">
+						<div class="hero-image">
+							<img src="assets/images/testimonial/img-4.png" alt="image_not_found">
+							<span class="icon" data-aos="zoom-in" data-aos-duration="450"><i class="flaticon-quotation"></i></span>
+							<small class="design-image">
+								<img src="assets/images/testimonial/design-image-1.png" alt="image_not_found">
+							</small>
+							<small class="shape-image">
+								<img src="assets/images/testimonial/shape-1.png" alt="image_not_found">
+							</small>
+						</div>
+						<div class="testimonial-content">
+							<div class="hero-info mb-60">
+								<h4 class="hero-name">nancy pocker</h4>
+								<span class="hero-title">themeforest</span>
+								<div class="rating-star ul-li clearfix">
+									<ul class="clearfix">
+										<li class="rated"><i class="fas fa-star"></i></li>
+										<li class="rated"><i class="fas fa-star"></i></li>
+										<li class="rated"><i class="fas fa-star"></i></li>
+										<li class="rated"><i class="fas fa-star"></i></li>
+										<li class="rated"><i class="fas fa-star"></i></li>
+									</ul>
+								</div>
+							</div>
+							<p class="paragraph-text mb-0">
+								Awesome Product highly recomended Lorem ipsum dolor alamet, nsectetur  mayalipol tempor eiusmod tempor incubto ectetur alasiqua enim ad nim veniam, quis nostrud ullam consectetur
+								mayalipol quis nostrud ullam consecte.
+							</p>
+						</div>
+					</div>
+
+					<div class="item item-style-2 clearfix">
+						<div class="hero-image">
+							<img src="assets/images/testimonial/img-5.png" alt="image_not_found">
+							<span class="icon" data-aos="zoom-in" data-aos-duration="450"><i class="flaticon-quotation"></i></span>
+							<small class="design-image">
+								<img src="assets/images/testimonial/design-image-1.png" alt="image_not_found">
+							</small>
+							<small class="shape-image">
+								<img src="assets/images/testimonial/shape-1.png" alt="image_not_found">
+							</small>
+						</div>
+						<div class="testimonial-content">
+							<div class="hero-info mb-60">
+								<h4 class="hero-name">nancy pocker</h4>
+								<span class="hero-title">themeforest</span>
+								<div class="rating-star ul-li clearfix">
+									<ul class="clearfix">
+										<li class="rated"><i class="fas fa-star"></i></li>
+										<li class="rated"><i class="fas fa-star"></i></li>
+										<li class="rated"><i class="fas fa-star"></i></li>
+										<li class="rated"><i class="fas fa-star"></i></li>
+										<li class="rated"><i class="fas fa-star"></i></li>
+									</ul>
+								</div>
+							</div>
+							<p class="paragraph-text mb-0">
+								Awesome Product highly recomended Lorem ipsum dolor alamet, nsectetur  mayalipol tempor eiusmod tempor incubto ectetur alasiqua enim ad nim veniam, quis nostrud ullam consectetur
+								mayalipol quis nostrud ullam consecte.
+							</p>
+						</div>
+					</div>
+
+					<div class="item item-style-2 clearfix">
+						<div class="hero-image">
+							<img src="assets/images/testimonial/img-6.png" alt="image_not_found">
+							<span class="icon" data-aos="zoom-in" data-aos-duration="450"><i class="flaticon-quotation"></i></span>
+							<small class="design-image">
+								<img src="assets/images/testimonial/design-image-1.png" alt="image_not_found">
+							</small>
+							<small class="shape-image">
+								<img src="assets/images/testimonial/shape-1.png" alt="image_not_found">
+							</small>
+						</div>
+						<div class="testimonial-content">
+							<div class="hero-info mb-60">
+								<h4 class="hero-name">nancy pocker</h4>
+								<span class="hero-title">themeforest</span>
+								<div class="rating-star ul-li clearfix">
+									<ul class="clearfix">
+										<li class="rated"><i class="fas fa-star"></i></li>
+										<li class="rated"><i class="fas fa-star"></i></li>
+										<li class="rated"><i class="fas fa-star"></i></li>
+										<li class="rated"><i class="fas fa-star"></i></li>
+										<li class="rated"><i class="fas fa-star"></i></li>
+									</ul>
+								</div>
+							</div>
+							<p class="paragraph-text mb-0">
+								Awesome Product highly recomended Lorem ipsum dolor alamet, nsectetur  mayalipol tempor eiusmod tempor incubto ectetur alasiqua enim ad nim veniam, quis nostrud ullam consectetur
+								mayalipol quis nostrud ullam consecte.
+							</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<!-- testimonial-section - end
+		================================================== -->
+
+
 
     <footer class="py-8">
         <div class="container mx-auto px-10">
