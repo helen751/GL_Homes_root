@@ -532,7 +532,7 @@ Overall, this session was a valuable experience. I left feeling more informed, i
 
         </div>
     </footer>
- <script src="js2/"></script>
+ <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script src="js2/bootstrap.min.js"></script>
     <script src="js2/main.js"></script>
     <script src="js2/demo.js"></script>
@@ -546,6 +546,23 @@ Overall, this session was a valuable experience. I left feeling more informed, i
 		<!-- scroll animation - jquery include -->
 		<script src="assets/js/aos.js"></script>
 		<script src="assets/js/parallax.min.js"></script>
+
+        <!-- multy countdown - jquery include -->
+		<script src="assets/js/jquery.countdown.js"></script>
+
+		<!-- counter - jquery include -->
+		<script src="assets/js/waypoints.min.js"></script>
+		<script src="assets/js/jquery.counterup.min.js"></script>
+
+		<!-- google - jquery include -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhrdEzlfpnsnfq4MgU1e1CCsrvVx2d59s"></script>
+        <script src="assets/js/gmaps.js"></script>
+
+		<!-- mCustomScrollbar for sidebar menu - jquery include -->
+        <script src="assets/js/jquery.mCustomScrollbar.js"></script>
+
+		<!-- custom - jquery include -->
+		<script src="assets/js/custom.js"></script>
 
     <script>
         var accepting_registration = false
