@@ -112,6 +112,9 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
     <script src="tailwind.config.js"></script>
     <!-- SweetAlert2 CSS + JS -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- custom - css include -->
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 
     <!-- icon - css include -->
 		<link rel="stylesheet" type="text/css" href="assets/css/unicons.css">
@@ -533,6 +536,7 @@ Overall, this session was a valuable experience. I left feeling more informed, i
     <script src="js2/bootstrap.min.js"></script>
     <script src="js2/main.js"></script>
     <script src="js2/demo.js"></script>
+    <script src="assets/js/popper.min.js"></script>
     <!-- carousel - jquery include -->
 		<script src="assets/js/owl.carousel.min.js"></script>
 
