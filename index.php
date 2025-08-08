@@ -161,54 +161,85 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
             </div>
         </nav>
     </div>
-        <div class="container mx-auto">
-            <div class="text-center text-dark relative">
-                <h2 class="text-5xl font-semibold capitalize text-transparent bg-clip-text bg-gradient-to-r from-red-700 via-blue-600 to-blue-400 mt-2" id="ready-text">Are you ready?</h2>
-                <p class="text-base mt-2 mb-7" id="ready-text2">Countdown to Beyond the Horison Business Masterclass</p>
-                <div id="countdown" class="my-10 z-30">
-                    <div class="flex flex-wrap items-center justify-center">
-                        <div>
-                            <div class="sm:h-40 sm:w-48 h-32 w-32 flex items-center justify-center bg-white/10 border border-white/20">
-                                <div>
-                                    <span id="days" class="text-3xl md:text-6xl"></span>
-                                    <p class="text-xs font-semibold uppercase mt-5">days</p>
-                                </div>
-                            </div>
-                        </div>
+    
+    
+    <!-- features-section - start
+		================================================== -->
+		<section class="features-section sec-ptb-160 clearfix">
+			<div class="container">
 
-                        <div>
-                            <div class="sm:h-40 sm:w-48 h-32 w-32 flex items-center justify-center bg-white/10 border border-white/20">
-                                <div>
-                                    <span id="hours" class="text-3xl md:text-6xl"></span>
-                                    <p class="text-xs font-semibold uppercase mt-5">Hours</p>
-                                </div>
-                            </div>
-                        </div>
+				<div class="feature-item mb-0">
+					<div class="row justify-content-lg-between justify-content-md-center">
 
-                        <div>
-                            <div class="sm:h-40 sm:w-48 h-32 w-32 flex items-center justify-center bg-white/10 border border-white/20">
-                                <div>
-                                    <span id="minutes" class="text-3xl md:text-6xl"></span>
-                                    <p class="text-xs font-semibold uppercase mt-5">Minutes</p>
-                                </div>
-                            </div>
-                        </div>
+						<div class="col-lg-5 col-md-8 col-sm-12">
+							<div class="feature-image-2 text-center">
+								<span class="item-image">
+									<img src="assets/images/bms.png" alt="image_not_found">
+								</span>
+								<a class="popup-video" href="https://youtu.be/pmm-1T9Av-g" data-aos="zoom-in" data-aos-delay="100">
+									<i class='uil uil-play'></i>
+								</a>
+							</div>
+						</div>
 
-                        <div>
-                            <div class="sm:h-40 sm:w-48 h-32 w-32 flex items-center justify-center bg-white/10 border border-white/20">
-                                <div>
-                                    <span id="seconds" class="text-3xl md:text-6xl"></span>
-                                    <p class="text-xs font-semibold uppercase mt-5">Seconds</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+						<div class="col-lg-6 col-md-8 col-sm-12">
+							<div class="feature-content p-0">
+								<h2 class="feature-item-title">ABOUT US / <span>Who we are</span></h2>
+								<p class="mb-0">
+									GL HOMES Beyond Horizon Leadership and Business Masterclass is a value-based leadership and entrepreneurial development platform, established in 2017, with a mission to raise transformational leaders, innovators, and entrepreneurs across Africa. It is a faith-rooted initiative focused on disrupting mindsets, raising ethical leaders, and driving sustainable development through practical, principle-based business education.
+
+The platform has continued to expand since inception, never looking back. The first edition featured participants from 8 countries, while the most recent Masterclass welcomed professionals from 5 countries and over 20 cities. This growing community is driven by one common cause— to build Africa by raising 
+								</p>
+
+								<div class="service-list ul-li clearfix">
+									<ul class="clearfix">
+										<li>
+											<div class="item-icon" style="background-image: url(assets/images/icons/bg-6.png);">
+												<i class='uil uil-shield-exclamation'></i>
+											</div>
+											<div class="item-content">
+												<h3 class="item-title mb-15">Our Mission</h3>
+												<p class="mb-0">
+													To build, equip, and mentor bold and transformational business leaders, innovators, and entrepreneurs who are driven by purpose and values, capable of disrupting the status quo and igniting sustainable change in Africa and beyond.
+
+												</p>
+											</div>
+										</li>
+										<li>
+											<div class="item-icon" style="background-image: url(assets/images/icons/bg-7.png);">
+												<i class='uil uil-lightbulb-alt'></i>
+											</div>
+											<div class="item-content">
+												<h3 class="item-title mb-15">Our Vision</h3>
+												<p class="mb-0">
+													To empower and impact visionary leaders and
+                                                    entrepreneurs with a sound mindset, strategies, and skills
+                                                    needed to scale up their businesses, inspire high-
+                                                    performance teams, and create lasting impact in a rapidly
+                                                    evolving global economy.
+												</p>
+											</div>
+										</li>
+										
+									</ul>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<!-- features-section - end
+		================================================== -->
+
+
+
 
     <!-- Section Start -->
-    <section class="section py-14 bg-white" id="home">
+    <section class="section py-14 bg-white" id="home" style="display: none;">
         <div class="container mx-auto px-10">
             
             <div class="grid lg:grid-cols-2 gap-10 items-center">
@@ -264,6 +295,52 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
         </div>
     </section>
 
+     <div class="container mx-auto">
+            <div class="text-center text-dark relative">
+                <h2 class="text-5xl font-semibold capitalize text-transparent bg-clip-text bg-gradient-to-r from-red-700 via-blue-600 to-blue-400 mt-2" id="ready-text">Are you ready?</h2>
+                <p class="text-base mt-2 mb-7" id="ready-text2">Countdown to Beyond the Horison Business Masterclass</p>
+                <div id="countdown" class="my-10 z-30">
+                    <div class="flex flex-wrap items-center justify-center">
+                        <div>
+                            <div class="sm:h-40 sm:w-48 h-32 w-32 flex items-center justify-center bg-white/10 border border-white/20">
+                                <div>
+                                    <span id="days" class="text-3xl md:text-6xl"></span>
+                                    <p class="text-xs font-semibold uppercase mt-5">days</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="sm:h-40 sm:w-48 h-32 w-32 flex items-center justify-center bg-white/10 border border-white/20">
+                                <div>
+                                    <span id="hours" class="text-3xl md:text-6xl"></span>
+                                    <p class="text-xs font-semibold uppercase mt-5">Hours</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="sm:h-40 sm:w-48 h-32 w-32 flex items-center justify-center bg-white/10 border border-white/20">
+                                <div>
+                                    <span id="minutes" class="text-3xl md:text-6xl"></span>
+                                    <p class="text-xs font-semibold uppercase mt-5">Minutes</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="sm:h-40 sm:w-48 h-32 w-32 flex items-center justify-center bg-white/10 border border-white/20">
+                                <div>
+                                    <span id="seconds" class="text-3xl md:text-6xl"></span>
+                                    <p class="text-xs font-semibold uppercase mt-5">Seconds</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
 
 <!-- team-section - start
@@ -303,7 +380,7 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
 					<div class="col-lg-3 col-md-6 col-sm-12">
 						<div class="team-member-grid text-center">
 							<div class="member-image image-container clearfix">
-								<img src="assets/images/team/img-5.jpg" alt="image_not_found">
+								<img src="assets/images/team/pauline.png" alt="GL Homes Masterclass Team">
 								<ul class="member-social-links clearfix">
 									<li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
 									<li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
@@ -319,7 +396,7 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
                     <div class="col-lg-3 col-md-6 col-sm-12">
 						<div class="team-member-grid text-center">
 							<div class="member-image image-container clearfix">
-								<img src="assets/images/team/comfort.jpg" alt="image_not_found">
+								<img src="assets/images/team/comfort.jpg" alt="GL Homes Masterclass Team">
 								<ul class="member-social-links clearfix">
 									<li><a href="https://www.facebook.com/share/1716a4iDaA/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 									<li><a href="https://www.linkedin.com/in/comfort-okereke-ijeoma?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
@@ -335,7 +412,7 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
                     <div class="col-lg-3 col-md-6 col-sm-12">
 						<div class="team-member-grid text-center">
 							<div class="member-image image-container clearfix">
-								<img src="assets/images/team/helen.jpeg" alt="image_not_found">
+								<img src="assets/images/team/helen.jpeg" alt="GL Homes Masterclass Team">
 								<ul class="member-social-links clearfix">
 									<li><a href="https://www.facebook.com/share/1Dx5sqpAvF/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 									<li><a href="https://www.linkedin.com/in/helen-okereke-432323205" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
@@ -354,7 +431,7 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
 		<!-- team-section - end
 		================================================== -->
 
-        
+
     <!-- testimonial-section - start
 		================================================== -->
 		<section id="testimonial-section" class="testimonial-section sec-ptb-160 pb-0 clearfix">
