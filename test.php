@@ -1,6 +1,6 @@
 <?php
 $apiKey = 'AIzaSyCIJXsraLbtk8seDBXWn7DJeEIkmBBN-8U';  // <-- Replace with your actual API key
-$imagePath = 'door.jpeg'; 
+$imagePath = 'fe.jpeg'; 
 
 // Read the image file and encode it to base64
 $imageData = base64_encode(file_get_contents($imagePath));
