@@ -133,6 +133,12 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
 		<!-- scroll animation - css include -->
 		<link rel="stylesheet" type="text/css" href="assets/css/aos.css">
 
+        <style>
+            .service-section .service-grid-item {
+    border-color: #e3e8fe;
+}
+        </style>
+
 </head>
 
 <body class="font-body">
