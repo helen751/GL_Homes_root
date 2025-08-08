@@ -260,7 +260,7 @@ The platform has continued to expand since inception, never looking back. The fi
 								<div class="counter-items-list ul-li-center clearfix">
 						<ul class="clearfix">
 							<li>
-								<h2 style="all: revert;"><span class="count-text">100</span>+</h2>
+								<h2 style="all: revert;"><span class="count-text">200</span>+</h2>
 							</li>
 						</ul>
 					</div>
