@@ -1,6 +1,6 @@
 <?php
 $apiKey = 'AIzaSyCkBToW6JV7krIZE-pjf97Ho0ILm3dDWJ8';  // <-- Replace with your actual API key
-$imagePath = 'test.jpg';
+$imagePath = 'test.jpg'; 
 
 // Read the image file and encode it to base64
 $imageData = base64_encode(file_get_contents($imagePath));
