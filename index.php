@@ -445,7 +445,7 @@ The platform has continued to expand since inception, never looking back. The fi
 				<div id="testimonial-carousel" class="testimonial-carousel owl-carousel owl-theme">
 					<div class="item item-style-2 clearfix">
 						<div class="hero-image">
-							<img src="assets/images/testimonial/img-4.png" alt="image_not_found">
+							<img src="assets/images/testimonial/dummy.png" alt="image_not_found">
 							<span class="icon" data-aos="zoom-in" data-aos-duration="450"><i class="flaticon-quotation"></i></span>
 							<small class="design-image">
 								<img src="assets/images/testimonial/design-image-1.png" alt="image_not_found">
@@ -511,7 +511,7 @@ Overall, this session was a valuable experience. I left feeling more informed, i
 
 					<div class="item item-style-2 clearfix">
 						<div class="hero-image">
-							<img src="assets/images/testimonial/img-6.png" alt="image_not_found">
+							<img src="assets/images/testimonial/dummy.png" alt="image_not_found">
 							<span class="icon" data-aos="zoom-in" data-aos-duration="450"><i class="flaticon-quotation"></i></span>
 							<small class="design-image">
 								<img src="assets/images/testimonial/design-image-1.png" alt="image_not_found">
