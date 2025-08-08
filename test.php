@@ -1,5 +1,5 @@
 <?php
-$apiKey = 'AIzaSyCkBToW6JV7krIZE-pjf97Ho0ILm3dDWJ8';  // <-- Replace with your actual API key
+$apiKey = 'AIzaSyCIJXsraLbtk8seDBXWn7DJeEIkmBBN-8U';  // <-- Replace with your actual API key
 $imagePath = 'test.jpg'; 
 
 // Read the image file and encode it to base64
