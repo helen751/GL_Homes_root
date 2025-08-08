@@ -236,6 +236,80 @@ The platform has continued to expand since inception, never looking back. The fi
 		================================================== -->
 
 
+		<!-- service-section - start
+		================================================== -->
+		<section id="service-section" class="service-section sec-ptb-160 pt-0 clearfix">
+			<div class="container">
+				<div class="row">
+
+					
+
+					<div class="col-lg-4 col-md-12 col-sm-12">
+						<div class="service-grid-item text-center">
+							<span class="item-icon" style="background-image: url(assets/images/icons/bg-2.png);">
+								<i class='uil uil-users-alt'></i>
+							</span>
+							<h2 class="item-title mb-30">Participants</h2>
+							<p>
+								<div class="counter-items-list ul-li-center clearfix">
+						<ul class="clearfix">
+							<li>
+								<h4><span class="count-text">100</span>+</h4>
+							</li>
+						</ul>
+					</div>
+							</p>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-12 col-sm-12">
+						<div class="service-grid-item text-center">
+							<span class="item-icon" style="background-image: url(assets/images/icons/bg-3.png);">
+								<i class='uil uil-headphones'></i>
+							</span>
+							<h2 class="item-title mb-30">Countries</h2>
+							<p>
+								<div class="counter-items-list ul-li-center mb-100 clearfix">
+						<ul class="clearfix">
+							<li>
+								<h4><span class="count-text">13</span>+</h4>
+								<small class="counter-title">Countries</small>
+							</li>
+							<li>
+								<h4><span class="count-text">30</span>+</h4>
+								<small class="counter-title">Cities</small>
+							</li>
+						</ul>
+					</div>
+							</p>
+						</div>
+					</div>
+
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+						<div class="service-grid-item text-center">
+							<span class="item-icon" style="background-image: url(assets/images/icons/bg-1.png);">
+								<i class="uil uil-layer-group-slash"></i>
+							</span>
+							<h2 class="item-title mb-30">Testimonials</h2>
+							<p>
+								<div class="counter-items-list ul-li-center clearfix">
+						<ul class="clearfix">
+							<li>
+								<h4><span class="count-text">30</span>+</h4>
+							</li>
+						</ul>
+					</div>
+							</p>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+		<!-- service-section - end
+		================================================== -->
+
+
 
 
     <!-- Section Start -->
@@ -380,14 +454,14 @@ The platform has continued to expand since inception, never looking back. The fi
 					<div class="col-lg-3 col-md-6 col-sm-12">
 						<div class="team-member-grid text-center">
 							<div class="member-image image-container clearfix">
-								<img src="assets/images/team/pauline.png" alt="GL Homes Masterclass Team">
+								<img src="assets/images/team/pauline.jpeg" alt="GL Homes Masterclass Team">
 								<ul class="member-social-links clearfix">
 									<li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
 									<li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
 								</ul>
 							</div>
 							<div class="member-info">
-								<h3 class="member-name">Pauline Inyke Ogbo</h3>
+								<h3 class="member-name">Dr Pauline Ogbo</h3>
 								<span class="member-title">Business Advisor</span>
 							</div>
 						</div>
