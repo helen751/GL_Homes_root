@@ -264,6 +264,97 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
         </div>
     </section>
 
+
+
+<!-- team-section - start
+		================================================== -->
+		<section class="team-section sec-ptb-160 bg-light-gray clearfix">
+			<div class="container">
+
+				<div class="row justify-content-center">
+					<div class="col-lg-6 col-md-8 col-sm-12">
+						<div class="section-title text-center">
+							<h2 class="title-text mb-30">Meet with GLHOMES Masterclass Team</h2>
+							<p class="paragraph-text mb-0">
+								We would like to take the opportunity to introduce to our experienced team, bringing this masterclass to live.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+
+					<div class="col-lg-3 col-md-6 col-sm-12">
+						<div class="team-member-grid text-center">
+							<div class="member-image image-container clearfix">
+								<img src="assets/images/team/emmanuel.jpg" alt="CEO GLHomes Limited">
+								<ul class="member-social-links clearfix">
+									<li><a href="https://www.facebook.com/share/1Yku9SmJvz/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+									<li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
+								</ul>
+							</div>
+							<div class="member-info">
+								<h3 class="member-name">Emmanuel Onyedikachi</h3>
+								<span class="member-title">Visionary/Founder</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6 col-sm-12">
+						<div class="team-member-grid text-center">
+							<div class="member-image image-container clearfix">
+								<img src="assets/images/team/img-5.jpg" alt="image_not_found">
+								<ul class="member-social-links clearfix">
+									<li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
+									<li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
+								</ul>
+							</div>
+							<div class="member-info">
+								<h3 class="member-name">Pauline Inyke Ogbo</h3>
+								<span class="member-title">Business Advisor</span>
+							</div>
+						</div>
+					</div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+						<div class="team-member-grid text-center">
+							<div class="member-image image-container clearfix">
+								<img src="assets/images/team/comfort.jpg" alt="image_not_found">
+								<ul class="member-social-links clearfix">
+									<li><a href="https://www.facebook.com/share/1716a4iDaA/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+									<li><a href="https://www.linkedin.com/in/comfort-okereke-ijeoma?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+								</ul>
+							</div>
+							<div class="member-info">
+								<h3 class="member-name">Comfort Ijeoma Okereke</h3>
+								<span class="member-title">Project Manager</span>
+							</div>
+						</div>
+					</div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+						<div class="team-member-grid text-center">
+							<div class="member-image image-container clearfix">
+								<img src="assets/images/team/helen.jpeg" alt="image_not_found">
+								<ul class="member-social-links clearfix">
+									<li><a href="https://www.facebook.com/share/1Dx5sqpAvF/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+									<li><a href="https://www.linkedin.com/in/helen-okereke-432323205" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+								</ul>
+							</div>
+							<div class="member-info">
+								<h3 class="member-name">Helen ugoeze Okereke</h3>
+								<span class="member-title">Tech Specialist</span>
+							</div>
+						</div>
+					</div>
+                    </div>
+
+			</div>
+		</section>
+		<!-- team-section - end
+		================================================== -->
+
+        
     <!-- testimonial-section - start
 		================================================== -->
 		<section id="testimonial-section" class="testimonial-section sec-ptb-160 pb-0 clearfix">
@@ -479,93 +570,6 @@ Overall, this session was a valuable experience. I left feeling more informed, i
     <!-- Section End -->
 
 
-<!-- team-section - start
-		================================================== -->
-		<section class="team-section sec-ptb-160 bg-light-gray clearfix">
-			<div class="container">
-
-				<div class="row justify-content-center">
-					<div class="col-lg-6 col-md-8 col-sm-12">
-						<div class="section-title text-center">
-							<h2 class="title-text mb-30">Meet with GLHOMES Masterclass Team</h2>
-							<p class="paragraph-text mb-0">
-								We would like to take the opportunity to introduce to our experienced team, bringing this masterclass to live.
-							</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="row">
-
-					<div class="col-lg-3 col-md-6 col-sm-12">
-						<div class="team-member-grid text-center">
-							<div class="member-image image-container clearfix">
-								<img src="assets/images/team/emmanuel.jpg" alt="CEO GLHomes Limited">
-								<ul class="member-social-links clearfix">
-									<li><a href="https://www.facebook.com/share/1Yku9SmJvz/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-									<li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
-								</ul>
-							</div>
-							<div class="member-info">
-								<h3 class="member-name">Emmanuel Onyedikachi</h3>
-								<span class="member-title">Visionary/Founder</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-3 col-md-6 col-sm-12">
-						<div class="team-member-grid text-center">
-							<div class="member-image image-container clearfix">
-								<img src="assets/images/team/img-5.jpg" alt="image_not_found">
-								<ul class="member-social-links clearfix">
-									<li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
-									<li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
-								</ul>
-							</div>
-							<div class="member-info">
-								<h3 class="member-name">Pauline Inyke Ogbo</h3>
-								<span class="member-title">Business Advisor</span>
-							</div>
-						</div>
-					</div>
-
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-						<div class="team-member-grid text-center">
-							<div class="member-image image-container clearfix">
-								<img src="assets/images/team/comfort.jpg" alt="image_not_found">
-								<ul class="member-social-links clearfix">
-									<li><a href="https://www.facebook.com/share/1716a4iDaA/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-									<li><a href="https://www.linkedin.com/in/comfort-okereke-ijeoma?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-								</ul>
-							</div>
-							<div class="member-info">
-								<h3 class="member-name">Comfort Ijeoma Okereke</h3>
-								<span class="member-title">Project Manager</span>
-							</div>
-						</div>
-					</div>
-
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-						<div class="team-member-grid text-center">
-							<div class="member-image image-container clearfix">
-								<img src="assets/images/team/helen.jpg" alt="image_not_found">
-								<ul class="member-social-links clearfix">
-									<li><a href="https://www.facebook.com/share/1Dx5sqpAvF/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-									<li><a href="https://www.linkedin.com/in/helen-okereke-432323205" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-								</ul>
-							</div>
-							<div class="member-info">
-								<h3 class="member-name">Helen ugoeze Okereke</h3>
-								<span class="member-title">Tech Specialist</span>
-							</div>
-						</div>
-					</div>
-                    </div>
-
-			</div>
-		</section>
-		<!-- team-section - end
-		================================================== -->
     <!-- shuffle portfolio -->
     <section class="section" id="companies">
         <div class="mx-4 md:mx-16 bg-slate-100 p-6 md:p-16 rounded-[40px]">
