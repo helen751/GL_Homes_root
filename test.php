@@ -16,7 +16,13 @@ $requestBody = [
                 [
                     "type" => "LABEL_DETECTION",
                     "maxResults" => 5
+                ],
+
+                [
+                    "type" => "TEXT_DETECTION",
+                    "maxResults" => 5
                 ]
+
             ]
         ]
     ]
