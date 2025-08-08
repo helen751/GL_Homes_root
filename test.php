@@ -15,12 +15,12 @@ $requestBody = [
             "features" => [
                 [
                     "type" => "LABEL_DETECTION",
-                    "maxResults" => 5
+                    "maxResults" => 3
                 ],
 
                 [
                     "type" => "TEXT_DETECTION",
-                    "maxResults" => 5
+                    "maxResults" => 1
                 ]
 
             ]
