@@ -260,7 +260,7 @@ The platform has continued to expand since inception, never looking back. The fi
 								<div class="counter-items-list ul-li-center clearfix">
 						<ul class="clearfix">
 							<li>
-								<h2><span class="count-text">100</span>+</h2>
+								<h2 style="all: revert;"><span class="count-text">100</span>+</h2>
 							</li>
 						</ul>
 					</div>
@@ -278,11 +278,11 @@ The platform has continued to expand since inception, never looking back. The fi
 								<div class="counter-items-list ul-li-center clearfix">
 						<ul class="clearfix">
 							<li class="mr-3">
-								<h3><span class="count-text">13</span>+</h3>
+								<h3 style="all: revert;"><span class="count-text">13</span>+</h3>
 								<small class="counter-title">Countries</small>
 							</li>
 							<li>
-								<h3><span class="count-text">30</span>+</h3>
+								<h3 style="all: revert;"><span class="count-text">30</span>+</h3>
 								<small class="counter-title">Cities</small>
 							</li>
 						</ul>
@@ -301,7 +301,7 @@ The platform has continued to expand since inception, never looking back. The fi
 								<div class="counter-items-list ul-li-center clearfix">
 						<ul class="clearfix">
 							<li>
-								<h2><span class="count-text">30</span>+</h2>
+								<h2 style="all: revert;"><span class="count-text">30</span>+</h2>
 							</li>
 						</ul>
 					</div>
