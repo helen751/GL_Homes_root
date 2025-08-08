@@ -308,6 +308,54 @@ The platform has continued to expand since inception, never looking back. The fi
 		</section>
 		<!-- service-section - end
 		================================================== -->
+<!-- service-section - start
+		================================================== -->
+		<section id="service-section" class="service-section sec-ptb-160 pt-0 clearfix">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-lg-4 col-md-12 col-sm-12">
+						<div class="service-grid-item text-center">
+							<span class="item-icon" style="background-image: url(assets/images/icons/bg-1.png);">
+								<i class="uil uil-layer-group-slash"></i>
+							</span>
+							<h2 class="item-title mb-30">Unique Design</h2>
+							<p>
+								Lorem ipsum dolor sit amt, consectet adop adipisicing elit, sed do eiusmod teporara incididunt training 
+							</p>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-12 col-sm-12">
+						<div class="service-grid-item text-center">
+							<span class="item-icon" style="background-image: url(assets/images/icons/bg-2.png);">
+								<i class='uil uil-users-alt'></i>
+							</span>
+							<h2 class="item-title mb-30">Easy Communications</h2>
+							<p>
+								Lorem ipsum dolor sit amt, consectet adop adipisicing elit, sed do eiusmod teporara incididunt training 
+							</p>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-12 col-sm-12">
+						<div class="service-grid-item text-center">
+							<span class="item-icon" style="background-image: url(assets/images/icons/bg-3.png);">
+								<i class='uil uil-headphones'></i>
+							</span>
+							<h2 class="item-title mb-30">24/7 Hour Support</h2>
+							<p>
+								Lorem ipsum dolor sit amt, consectet adop adipisicing elit, sed do eiusmod teporara incididunt training 
+							</p>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+		<!-- service-section - end
+		================================================== -->
+
 
 
 
