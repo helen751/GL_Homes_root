@@ -1,6 +1,6 @@
 <?php
 $apiKey = 'AIzaSyCIJXsraLbtk8seDBXWn7DJeEIkmBBN-8U';  // <-- Replace with your actual API key
-$imagePath = 'test.jpg'; 
+$imagePath = 'door.jpg'; 
 
 // Read the image file and encode it to base64
 $imageData = base64_encode(file_get_contents($imagePath));
@@ -15,7 +15,7 @@ $requestBody = [
             "features" => [
                 [
                     "type" => "LABEL_DETECTION",
-                    "maxResults" => 5
+                    "maxResults" => 1
                 ],
 
                 [
