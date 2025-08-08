@@ -201,7 +201,7 @@ The platform has continued to expand since inception, never looking back. The fi
 									<ul class="clearfix">
 										<li>
 											<div class="item-icon" style="background-image: url(assets/images/icons/bg-6.png);">
-												<i class='uil uil-shield-exclamation'></i>
+												<i class='uil uil-rocket'></i>
 											</div>
 											<div class="item-content">
 												<h3 class="item-title mb-15">Our Mission</h3>
