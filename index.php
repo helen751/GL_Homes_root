@@ -271,7 +271,7 @@ The platform has continued to expand since inception, never looking back. The fi
 					<div class="col-lg-4 col-md-12 col-sm-12">
 						<div class="service-grid-item text-center">
 							<span class="item-icon" style="background-image: url(assets/images/icons/bg-3.png);">
-								<i class='uil uil-flag'></i>
+								<i class='uil uil-globe'></i>
 							</span>
 							<h2 class="item-title mb-30">Demographics</h2>
 							<p>
