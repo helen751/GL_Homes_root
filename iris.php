@@ -9,25 +9,12 @@ if (empty($imageData)) {
     exit;
 }
 
-$imageData = trim($imageData);
-
-$decodedImage = base64_decode($imageData, true);
-if ($decodedImage === false) {
-    http_response_code(400);
-    echo json_encode(['error' => 'Invalid base64 image data']);
-    exit;
-}
-
+// Log the received data (append)
 $logFile = 'uploads/images_log.txt';
+if (!is_dir('uploads')) mkdir('uploads', 0755, true);
+file_put_contents($logFile, "----- " . date('Y-m-d H:i:s') . " -----\n" . $imageData . "\n\n", FILE_APPEND);
 
-if (!is_dir('uploads')) {
-    mkdir('uploads', 0755, true);
-}
-
-// Append base64 string with timestamp separator
-$entry = "----- " . date('Y-m-d H:i:s') . " -----\n" . $imageData . "\n\n";
-file_put_contents($logFile, $entry, FILE_APPEND);
-
+// No base64 decoding here, just pass it raw to the API request
 $requestBody = [
     "requests" => [
         [
