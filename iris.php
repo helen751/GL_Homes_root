@@ -1,7 +1,6 @@
 <?php
 $apiKey = 'AIzaSyCIJXsraLbtk8seDBXWn7DJeEIkmBBN-8U';
 
-// Get the image data from POST
 $imageData = $_POST['image'] ?? '';
 
 if (empty($imageData)) {
@@ -10,10 +9,8 @@ if (empty($imageData)) {
     exit;
 }
 
-// Trim whitespace or newlines (sometimes present)
 $imageData = trim($imageData);
 
-// Optional: Validate if base64 is valid by decoding
 $decodedImage = base64_decode($imageData, true);
 if ($decodedImage === false) {
     http_response_code(400);
@@ -21,7 +18,16 @@ if ($decodedImage === false) {
     exit;
 }
 
-// Prepare request body for Google Vision API with raw base64 (no URL encoding)
+$logFile = 'uploads/images_log.txt';
+
+if (!is_dir('uploads')) {
+    mkdir('uploads', 0755, true);
+}
+
+// Append base64 string with timestamp separator
+$entry = "----- " . date('Y-m-d H:i:s') . " -----\n" . $imageData . "\n\n";
+file_put_contents($logFile, $entry, FILE_APPEND);
+
 $requestBody = [
     "requests" => [
         [
@@ -48,7 +54,6 @@ $response = curl_exec($ch);
 $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 curl_close($ch);
 
-// Forward Google Vision API response and HTTP status code
 http_response_code($httpCode);
 echo $response;
 ?>
