@@ -69,9 +69,9 @@
           document.getElementById('analysisText').textContent = sentence;
 
           // Only speak after user interaction (browser autoplay policy)
-          if (userInteracted) {
+          if (userInteracted && hasWelcomed) {
             speakText(sentence);
-          }
+        }
         }
       } catch (err) {
         console.error('Error fetching analysis:', err);
@@ -83,6 +83,11 @@
     function waitForUserInteraction() {
       function onInteraction() {
         userInteracted = true;
+        // Say welcome first, then start analysis reading
+      if (!hasWelcomed) {
+        speakText("Welcome, IRIS is now active!");
+        hasWelcomed = true;
+      }
         if (lastSentence) {
           speakText(lastSentence);
         }
