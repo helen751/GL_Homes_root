@@ -29,7 +29,7 @@
 </head>
 <body>
   <div class="container text-center">
-    <img src="iris.jpg" alt="Iris Image" class="iris-img" />
+    <img src="logo.png" alt="Iris Image" class="iris-img" />
     <h1 class="mb-4">Iris Image Analysis</h1>
     <div class="card p-4 shadow-sm bg-white">
       <h4>Last Image Analysis:</h4>
