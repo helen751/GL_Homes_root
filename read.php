@@ -32,7 +32,7 @@
     <img src="logo.png" alt="Iris Image" class="iris-img" />
     <h1 class="mb-4">Iris Image Analysis</h1>
     <div class="card p-4 shadow-sm bg-white">
-      <h4>Last Image Analysis:</h4>
+      <h4>Environment Guidance:</h4>
       <div id="analysisText" class="mt-3">Loading...</div>
     </div>
   </div>
@@ -46,6 +46,8 @@
       if ('speechSynthesis' in window) {
         const utterance = new SpeechSynthesisUtterance(text);
         window.speechSynthesis.speak(utterance);
+
+        speakText("Welcome, IRIS is now active!");
       }
     }
 
