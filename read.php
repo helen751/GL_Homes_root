@@ -49,7 +49,9 @@
 
       }
     }
-    speakText("Welcome, IRIS is now active!");
+    if (userInteracted) {
+            speakText("Welcome, IRIS is now active!");
+    }
 
     // Fetch the latest analysis from your PHP backend
     async function fetchAnalysis() {
