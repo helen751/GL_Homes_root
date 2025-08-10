@@ -69,7 +69,7 @@ if ($httpCode == 200 && isset($responseData['responses'][0])) {
     foreach ($labels as $label) {
         $labelDescriptions[] = $label['description'];
     }
-    $combinedLabels = implode(', ', $labelDescriptions);
+    $combinedLabels = implode(' ', $labelDescriptions);
 
     // Combine into one sentence
     $sentence = "Detected labels: " . $combinedLabels;
