@@ -93,7 +93,7 @@
 
     // Poll the server every 2 seconds
     fetchAnalysis(); // initial fetch
-    setInterval(fetchAnalysis, 2000);
+    setInterval(fetchAnalysis, 1000);
   </script>
 
   <!-- Bootstrap JS (optional, for components) -->
