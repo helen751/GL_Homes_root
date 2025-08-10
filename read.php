@@ -47,9 +47,9 @@
         const utterance = new SpeechSynthesisUtterance(text);
         window.speechSynthesis.speak(utterance);
 
-        speakText("Welcome, IRIS is now active!");
       }
     }
+    speakText("Welcome, IRIS is now active!");
 
     // Fetch the latest analysis from your PHP backend
     async function fetchAnalysis() {
