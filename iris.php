@@ -55,3 +55,33 @@ curl_close($ch);
 
 http_response_code($httpCode);
 echo $response;
+
+// =====================
+// New part to store last analysis with timestamp
+$responseData = json_decode($response, true);
+
+if ($httpCode == 200 && isset($responseData['responses'][0])) {
+    $labels = $responseData['responses'][0]['labelAnnotations'] ?? [];
+    $textAnnotation = $responseData['responses'][0]['textAnnotations'][0]['description'] ?? '';
+
+    // Combine label descriptions
+    $labelDescriptions = [];
+    foreach ($labels as $label) {
+        $labelDescriptions[] = $label['description'];
+    }
+    $combinedLabels = implode(', ', $labelDescriptions);
+
+    // Combine into one sentence
+    $sentence = "Detected labels: " . $combinedLabels;
+    if (!empty($textAnnotation)) {
+        $sentence .= ". Text detected: " . $textAnnotation;
+    }
+
+    // Store sentence with timestamp in a file
+    $analysisFile = 'uploads/last_analysis.json';
+    $dataToStore = [
+        'timestamp' => time(),
+        'sentence' => $sentence
+    ];
+    file_put_contents($analysisFile, json_encode($dataToStore));
+}
