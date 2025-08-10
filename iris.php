@@ -9,12 +9,15 @@ if (empty($imageData)) {
     exit;
 }
 
-// Log the received data (append)
+// Log the received (possibly URL-encoded) data
 $logFile = 'uploads/images_log.txt';
 if (!is_dir('uploads')) mkdir('uploads', 0755, true);
 file_put_contents($logFile, "----- " . date('Y-m-d H:i:s') . " -----\n" . $imageData . "\n\n", FILE_APPEND);
 
-// No base64 decoding here, just pass it raw to the API request
+// Decode URL-encoded Base64 if necessary
+$imageData = urldecode($imageData);
+
+// Prepare request body for Google Vision
 $requestBody = [
     "requests" => [
         [
