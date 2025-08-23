@@ -444,7 +444,7 @@ The platform has continued to expand since inception, never looking back. The fi
 					<div class="col-lg-3 col-md-6 col-sm-12">
 						<div class="team-member-grid text-center">
 							<div class="member-image image-container clearfix">
-								<img src="assets/images/team/emm.webp" alt="CEO GLHomes Limited" style="height: 200px;">
+								<img src="assets/images/team/emm.webp" alt="CEO GLHomes Limited" style="height: 400px;">
 								<ul class="member-social-links clearfix">
 									<li><a href="https://www.facebook.com/share/1Yku9SmJvz/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 									<li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
