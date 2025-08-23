@@ -444,7 +444,7 @@ The platform has continued to expand since inception, never looking back. The fi
 					<div class="col-lg-3 col-md-6 col-sm-12">
 						<div class="team-member-grid text-center">
 							<div class="member-image image-container clearfix">
-								<img src="assets/images/team/emmanuel.jpg" alt="CEO GLHomes Limited">
+								<img src="assets/images/team/emm.webp" alt="CEO GLHomes Limited">
 								<ul class="member-social-links clearfix">
 									<li><a href="https://www.facebook.com/share/1Yku9SmJvz/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 									<li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
@@ -460,7 +460,7 @@ The platform has continued to expand since inception, never looking back. The fi
 					<div class="col-lg-3 col-md-6 col-sm-12">
 						<div class="team-member-grid text-center">
 							<div class="member-image image-container clearfix">
-								<img src="assets/images/team/pauline.jpeg" alt="GL Homes Masterclass Team">
+								<img src="assets/images/team/pauline.webp" alt="GL Homes Masterclass Team">
 								<ul class="member-social-links clearfix">
 									<li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
 									<li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
@@ -476,7 +476,7 @@ The platform has continued to expand since inception, never looking back. The fi
                     <div class="col-lg-3 col-md-6 col-sm-12">
 						<div class="team-member-grid text-center">
 							<div class="member-image image-container clearfix">
-								<img src="assets/images/team/comfort.jpg" alt="GL Homes Masterclass Team">
+								<img src="assets/images/team/comfort.webp" alt="GL Homes Masterclass Team">
 								<ul class="member-social-links clearfix">
 									<li><a href="https://www.facebook.com/share/1716a4iDaA/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 									<li><a href="https://www.linkedin.com/in/comfort-okereke-ijeoma?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
@@ -492,7 +492,7 @@ The platform has continued to expand since inception, never looking back. The fi
                     <div class="col-lg-3 col-md-6 col-sm-12">
 						<div class="team-member-grid text-center">
 							<div class="member-image image-container clearfix">
-								<img src="assets/images/team/helen.jpeg" alt="GL Homes Masterclass Team">
+								<img src="assets/images/team/helen.webp" alt="GL Homes Masterclass Team">
 								<ul class="member-social-links clearfix">
 									<li><a href="https://www.facebook.com/share/1Dx5sqpAvF/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 									<li><a href="https://www.linkedin.com/in/helen-okereke-432323205" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
