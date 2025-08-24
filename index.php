@@ -531,7 +531,7 @@ The platform has continued to expand since inception, never looking back. The fi
 								<img src="assets/images/testimonial/design-image-1.png" alt="image_not_found">
 							</small>
 							<small class="shape-image">
-								<img src="assets/images/testimonial/shape-1.png" alt="image_not_found">
+								<img src="assets/images/testimonial/sharon.jpg" alt="Innocent Sharon Chidinma">
 							</small>
 						</div>
 						<div class="testimonial-content">
@@ -566,7 +566,7 @@ Overall, this session was a valuable experience. I left feeling more informed, i
 								<img src="assets/images/testimonial/design-image-1.png" alt="image_not_found">
 							</small>
 							<small class="shape-image">
-								<img src="assets/images/testimonial/shape-1.png" alt="image_not_found">
+								<img src="assets/images/testimonial/shape-1.png" alt="Evelyn Ogonna Okereke">
 							</small>
 						</div>
 						<div class="testimonial-content">
