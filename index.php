@@ -32,7 +32,7 @@ if (isset($_GET['trxref']) && isset($_GET['id'])) {
     if (isset($result['status']) && $result['status'] === true) {
         $payment_status = $result['data']['status'];
 
-        if ($payment_status === 'successful') {
+        if ($payment_status === 'success') {
             $ref = $conn->real_escape_string($ref);
             $conn->query("UPDATE masterclass_registrations_01 SET payment_status = 1, payment_reference = '$ref', payment_amount = '$amount' WHERE id = $id");
 
