@@ -52,38 +52,42 @@ if (!$conn->query($sql)) {
     exit;
 }
 
-
 $insert_id = $conn->insert_id; // Get inserted ID for redirect
 
-// Prepare for Flutterwave payment
-$tx_ref = "GLHOMES_" . time() . "_" . rand(1000, 9999);
-$redirect_url = "https://glhomesltd.com?id=$insert_id"; // Update to your real redirect
+// Prepare for Paystack payment
+$reference = "GLHOMES_" . time() . "_" . rand(1000, 9999);
+$callback_url = "https://glhomesltd.com?id=$insert_id"; // Redirect after payment
 
 $paymentData = [
-    "tx_ref" => $tx_ref,
-    "amount" => $amount,
+    "email" => $email,
+    "amount" => $amount * 100, // Paystack uses kobo (multiply Naira by 100)
     "currency" => $currency,
-    "redirect_url" => $redirect_url,
-    "payment_options" => "card,banktransfer",
-    "customer" => [
-        "email" => $email,
-        "phonenumber" => $phone_full,
-        "name" => $fullname
-    ],
-    "customizations" => [
-        "title" => "GL Homes Business Masterclass",
-        "description" => "Payment for masterclass registration"
+    "reference" => $reference,
+    "callback_url" => $callback_url,
+    "metadata" => [
+        "custom_fields" => [
+            [
+                "display_name" => "Customer Name",
+                "variable_name" => "name",
+                "value" => $fullname
+            ],
+            [
+                "display_name" => "Phone Number",
+                "variable_name" => "phone",
+                "value" => $phone_full
+            ]
+        ]
     ]
 ];
 
-// Flutterwave cURL
+// Paystack cURL
 $ch = curl_init();
 curl_setopt_array($ch, [
-    CURLOPT_URL => "https://api.flutterwave.com/v3/payments",
+    CURLOPT_URL => "https://api.paystack.co/transaction/initialize",
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_POST => true,
     CURLOPT_HTTPHEADER => [
-        "Authorization: Bearer FLWSECK-ed3fa365dbdbbe4554832ea097659f65-197ba0c5ed0vt-X", // Replace with your key
+        "Authorization: Bearer sk_live_9c7dd14bedec1d3c18abc60e6bcdb5a269f8ca24", // Replace with your Paystack secret key
         "Content-Type: application/json"
     ],
     CURLOPT_POSTFIELDS => json_encode($paymentData)
@@ -99,12 +103,15 @@ if ($err) {
 }
 
 $result = json_decode($response, true);
-if (isset($result["data"]["link"])) {
+if (isset($result["data"]["authorization_url"])) {
     echo json_encode([
         "status" => "success",
-        "payment_link" => $result["data"]["link"]
+        "payment_link" => $result["data"]["authorization_url"]
     ]);
 } else {
-    echo json_encode(["status" => "error", "message" => "Payment link not generated"]);
+    echo json_encode([
+        "status" => "error",
+        "message" => isset($result["message"]) ? $result["message"] : "Payment link not generated"
+    ]);
 }
 ?>

@@ -16,10 +16,10 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
 
     $curl = curl_init();
     curl_setopt_array($curl, [
-        CURLOPT_URL => "https://api.flutterwave.com/v3/transactions/verify_by_reference?tx_ref=$ref",
+        CURLOPT_URL => "https://api.paystack.co/transaction/verify/" . rawurlencode($ref),
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_HTTPHEADER => [
-            "Authorization: Bearer FLWSECK-ed3fa365dbdbbe4554832ea097659f65-197ba0c5ed0vt-X",
+            "Authorization: Bearer sk_live_9c7dd14bedec1d3c18abc60e6bcdb5a269f8ca24",
             "Content-Type: application/json"
         ]
     ]);
@@ -325,27 +325,27 @@ The platform has continued to expand since inception, never looking back. The fi
             <div class="grid lg:grid-cols-2 gap-10 items-center">
                 <div class="mx-2">
                     <h1 class="text-4xl/snug font-semibold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-blue-600 to-blue-400 mb-4">
-                        GL HOMES PRESENTS: BEYOND THE HORIZON 2025 
+                        GL HOMES PRESENTS: MINDSET SHIFT 2025 
                         </h1>
                         <span class="text-2xl text-gray-600">A Business Masterclass Like No Other!
                         </span>
                     
                     <p class="text-base text-zinc-800 max-w-lg mb-6">
-                        Are you ready to break limits and unlock new levels in business?
-                        Join GL Homes for BEYOND THE HORIZON 2025,  a power-packed masterclass designed to equip entrepreneurs, aspiring business leaders, and visionaries with the tools to build, scale, and dominate in today’s marketplace!<br>
+                        Are you ready for a mindset shift towards your business?
+                        This exclusive Masterclass brings together visionary leaders across governance, banking, and investment to share practical insights on building sustainable systems, global leadership, and innovative investment opportunities. Participants will gain actionable strategies that bridge ethics, finance, and real estate to unlock long-term impact.<br>
 
-                        ✓ Learn from top industry experts<br>
-                        ✓ Discover proven strategies for business growth<br>
-                        ✓ Network with forward-thinking minds<br>
-                        ✓ Gain clarity, confidence, and direction for 2025 and beyond!<br>
+                        ✓ Ethical governance as the foundation for sustainable business growth<br>
+                        ✓ Expanding leadership influence from regional to global markets<br>
+                        ✓ Unlocking wealth through agricultural investment in real estate<br>
+                        ✓ Practical strategies to build transparency, trust, and long-term impact<br>
 
                     </p>
-                    <strong class="text-2xl text-zinc-600 mb-4">Date: SUNDAY, 20<sup>th</sup> July, 2025</strong><br>
-                    <strong class="text-2xl text-zinc-600 mb-4">Time: 7:00PM WAT</strong><br>
+                    <strong class="text-2xl text-zinc-600 mb-4">Date: Sunday, 21 <sup>st</sup> September 2025</strong><br>
+                    <strong class="text-2xl text-zinc-600 mb-4">Time: 6:00PM WAT</strong><br>
                     <strong class="text-2xl text-zinc-600 mb-4">Venue: Google Meet</strong><br>
                     <strong class="text-2xl text-zinc-600 mb-4">Registration Fee: 
                         <strong class="text-red-600 line-through">₦25,000 NGN</strong>
-                        <strong class="text-blue-600">₦5,000 (Everyone)</strong> 
+                        <strong class="text-blue-600">₦10,000 (early rate – price will increase as date approaches!)</strong> 
                         <!-- <strong class="text-zinc-600">or</strong>
                         <strong class="text-red-600 line-through">25 USD</strong>
                         <strong class="text-blue-600">$10 USD(outside Nigeria)</strong>  -->
@@ -353,7 +353,6 @@ The platform has continued to expand since inception, never looking back. The fi
                     <strong class="text-2xl text-blue-600 mb-4">Limited Seats Available!</strong><br><br>
                     <p class="text-base text-zinc-800 max-w-lg mb-6">
                         Don’t miss this opportunity to transform your business mindset and strategies for the year ahead.
-                        Your next level is not behind you… it’s BEYOND THE HORIZON!
 
                     </p>
                     <a class="w-auto inline-flex items-center font-semibold gap-2 px-6 py-2.5 rounded-full transition-all duration-300 text-white bg-blue-600 hover:bg-blue-700"
@@ -367,7 +366,7 @@ The platform has continued to expand since inception, never looking back. The fi
                     </a>
                 </div>
                 <div class="max-w-lg mx-auto">
-                    <img src="images/bms-july3.webp" alt="GL Homes class" class="max-w-full w-auto">
+                    <img src="images/ms.webp" alt="GL Homes class" class="max-w-full w-auto">
                 </div>
             </div>
 
@@ -378,7 +377,7 @@ The platform has continued to expand since inception, never looking back. The fi
      <div class="container mx-auto">
             <div class="text-center text-dark relative">
                 <h2 class="text-5xl font-semibold capitalize text-transparent bg-clip-text bg-gradient-to-r from-red-700 via-blue-600 to-blue-400 mt-2" id="ready-text">Are you ready?</h2>
-                <p class="text-base mt-2 mb-7" id="ready-text2">Countdown to Beyond the Horison Business Masterclass</p>
+                <p class="text-base mt-2 mb-7" id="ready-text2">Countdown to BMINDSET SHIFT Business Masterclass</p>
                 <div id="countdown" class="my-10 z-30">
                     <div class="flex flex-wrap items-center justify-center">
                         <div>
@@ -814,7 +813,7 @@ Overall, this session was a valuable experience. I left feeling more informed, i
 		<script src="assets/js/custom.js"></script>
 
     <script>
-        var accepting_registration = false
+        var accepting_registration = true
 
         if (!accepting_registration){
             document.querySelector('.forny-container').innerHTML = `
