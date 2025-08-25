@@ -502,17 +502,7 @@ The platform has continued to expand since inception, never looking back. The fi
         <label class="custom-control-label text-danger" for="executuve">Include Executive Benefits (+ NGN 50,000)
         </label>
     </div>
-
-    <div class="form-group">
-    <div class="input-group">
-        <select id="executiveChoice" class="form-control" required>
-            <label for="executiveChoice">Choose Executive Plan:</label>
-            <option value="Mr. Michael Hadi Ango">Mr. Michael Hadi Ango (Chairman, FCT Federal Inland Revenue Service)</option>
-            <option value="Mr. Alex Alozie">Mr. Alex Alozie (Executive Director, UBA North Bank) </option>
-            <option value="Dr. Nnaemeka Onyeka Obiaraeri">Dr. Nnaemeka Onyeka Obiaraeri</option>
-            <option value="Mr. Emmanuel O. Emmanuel">Mr. Emmanuel O. Emmanuel (CEO, GL Homes Limited)</option>
-        </select>
-    </div>
+    
 
     <div class="row mt-6 mb-6">
         <div class="col-6 d-flex align-items-center"></div>
