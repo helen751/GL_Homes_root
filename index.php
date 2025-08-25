@@ -499,15 +499,15 @@ The platform has continued to expand since inception, never looking back. The fi
     </div>
     <div class="mt-3 custom-control custom-checkbox">
         <input type="checkbox" class="custom-control-input" id="executive">
-        <label class="custom-control-label text-danger" for="executive">Include Executive Benefits (+ NGN 50,000)
+        <label class="custom-control-label text-danger" for="executive">Include Executive Benefits (NGN 250,000)
         </label>
     </div>
 
     <div class="form-group" id="executive-options" style="display: none; margin-top: 10px;">
-        <label for="executiveChoice">Choose the Speaker to Engage:</label><br>
         <div class="input-group">
             
             <select id="executiveChoice" class="form-control">
+                <option value="">Select the Speaker to Engage:</option>
                 <option value="Mr. Michael Hadi Ango">Mr. Michael Hadi Ango (Chairman, FCT Federal Inland Revenue Service)</option>
                 <option value="Mr. Alex Alozie">Mr. Alex Alozie (Executive Director, UBA North Bank) </option>
                 <option value="Dr. Nnaemeka Onyeka Obiaraeri">Dr. Nnaemeka Onyeka Obiaraeri</option>
@@ -961,6 +961,9 @@ async function pay_now(button, currency) {
     const city = document.getElementById("city").value.trim();
     const gender = document.getElementById("gender").value;
     const category = document.getElementById("category").value;
+    var executive = 0;
+    var executiveChoice = "";
+
 
     // Validation
     if (!fullname) return alert("Please enter your full name.");
@@ -972,6 +975,15 @@ async function pay_now(button, currency) {
     if (!state) return alert("Please select a state.");
     if (!city) return alert("Please enter your city.");
 
+    if(!document.getElementById("executive").checked){
+        executive = 0;
+        executiveChoice = "";
+    } else {
+        executive = 1;
+        executiveChoice = document.getElementById("executiveChoice").value;
+        if (!executiveChoice) return alert("Please select the speaker you want to engage with.");
+    }
+
     const data = {
         fullname,
         email,
@@ -982,7 +994,9 @@ async function pay_now(button, currency) {
         gender,
         city,
         category,
-        currency
+        currency,
+        executive,
+        executiveChoice
     };
     // pay now button should be disabled to prevent multiple clicks and show please wait message
     

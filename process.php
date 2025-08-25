@@ -31,12 +31,22 @@ $gender       = $conn->real_escape_string($data["gender"]);
 $category     = $conn->real_escape_string($data["category"]);
 $currency     = trim($data["currency"]);
 $amount       = 0; // Default amount
+$executive    = $conn->real_escape_string($data["executive"]);
+$executiveChoice = $conn->real_escape_string($data["executiveChoice"]);
 
-if ($currency == "USD") {
+if ($currency == "USD" and !$executive) {
     $amount = 10; // USD amount
-} elseif ($currency == "NGN") {
+}
+elseif ($currency == "USD" and $executive) {
+    $amount = 250; // USD amount
+} 
+elseif ($currency == "NGN" and !$executive) {
     $amount = 10000; // NGN amount
-} else {
+}
+elseif ($currency == "NGN" and $executive) {
+    $amount = 250000; // NGN amount
+}
+else {
     echo json_encode(["status" => "error", "message" => "Unsupported currency $currency"]);
     exit;
 }
@@ -56,9 +66,9 @@ if ($check && $check->num_rows > 0) {
 } else {
     // Insert into database (initial payment_status = 0)
     $sql = "INSERT INTO mindset_shift_attendees 
-    (fullname, email, phone_number, country, state, city, gender, payment_amount, currency, category_group, payment_status, payment_mode)
+    (fullname, email, phone_number, country, state, city, gender, payment_amount, currency, category_group, payment_status, payment_mode, executive_list, Guest_to_see)
     VALUES 
-    ('$fullname', '$email', '$phone_full', '$country', '$state', '$city', '$gender', $amount, '$currency','$category', 0, 'paystack')";
+    ('$fullname', '$email', '$phone_full', '$country', '$state', '$city', '$gender', $amount, '$currency','$category', 0, 'paystack', $executive, '$executiveChoice')";
 
     if (!$conn->query($sql)) {
         echo json_encode(["status" => "error", "message" => "Failed to insert data into database"]);
