@@ -497,17 +497,17 @@ The platform has continued to expand since inception, never looking back. The fi
             <input type="text" class="form-control" id="city" placeholder="Enter your city" required>
         </div>
     </div>
-    <div class="custom-control custom-checkbox">
+    <div class="mt-3 custom-control custom-checkbox">
         <input type="checkbox" class="custom-control-input" id="executive">
         <label class="custom-control-label text-danger" for="executive">Include Executive Benefits (+ NGN 50,000)
         </label>
     </div>
 
-    <div class="form-group mt-3" id="executive-options" style="display: none;">
+    <div class="form-group" id="executive-options" style="display: none; margin-top: 10px;">
+        <label for="executiveChoice">Choose the Speaker to Engage:</label><br>
         <div class="input-group">
-            <label for="executiveChoice">Choose Executive Plan:</label><br>
-            <select id="executiveChoice" class="form-control" required>
-                
+            
+            <select id="executiveChoice" class="form-control">
                 <option value="Mr. Michael Hadi Ango">Mr. Michael Hadi Ango (Chairman, FCT Federal Inland Revenue Service)</option>
                 <option value="Mr. Alex Alozie">Mr. Alex Alozie (Executive Director, UBA North Bank) </option>
                 <option value="Dr. Nnaemeka Onyeka Obiaraeri">Dr. Nnaemeka Onyeka Obiaraeri</option>
