@@ -10,9 +10,9 @@ $conn = new mysqli($host, $user, $pass, $db);
 $swal_success = "";
 $swal_error = "";
 
-if (isset($_GET['txref']) && isset($_GET['id'])) {
+if (isset($_GET['trxref']) && isset($_GET['id'])) {
     $id = (int) $_GET['id'];
-    $ref = $_GET['txref'];
+    $ref = $_GET['trxref'];
     $amount = $_GET['amount'];
 
     $curl = curl_init();
