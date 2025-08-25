@@ -1,41 +1,29 @@
+<script>
 (function () {
-    const second = 1000,
-        minute = second * 60,
-        hour = minute * 60,
-        day = hour * 24;
+  const second = 1000, minute = second * 60, hour = minute * 60, day = hour * 24;
 
-    //I'm adding this section so I don't have to keep updating this pen every year :-)
-    //remove this if you don't need it
-    let today = new Date(),
-        dd = String(today.getDate()).padStart(2, "0"),
-        mm = String(today.getMonth() + 1).padStart(2, "0"),
-        yyyy = today.getFullYear(),
-        nextYear = yyyy + 1,
-        dayMonth = "09/21/",
-        birthday = dayMonth + yyyy;
+  // EDIT THIS LINE ONLY (month is 0-based: 8 = September)
+  const eventDate = new Date(2025, 8, 21, 18, 0, 0); // Sep 21, 2025 18:00 LOCAL time
+  // Or, if you prefer explicit WAT time regardless of viewer’s timezone:
+  // const eventDate = new Date('2025-09-21T18:00:00+01:00');
 
-    today = mm + "/" + dd + "/" + yyyy;
-    if (today > birthday) {
-        birthday = dayMonth + nextYear;
+  const target = eventDate.getTime();
+
+  const timer = setInterval(function () {
+    const now = Date.now();
+    const distance = target - now;
+
+    if (distance <= 0) {
+      ["days","hours","minutes","seconds"].forEach(id => document.getElementById(id).innerText = "0");
+      document.getElementById("countdown").style.display = "none";
+      clearInterval(timer);
+      return;
     }
-    //end
 
-    const countDown = new Date(birthday).getTime(),
-        x = setInterval(function () {
-
-            const now = new Date().getTime(),
-                distance = countDown - now;
-
-            document.getElementById("days").innerText = Math.floor(distance / (day)),
-                document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
-                document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
-                document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
-
-            //do something later when date is reached
-            if (distance < 0) {
-                document.getElementById("countdown").style.display = "none";
-                clearInterval(x);
-            }
-            //seconds
-        }, 0)
-}());
+    document.getElementById("days").innerText = Math.floor(distance / day);
+    document.getElementById("hours").innerText = Math.floor((distance % day) / hour);
+    document.getElementById("minutes").innerText = Math.floor((distance % hour) / minute);
+    document.getElementById("seconds").innerText = Math.floor((distance % minute) / second);
+  }, 1000);
+})();
+</script>
