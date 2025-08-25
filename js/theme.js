@@ -10,8 +10,8 @@
         dd = String(today.getDate()).padStart(2, "0"),
         mm = String(today.getMonth() + 1).padStart(2, "0"),
         yyyy = today.getFullYear(),
-        nextYear = yyyy,
-        dayMonth = "09/21/",
+        nextYear = yyyy + 1,
+        dayMonth = "07/20/",
         birthday = dayMonth + yyyy;
 
     today = mm + "/" + dd + "/" + yyyy;
