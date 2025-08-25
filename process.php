@@ -62,6 +62,29 @@ if ($check && $check->num_rows > 0) {
         echo json_encode(["status" => "error", "message" => "You have already registered and your payment is confirmed."]);
         exit;
     }
+    else{
+        $sql = "UPDATE mindset_shift_attendees 
+    SET 
+        fullname = '$fullname',
+        email = '$email',
+        phone_number = '$phone_full',
+        country = '$country',
+        state = '$state',
+        city = '$city',
+        gender = '$gender',
+        payment_amount = $amount,
+        currency = '$currency',
+        category_group = '$category',
+        payment_status = 0,
+        payment_mode = 'paystack',
+        executive_list = $executive,
+        Guest_to_see = '$executiveChoice'
+    WHERE id = $insert_id";
+    if (!$conn->query($sql)) {
+        echo json_encode(["status" => "error", "message" => "Failed to update your existing data into database"]);
+        exit;
+    }
+    }
     // If payment not approved, reuse same record
 } else {
     // Insert into database (initial payment_status = 0)
