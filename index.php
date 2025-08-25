@@ -45,12 +45,12 @@ if (isset($_GET['trxref']) && isset($_GET['id'])) {
             // Email content
             $subject = "GL Homes Masterclass Payment Confirmation";
             $message = "
-            Dear $name,\n\n
-            Thank you for registering for the GL Homes Masterclass.\n
-            Your payment has been confirmed successfully.\n\n
-            Payment Reference: $ref\n
-            We will keep in touch and share the event invite and access link with you before the masterclass start date.\n\n
-            Best regards,\n
+            Dear $name,\n
+            Thank you for registering for the GL Homes Masterclass.
+            Your payment has been confirmed successfully.\n
+            Payment Reference: $ref
+            We will keep in touch and share the event invite and access link with you before the masterclass start date.\n
+            Best regards,
             GL Homes Team";
 
             $headers = "From: masterclass@glhomesltd.com\r\n" .
@@ -495,6 +495,11 @@ The platform has continued to expand since inception, never looking back. The fi
     <div class="form-group">
         <div class="input-group">
             <input type="text" class="form-control" id="city" placeholder="Enter your city" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <input type="checkbox" class="form-control" id="executuve"> Include Executive Benefits (+ NGN 50,000)
         </div>
     </div>
 
