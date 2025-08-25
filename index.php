@@ -321,7 +321,7 @@ The platform has continued to expand since inception, never looking back. The fi
     <!-- Section Start -->
     <section class="section py-2 bg-white" id="home">
         <div class="container mx-auto px-10">
-            <h1 class="text-4xl/snug font-semibold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-blue-600 to-blue-400 mb-4">
+            <h1 class="text-4xl/snug font-semibold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-blue-600 to-blue-400 mb-4 text-center">
                         GL HOMES PRESENTS: MINDSET SHIFT 2025 
                         </h1>
             <div class="grid lg:grid-cols-2 gap-10 items-center">
