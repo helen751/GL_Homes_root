@@ -503,10 +503,11 @@ The platform has continued to expand since inception, never looking back. The fi
         </label>
     </div>
 
-    <div class="form-group" id="executive-options" style="display: none;">
+    <div class="form-group mt-3" id="executive-options" style="display: none;">
         <div class="input-group">
+            <label for="executiveChoice">Choose Executive Plan:</label><br>
             <select id="executiveChoice" class="form-control" required>
-                <label for="executiveChoice">Choose Executive Plan:</label>
+                
                 <option value="Mr. Michael Hadi Ango">Mr. Michael Hadi Ango (Chairman, FCT Federal Inland Revenue Service)</option>
                 <option value="Mr. Alex Alozie">Mr. Alex Alozie (Executive Director, UBA North Bank) </option>
                 <option value="Dr. Nnaemeka Onyeka Obiaraeri">Dr. Nnaemeka Onyeka Obiaraeri</option>
