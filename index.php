@@ -169,6 +169,51 @@ if (isset($_GET['trxref']) && isset($_GET['id'])) {
         </nav>
     </div>
     
+    <div class="container mx-auto">
+            <div class="text-center text-dark relative">
+                <h2 class="text-5xl font-semibold capitalize text-transparent bg-clip-text bg-gradient-to-r from-red-700 via-blue-600 to-blue-400 mt-2" id="ready-text">Are you ready?</h2>
+                <p class="text-base mt-2 mb-7" id="ready-text2">Countdown to MINDSET SHIFT Business Masterclass</p>
+                <div id="countdown" class="my-10 z-30">
+                    <div class="flex flex-wrap items-center justify-center">
+                        <div>
+                            <div class="sm:h-40 sm:w-48 h-32 w-32 flex items-center justify-center bg-white/10 border border-white/20">
+                                <div>
+                                    <span id="days" class="text-3xl md:text-6xl"></span>
+                                    <p class="text-xs font-semibold uppercase mt-5">days</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="sm:h-40 sm:w-48 h-32 w-32 flex items-center justify-center bg-white/10 border border-white/20">
+                                <div>
+                                    <span id="hours" class="text-3xl md:text-6xl"></span>
+                                    <p class="text-xs font-semibold uppercase mt-5">Hours</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="sm:h-40 sm:w-48 h-32 w-32 flex items-center justify-center bg-white/10 border border-white/20">
+                                <div>
+                                    <span id="minutes" class="text-3xl md:text-6xl"></span>
+                                    <p class="text-xs font-semibold uppercase mt-5">Minutes</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="sm:h-40 sm:w-48 h-32 w-32 flex items-center justify-center bg-white/10 border border-white/20">
+                                <div>
+                                    <span id="seconds" class="text-3xl md:text-6xl"></span>
+                                    <p class="text-xs font-semibold uppercase mt-5">Seconds</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     
     <!-- features-section - start
 		================================================== -->
@@ -376,51 +421,7 @@ The platform has continued to expand since inception, never looking back. The fi
         </div>
     </section>
 
-     <div class="container mx-auto">
-            <div class="text-center text-dark relative">
-                <h2 class="text-5xl font-semibold capitalize text-transparent bg-clip-text bg-gradient-to-r from-red-700 via-blue-600 to-blue-400 mt-2" id="ready-text">Are you ready?</h2>
-                <p class="text-base mt-2 mb-7" id="ready-text2">Countdown to MINDSET SHIFT Business Masterclass</p>
-                <div id="countdown" class="my-10 z-30">
-                    <div class="flex flex-wrap items-center justify-center">
-                        <div>
-                            <div class="sm:h-40 sm:w-48 h-32 w-32 flex items-center justify-center bg-white/10 border border-white/20">
-                                <div>
-                                    <span id="days" class="text-3xl md:text-6xl"></span>
-                                    <p class="text-xs font-semibold uppercase mt-5">days</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="sm:h-40 sm:w-48 h-32 w-32 flex items-center justify-center bg-white/10 border border-white/20">
-                                <div>
-                                    <span id="hours" class="text-3xl md:text-6xl"></span>
-                                    <p class="text-xs font-semibold uppercase mt-5">Hours</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="sm:h-40 sm:w-48 h-32 w-32 flex items-center justify-center bg-white/10 border border-white/20">
-                                <div>
-                                    <span id="minutes" class="text-3xl md:text-6xl"></span>
-                                    <p class="text-xs font-semibold uppercase mt-5">Minutes</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="sm:h-40 sm:w-48 h-32 w-32 flex items-center justify-center bg-white/10 border border-white/20">
-                                <div>
-                                    <span id="seconds" class="text-3xl md:text-6xl"></span>
-                                    <p class="text-xs font-semibold uppercase mt-5">Seconds</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+     
 
 <div class="forny-container mt-4">
         
