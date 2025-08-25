@@ -13,6 +13,7 @@ $swal_error = "";
 if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
     $id = (int) $_GET['id'];
     $ref = $_GET['tx_ref'];
+    $amount = $_GET['amount'];
 
     $curl = curl_init();
     curl_setopt_array($curl, [
@@ -33,7 +34,7 @@ if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
 
         if ($payment_status === 'successful') {
             $ref = $conn->real_escape_string($ref);
-            $conn->query("UPDATE masterclass_registrations_01 SET payment_status = 1, payment_reference = '$ref' WHERE id = $id");
+            $conn->query("UPDATE masterclass_registrations_01 SET payment_status = 1, payment_reference = '$ref', payment_amount = '$amount' WHERE id = $id");
 
             // Retrieve user info for email
             $result = $conn->query("SELECT fullname, email FROM masterclass_registrations_01 WHERE id = $id");
