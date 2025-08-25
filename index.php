@@ -503,7 +503,7 @@ The platform has continued to expand since inception, never looking back. The fi
         </label>
     </div>
 
-    <div class="form-group" style="display: none;">
+    <div class="form-group" id="executive-options" style="display: none;">
         <div class="input-group">
             <select id="executiveChoice" class="form-control" required>
                 <label for="executiveChoice">Choose Executive Plan:</label>
@@ -836,7 +836,7 @@ Overall, this session was a valuable experience. I left feeling more informed, i
   const execOptions = document.getElementById("executive-options");
 
   // Listen for checkbox changes
-  checkbox.addEventListener("change", function() {
+  checkbox.addEventListener("click", function() {
     if (this.checked) {
       execOptions.style.display = "block"; // Show input
     } else {
