@@ -420,12 +420,12 @@ The platform has continued to expand since inception, never looking back. The fi
             </div>
         </div>
 
-<div class="forny-container">
+<div class="forny-container mt-2">
         
 <div class="forny-inner">
     <div class="forny-form" id="register">
         <div class="text-center">
-            <h2 class="text-4xl/snug font-semibold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-blue-600 to-blue-400 mb-2">Register for GLHOMES Mindset Shift</h2>
+            <h2 class="text-4xl/snug font-semibold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-blue-600 to-blue-400 mb-2">Register for Mindset Shift</h2>
             <p class="text-1xl text-center font-semibold mb-5">Fill in your details and proceed to payment. <br>
             <strong>NOTE:</strong>We will contact you after payment</p>
         </div>
