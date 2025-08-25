@@ -6,8 +6,8 @@ header("Content-Type: application/json");
 // Database configuration
 $host = "localhost";
 $db = "glhorgia_users";        // Change to your DB name
-$user = "glhorgia_admin";          // Change to your DB user
-$pass = "GLHOMES_DB_ADMIN06";      // Change to your DB password
+$user = "glhorgia_admin";      // Change to your DB user
+$pass = "GLHOMES_DB_ADMIN06";  // Change to your DB password
 
 // Create connection
 $conn = new mysqli($host, $user, $pass, $db);
@@ -28,8 +28,8 @@ $country      = $conn->real_escape_string($data["country"]);
 $state        = $conn->real_escape_string($data["state"]);
 $city         = $conn->real_escape_string($data["city"]);
 $gender       = $conn->real_escape_string($data["gender"]);
-$category       = $conn->real_escape_string($data["category"]);
-$currency       = trim($data["currency"]);
+$category     = $conn->real_escape_string($data["category"]);
+$currency     = trim($data["currency"]);
 $amount       = 0; // Default amount
 
 if ($currency == "USD") {
@@ -41,18 +41,32 @@ if ($currency == "USD") {
     exit;
 }
 
-// Insert into database (initial payment_status = 0)
-$sql = "INSERT INTO masterclass_registrations_01 
-(fullname, email, phone_full, country, state, city, gender, payment_amount, currency, category_group, payment_status)
-VALUES 
-('$fullname', '$email', '$phone_full', '$country', '$state', '$city', '$gender', $amount, '$currency','$category', 0)";
+// Check if email already exists
+$check = $conn->query("SELECT id, payment_status FROM mindset_shift_attendees WHERE email = '$email' LIMIT 1");
 
-if (!$conn->query($sql)) {
-    echo json_encode(["status" => "error", "message" => "Failed to insert data into database"]);
-    exit;
+if ($check && $check->num_rows > 0) {
+    $existing = $check->fetch_assoc();
+    $insert_id = $existing['id'];
+
+    if ($existing['payment_status'] == 1) {
+        echo json_encode(["status" => "error", "message" => "You have already registered and your payment is confirmed."]);
+        exit;
+    }
+    // If payment not approved, reuse same record
+} else {
+    // Insert into database (initial payment_status = 0)
+    $sql = "INSERT INTO mindset_shift_attendees 
+    (fullname, email, phone_number, country, state, city, gender, payment_amount, currency, category_group, payment_status, payment_mode)
+    VALUES 
+    ('$fullname', '$email', '$phone_full', '$country', '$state', '$city', '$gender', $amount, '$currency','$category', 0, 'paystack')";
+
+    if (!$conn->query($sql)) {
+        echo json_encode(["status" => "error", "message" => "Failed to insert data into database"]);
+        exit;
+    }
+
+    $insert_id = $conn->insert_id; // Get inserted ID for redirect
 }
-
-$insert_id = $conn->insert_id; // Get inserted ID for redirect
 
 // Prepare for Paystack payment
 $reference = "GLHOMES_" . time() . "_" . rand(1000, 9999);
