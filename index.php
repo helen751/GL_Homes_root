@@ -499,7 +499,7 @@ The platform has continued to expand since inception, never looking back. The fi
     </div>
     <div class="custom-control custom-checkbox">
         <input type="checkbox" class="custom-control-input" id="executive">
-        <label class="custom-control-label text-danger" for="executuve">Include Executive Benefits (+ NGN 50,000)
+        <label class="custom-control-label text-danger" for="executive">Include Executive Benefits (+ NGN 50,000)
         </label>
     </div>
 
