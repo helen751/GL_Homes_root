@@ -503,8 +503,8 @@ The platform has continued to expand since inception, never looking back. The fi
         </label>
     </div>
 
-    <div class="form-group" id="executive-options" style="display: none; margin-top:10px;">
-    <div class="input-group">
+    <div class="form-group">
+    <div class="input-group" id="executive-options" style="display: none; margin-top:10px;">
         <select id="executiveChoice" class="form-control" required>
             <label for="executiveChoice">Choose Executive Plan:</label>
             <option value="Mr. Michael Hadi Ango">Mr. Michael Hadi Ango (Chairman, FCT Federal Inland Revenue Service)</option>
