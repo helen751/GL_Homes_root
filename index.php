@@ -34,10 +34,10 @@ if (isset($_GET['trxref']) && isset($_GET['id'])) {
 
         if ($payment_status === 'success') {
             $ref = $conn->real_escape_string($ref);
-            $conn->query("UPDATE masterclass_registrations_01 SET payment_status = 1, payment_reference = '$ref', payment_amount = '$amount' WHERE id = $id");
+            $conn->query("UPDATE mindset_shift_attendees SET payment_status = 1, payment_reference = '$ref', payment_amount = '$amount' WHERE id = $id");
 
             // Retrieve user info for email
-            $result = $conn->query("SELECT fullname, email FROM masterclass_registrations_01 WHERE id = $id");
+            $result = $conn->query("SELECT fullname, email FROM mindset_shift_attendees WHERE id = $id");
             $user = $result->fetch_assoc();
             $name = $user['fullname'];
             $email = $user['email'];
