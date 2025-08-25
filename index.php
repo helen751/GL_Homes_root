@@ -10,9 +10,9 @@ $conn = new mysqli($host, $user, $pass, $db);
 $swal_success = "";
 $swal_error = "";
 
-if (isset($_GET['tx_ref']) && isset($_GET['id'])) {
+if (isset($_GET['txref']) && isset($_GET['id'])) {
     $id = (int) $_GET['id'];
-    $ref = $_GET['tx_ref'];
+    $ref = $_GET['txref'];
     $amount = $_GET['amount'];
 
     $curl = curl_init();
@@ -421,7 +421,7 @@ The platform has continued to expand since inception, never looking back. The fi
             </div>
         </div>
 
-<div class="forny-container mt-2">
+<div class="forny-container mt-4">
         
 <div class="forny-inner">
     <div class="forny-form" id="register">
