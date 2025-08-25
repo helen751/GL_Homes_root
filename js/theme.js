@@ -1,6 +1,6 @@
 // Set the target date and time (Year, Month (0-11), Day, Hour, Minute, Second)
 // Example: September 21, 2025, at 00:00:00
-const targetDate = new Date("September 21, 2025 00:00:00").getTime();
+const targetDate = new Date("Sep 21, 2025 00:00:00").getTime();
 
 function updateCountdown() {
   const now = new Date().getTime();
