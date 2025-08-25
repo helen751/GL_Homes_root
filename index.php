@@ -29,7 +29,7 @@ if (isset($_GET['trxref']) && isset($_GET['id'])) {
     curl_close($curl);
     $result = json_decode($response, true);
 
-    if ($result['status'] && $result['data']['status'] === 'success') {
+    if (isset($result['status']) && $result['status'] === true) {
         $payment_status = $result['data']['status'];
 
         if ($payment_status === 'successful') {
