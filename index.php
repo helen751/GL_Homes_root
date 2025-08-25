@@ -319,7 +319,7 @@ The platform has continued to expand since inception, never looking back. The fi
 
 
     <!-- Section Start -->
-    <section class="section py-14 bg-white" id="home" style="display: none;">
+    <section class="section py-14 bg-white" id="home">
         <div class="container mx-auto px-10">
             
             <div class="grid lg:grid-cols-2 gap-10 items-center">
@@ -377,7 +377,7 @@ The platform has continued to expand since inception, never looking back. The fi
      <div class="container mx-auto">
             <div class="text-center text-dark relative">
                 <h2 class="text-5xl font-semibold capitalize text-transparent bg-clip-text bg-gradient-to-r from-red-700 via-blue-600 to-blue-400 mt-2" id="ready-text">Are you ready?</h2>
-                <p class="text-base mt-2 mb-7" id="ready-text2">Countdown to BMINDSET SHIFT Business Masterclass</p>
+                <p class="text-base mt-2 mb-7" id="ready-text2">Countdown to MINDSET SHIFT Business Masterclass</p>
                 <div id="countdown" class="my-10 z-30">
                     <div class="flex flex-wrap items-center justify-center">
                         <div>
@@ -633,7 +633,7 @@ Overall, this session was a valuable experience. I left feeling more informed, i
 <div class="forny-inner">
     <div class="forny-form" id="register">
         <div class="text-center">
-            <h2 class="text-4xl/snug font-semibold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-blue-600 to-blue-400 mb-2">Register for GLHOMES BMC</h2>
+            <h2 class="text-4xl/snug font-semibold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-blue-600 to-blue-400 mb-2">Register for GLHOMES Mindset Shift</h2>
             <p class="text-1xl text-center font-semibold mb-5">Fill in your details and proceed to payment. <br>
             <strong>NOTE:</strong>We will contact you after payment</p>
         </div>
