@@ -836,7 +836,7 @@ Overall, this session was a valuable experience. I left feeling more informed, i
   const execOptions = document.getElementById("executive-options");
 
   // Listen for checkbox changes
-  checkbox.addEventListener("click", function() {
+  checkbox.addEventListener("change", function() {
     if (this.checked) {
       execOptions.style.display = "block"; // Show input
     } else {
