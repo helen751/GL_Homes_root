@@ -344,12 +344,12 @@ The platform has continued to expand since inception, never looking back. The fi
                     <strong class="text-2xl text-zinc-600 mb-1">Date: Sunday, 21 <sup>st</sup> September 2025</strong><br>
                     <strong class="text-2xl text-zinc-600 mb-1">Time: 6:00PM WAT</strong><br>
                     <strong class="text-2xl text-zinc-600 mb-1">Venue: Google Meet</strong><br>
-                    <strong class="text-1xl text-zinc-600 mb-1">Registration Fee: </strong>
+                    <strong class="text-2xl text-zinc-600 mb-1">Registration Fee: 
                         <strong class="text-red-600 line-through">₦25,000 NGN</strong>
                         <strong class="text-blue-600">₦10,000 (early rate – price will increase as date approaches!)</strong> 
                         <!-- <strong class="text-zinc-600">or</strong>
                         <strong class="text-red-600 line-through">25 USD</strong>
-                        <strong class="text-blue-600">$10 USD(outside Nigeria)</strong>  -->
+                        <strong class="text-blue-600">$10 USD(outside Nigeria)</strong>  --></strong>
                     <br><br>
                     <strong class="text-zinc-600 mb-1">The executive access allows you to meet any of our guest speakers of your choice and have a one-on-one session with them.</strong><br>
                     <strong class="text-2xl text-red-600 mb-4">Executive Access- ₦250,000 NGN</strong><br><br>
