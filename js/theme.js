@@ -1,29 +1,31 @@
-<script>
-(function () {
-  const second = 1000, minute = second * 60, hour = minute * 60, day = hour * 24;
+// Set the target date and time (Year, Month (0-11), Day, Hour, Minute, Second)
+// Example: September 21, 2025, at 00:00:00
+const targetDate = new Date("September 21, 2025 00:00:00").getTime();
 
-  // EDIT THIS LINE ONLY (month is 0-based: 8 = September)
-  const eventDate = new Date(2025, 8, 21, 18, 0, 0); // Sep 21, 2025 18:00 LOCAL time
-  // Or, if you prefer explicit WAT time regardless of viewer’s timezone:
-  // const eventDate = new Date('2025-09-21T18:00:00+01:00');
+function updateCountdown() {
+  const now = new Date().getTime();
+  const distance = targetDate - now;
 
-  const target = eventDate.getTime();
+  if (distance < 0) {
+    document.getElementById("countdown").innerHTML = "The event has started!";
+    clearInterval(timer);
+    return;
+  }
 
-  const timer = setInterval(function () {
-    const now = Date.now();
-    const distance = target - now;
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    if (distance <= 0) {
-      ["days","hours","minutes","seconds"].forEach(id => document.getElementById(id).innerText = "0");
-      document.getElementById("countdown").style.display = "none";
-      clearInterval(timer);
-      return;
-    }
+  // Update the DOM
+  document.getElementById("days").textContent = days;
+  document.getElementById("hours").textContent = hours;
+  document.getElementById("minutes").textContent = minutes;
+  document.getElementById("seconds").textContent = seconds;
+}
 
-    document.getElementById("days").innerText = Math.floor(distance / day);
-    document.getElementById("hours").innerText = Math.floor((distance % day) / hour);
-    document.getElementById("minutes").innerText = Math.floor((distance % hour) / minute);
-    document.getElementById("seconds").innerText = Math.floor((distance % minute) / second);
-  }, 1000);
-})();
-</script>
+// Update every second
+const timer = setInterval(updateCountdown, 1000);
+
+// Run once immediately so it doesn’t wait 1 second
+updateCountdown();
