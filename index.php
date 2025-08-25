@@ -420,7 +420,102 @@ The platform has continued to expand since inception, never looking back. The fi
             </div>
         </div>
 
+<div class="forny-container">
+        
+<div class="forny-inner">
+    <div class="forny-form" id="register">
+        <div class="text-center">
+            <h2 class="text-4xl/snug font-semibold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-blue-600 to-blue-400 mb-2">Register for GLHOMES Mindset Shift</h2>
+            <p class="text-1xl text-center font-semibold mb-5">Fill in your details and proceed to payment. <br>
+            <strong>NOTE:</strong>We will contact you after payment</p>
+        </div>
+        <form>
+     <div class="form-group">
+        <div class="input-group">
+            <input required class="form-control" name="name" id="name" type="text" placeholder="Full Name">   
+        </div>
+    </div>        
+    <div class="form-group">
+        <div class="input-group">
+            <input required class="form-control" name="email" id="email" type="email" placeholder="Email Address">
+        </div>
+    </div>
 
+    <!-- Phone Number Input -->
+    <div class="form-group">
+        <div class="input-group">
+            <input required class="form-control" id="phone" type="tel" name="phone" placeholder="Phone Number">
+        </div>
+    </div>
+
+    <!-- Gender Dropdown -->
+<div class="form-group">
+    <div class="input-group">
+        <select id="gender" class="form-control" required>
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+</div>
+<!-- Gender Dropdown -->
+<div class="form-group">
+    <div class="input-group">
+        <select id="category" class="form-control" required>
+            <option value="">Which Category can you Identify in?</option>
+             <option value="Startup Owner">Startup Owner</option>
+            <option value="Business Aspirant">Business Aspirant</option>
+            <option value="Business Scale-up">Business Scale-up</option>
+            <option value="Business Consultancy">Business Consultancy</option>
+             <option value="Business Mentorship">Business Mentorship</option>
+        </select>
+    </div>
+</div>
+    <!-- Country Dropdown -->
+    <div class="form-group">
+        <div class="input-group">
+            <select id="country" class="form-control" required>
+                <option value="">Select Country</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- State Dropdown -->
+    <div class="form-group">
+        <div class="input-group">
+            <select id="state" class="form-control" required>
+                <option value="">Select State/Province</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- City Input -->
+    <div class="form-group">
+        <div class="input-group">
+            <input type="text" class="form-control" id="city" placeholder="Enter your city" required>
+        </div>
+    </div>
+
+    <div class="row mt-6 mb-6">
+        <div class="col-6 d-flex align-items-center"></div>
+    </div>
+    <strong class="text-1xl text-blue-600 mb-3">Any issue? message masterclass@glhomesltd.com</strong><br><br>
+<button class="btn text-white bg-blue-600 hover:bg-blue-700 btn-block col-xl-4 col-lg-4 col-md-4 col-12" id="pn" type="button" onclick="pay_now(this, 'NGN');">Pay in Naira</button>
+    <!-- <div class="row"> -->
+        
+        <!-- <div class="line col-xl-4 col-lg-4 col-12 col-md-4 mt-5 mb-3">
+                <span>or </span>
+            </div>
+         <button class="btn text-white bg-blue-600 hover:bg-blue-700 btn-block col-4 col-xl-4 col-lg-4 col-12 col-md-4" id="pn2" type="button" onclick="pay_now(this, 'USD');">Pay in USD</button> -->
+    <!-- </div> -->
+</form>
+
+    </div>
+</div>
+
+    </div>
+    <!-- Section End -->
 
 <!-- team-section - start
 		================================================== -->
@@ -628,102 +723,7 @@ Overall, this session was a valuable experience. I left feeling more informed, i
 		================================================== -->
 
 
-    <div class="forny-container">
-        
-<div class="forny-inner">
-    <div class="forny-form" id="register">
-        <div class="text-center">
-            <h2 class="text-4xl/snug font-semibold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-blue-600 to-blue-400 mb-2">Register for GLHOMES Mindset Shift</h2>
-            <p class="text-1xl text-center font-semibold mb-5">Fill in your details and proceed to payment. <br>
-            <strong>NOTE:</strong>We will contact you after payment</p>
-        </div>
-        <form>
-     <div class="form-group">
-        <div class="input-group">
-            <input required class="form-control" name="name" id="name" type="text" placeholder="Full Name">   
-        </div>
-    </div>        
-    <div class="form-group">
-        <div class="input-group">
-            <input required class="form-control" name="email" id="email" type="email" placeholder="Email Address">
-        </div>
-    </div>
 
-    <!-- Phone Number Input -->
-    <div class="form-group">
-        <div class="input-group">
-            <input required class="form-control" id="phone" type="tel" name="phone" placeholder="Phone Number">
-        </div>
-    </div>
-
-    <!-- Gender Dropdown -->
-<div class="form-group">
-    <div class="input-group">
-        <select id="gender" class="form-control" required>
-            <option value="">Select Gender</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            <option value="Other">Other</option>
-        </select>
-    </div>
-</div>
-<!-- Gender Dropdown -->
-<div class="form-group">
-    <div class="input-group">
-        <select id="category" class="form-control" required>
-            <option value="">Which Category can you Identify in?</option>
-             <option value="Startup Owner">Startup Owner</option>
-            <option value="Business Aspirant">Business Aspirant</option>
-            <option value="Business Scale-up">Business Scale-up</option>
-            <option value="Business Consultancy">Business Consultancy</option>
-             <option value="Business Mentorship">Business Mentorship</option>
-        </select>
-    </div>
-</div>
-    <!-- Country Dropdown -->
-    <div class="form-group">
-        <div class="input-group">
-            <select id="country" class="form-control" required>
-                <option value="">Select Country</option>
-            </select>
-        </div>
-    </div>
-
-    <!-- State Dropdown -->
-    <div class="form-group">
-        <div class="input-group">
-            <select id="state" class="form-control" required>
-                <option value="">Select State/Province</option>
-            </select>
-        </div>
-    </div>
-
-    <!-- City Input -->
-    <div class="form-group">
-        <div class="input-group">
-            <input type="text" class="form-control" id="city" placeholder="Enter your city" required>
-        </div>
-    </div>
-
-    <div class="row mt-6 mb-6">
-        <div class="col-6 d-flex align-items-center"></div>
-    </div>
-    <strong class="text-1xl text-blue-600 mb-3">Any issue? message masterclass@glhomesltd.com</strong><br><br>
-<button class="btn text-white bg-blue-600 hover:bg-blue-700 btn-block col-xl-4 col-lg-4 col-md-4 col-12" id="pn" type="button" onclick="pay_now(this, 'NGN');">Pay in Naira</button>
-    <!-- <div class="row"> -->
-        
-        <!-- <div class="line col-xl-4 col-lg-4 col-12 col-md-4 mt-5 mb-3">
-                <span>or </span>
-            </div>
-         <button class="btn text-white bg-blue-600 hover:bg-blue-700 btn-block col-4 col-xl-4 col-lg-4 col-12 col-md-4" id="pn2" type="button" onclick="pay_now(this, 'USD');">Pay in USD</button> -->
-    <!-- </div> -->
-</form>
-
-    </div>
-</div>
-
-    </div>
-    <!-- Section End -->
 
 
     <!-- shuffle portfolio -->
