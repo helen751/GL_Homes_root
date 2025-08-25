@@ -831,16 +831,12 @@ Overall, this session was a valuable experience. I left feeling more informed, i
 		<!-- custom - jquery include -->
 		<script src="assets/js/custom.js"></script>
 <script>
-  // Get elements
-  const checkbox = document.getElementById("executive");
-  const execOptions = document.getElementById("executive-options");
-
-  // Listen for checkbox changes
-  checkbox.addEventListener("change", function() {
+document.getElementById("executive").addEventListener("change", function() {
+    const inputDiv = document.getElementById("executive-options");
     if (this.checked) {
-      execOptions.style.display = "block"; // Show input
+      inputDiv.style.display = "block"; // Show input when checked
     } else {
-      execOptions.style.display = "none";  // Hide input
+      inputDiv.style.display = "none"; // Hide input when unchecked
     }
   });
 </script>
