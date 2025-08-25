@@ -497,10 +497,10 @@ The platform has continued to expand since inception, never looking back. The fi
             <input type="text" class="form-control" id="city" placeholder="Enter your city" required>
         </div>
     </div>
-    <div class="form-group">
-        <div class="input-group">
-            <input type="checkbox" class="form-control" id="executuve"> Include Executive Benefits (+ NGN 50,000)
-        </div>
+    <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="executuve">
+        <label class="custom-control-label" for="executuve">Include Executive Benefits (+ NGN 50,000)
+        </label>
     </div>
 
     <div class="row mt-6 mb-6">
