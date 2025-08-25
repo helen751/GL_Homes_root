@@ -20,7 +20,7 @@ if (isset($_GET['txref']) && isset($_GET['id'])) {
         CURLOPT_URL => "https://api.paystack.co/transaction/verify/" . rawurlencode($ref),
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_HTTPHEADER => [
-            "Authorization: Bearer sk_live_9c7dd14bedec1d3c18abc60e6bcdb5a269f8ca24",
+            "Authorization: Bearer sk_test_a69ba65a77ac70e96e3694b25d5db08a2a79add9",
             "Content-Type: application/json"
         ]
     ]);
