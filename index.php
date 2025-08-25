@@ -321,16 +321,16 @@ The platform has continued to expand since inception, never looking back. The fi
     <!-- Section Start -->
     <section class="section py-14 bg-white" id="home">
         <div class="container mx-auto px-10">
-            
-            <div class="grid lg:grid-cols-2 gap-10 items-center">
-                <div class="mx-2">
-                    <h1 class="text-4xl/snug font-semibold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-blue-600 to-blue-400 mb-4">
+            <h1 class="text-4xl/snug font-semibold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-blue-600 to-blue-400 mb-4">
                         GL HOMES PRESENTS: MINDSET SHIFT 2025 
                         </h1>
+            <div class="grid lg:grid-cols-2 gap-10 items-center">
+                <div class="mx-2">
+                    
                         <span class="text-2xl text-gray-600">A Business Masterclass Like No Other!
                         </span>
                     
-                    <p class="text-base text-zinc-800 max-w-lg mb-6">
+                    <p class="text-base text-zinc-800 max-w-lg mb-2">
                         Are you ready for a mindset shift towards your business?
                         This exclusive Masterclass brings together visionary leaders across governance, banking, and investment to share practical insights on building sustainable systems, global leadership, and innovative investment opportunities. Participants will gain actionable strategies that bridge ethics, finance, and real estate to unlock long-term impact.<br>
 
@@ -340,10 +340,10 @@ The platform has continued to expand since inception, never looking back. The fi
                         ✓ Practical strategies to build transparency, trust, and long-term impact<br>
 
                     </p>
-                    <strong class="text-2xl text-zinc-600 mb-4">Date: Sunday, 21 <sup>st</sup> September 2025</strong><br>
-                    <strong class="text-2xl text-zinc-600 mb-4">Time: 6:00PM WAT</strong><br>
-                    <strong class="text-2xl text-zinc-600 mb-4">Venue: Google Meet</strong><br>
-                    <strong class="text-2xl text-zinc-600 mb-4">Registration Fee: 
+                    <strong class="text-2xl text-zinc-600 mb-1">Date: Sunday, 21 <sup>st</sup> September 2025</strong><br>
+                    <strong class="text-2xl text-zinc-600 mb-1">Time: 6:00PM WAT</strong><br>
+                    <strong class="text-2xl text-zinc-600 mb-1">Venue: Google Meet</strong><br>
+                    <strong class="text-2xl text-zinc-600 mb-1">Registration Fee: 
                         <strong class="text-red-600 line-through">₦25,000 NGN</strong>
                         <strong class="text-blue-600">₦10,000 (early rate – price will increase as date approaches!)</strong> 
                         <!-- <strong class="text-zinc-600">or</strong>
