@@ -301,7 +301,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <a href="about" class="tg-btn">More about us <img src="assets2/img/icons/right_arrow.svg" alt="" class="injectable"></a>
+                            <a href="#" class="tg-btn">More about us <img src="assets2/img/icons/right_arrow.svg" alt="" class="injectable"></a>
                         </div>
                     </div>
                 </div>
