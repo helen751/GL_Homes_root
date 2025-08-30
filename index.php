@@ -312,9 +312,10 @@ if (isset($_GET['trxref']) && isset($_GET['id'])) {
     
 
 
-     
+<section class="banner__area-two fix">
+            <div class="container">
 
-<div class="forny-container mt-4">
+    <div class="forny-container mt-4">
         
 <div class="forny-inner">
     <div class="forny-form" id="register">
@@ -428,6 +429,8 @@ if (isset($_GET['trxref']) && isset($_GET['id'])) {
 </div>
 
     </div>
+            </div>
+</section>
 </main>
     <!-- Section End -->
 
