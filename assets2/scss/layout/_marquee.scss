@@ -1,0 +1,93 @@
+@use '../utils' as *;
+
+/*=============================
+    	18. Marquee
+===============================*/
+.marquee {
+    &__area {
+        &-two {
+            position: relative;
+            z-index: 1;
+            margin: 73px 0;
+            @media #{$xl} {
+                margin: 55px 0;
+            }
+            @media #{$md} {
+                margin: 33px 0;
+            }
+        }
+    }
+    &-wrap {
+        &-two {
+            background: var(--tg-theme-primary);
+            padding: 17px 0 8px;
+            transform: rotate(-4.333deg);
+            position: relative;
+            left: -5px;
+            right: -5px;
+            width: 105%;
+        }
+        &-three {
+            background: var(--tg-theme-secondary);
+            padding: 17px 0 8px;
+            transform: rotate(3.864deg);
+            position: absolute;
+            z-index: 1;
+            left: -5px;
+            right: -5px;
+            top: 0;
+            @media #{$lg} {
+                padding: 12px 0 4px;
+            }
+        }
+        &-four {
+            transform: rotate(0);
+        }
+    }
+    &__item {
+        margin-right: 20px;
+        display: inline;
+        line-height: 1;
+        & a {
+            font-size: 60px;
+            font-weight: 800;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: transparent;
+            -webkit-text-stroke: 1.5px var(--tg-body-color);
+            display: inline-flex;
+            align-items: center;
+            @media #{$lg} {
+                font-size: 50px;
+            }
+            @media #{$md} {
+                font-size: 45px;
+            }
+            @media #{$xs} {
+                font-size: 40px;
+            }
+            & svg {
+                margin-right: 20px;
+                color: var(--tg-theme-primary);
+            }
+        }
+        &-two {
+            & a {
+                font-size: 32px;
+                font-weight: 700;
+                color: var(--tg-color-white-default);
+                -webkit-text-stroke: unset;
+                letter-spacing: 3.2px;
+                line-height: 1;
+                @media #{$lg} {
+                    font-size: 24px;
+                }
+                & svg {
+                    color: var(--tg-color-white-default);
+                    width: 36px;
+                    height: 36px;
+                }
+            }
+        }
+    }
+}

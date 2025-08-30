@@ -1,0 +1,201 @@
+@use '../utils' as *;
+
+/*=============================
+    	16. Call-Back
+===============================*/
+.call {
+    &__back {
+        &-area {
+            background: var(--tg-theme-secondary);
+            position: relative;
+            z-index: 1;
+        }
+        &-wrap {
+            padding: 0 80px;
+            @media #{$lg} {
+                padding: 0 0;
+            }
+            &-two {
+                background: var(--tg-theme-primary);
+                @include border-radius(30px);
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+                padding: 70px 70px;
+                box-shadow: 0px 16px 50px 0px rgba(0, 0, 0, 0.20);
+                @media #{$lg} {
+                    padding: 50px 50px;
+                }
+                @media #{$xs} {
+                    padding: 30px 30px;
+                }
+            }
+        }
+        &-img {
+            @media #{$md} {
+                text-align: center;
+                margin-bottom: 50px;
+            }
+            & img {
+                @include border-radius(15px);
+            }
+        }
+        &-content {
+            & p {
+                color: var(--tg-color-gray-4);
+                margin-bottom: 20px;
+            }
+            &-two {
+                width: 80%;
+                @media #{$lg} {
+                    width: 100%;
+                }
+                @media #{$md} {
+                    margin-bottom: 50px;
+                }
+                & .section__title {
+                    & .title {
+                        font-size: 40px;
+                        @media #{$lg} {
+                            font-size: 36px;
+                        }
+                        @media #{$xs} {
+                            font-size: 30px;
+                        }
+                        @media #{$sm} {
+                            font-size: 34px;
+                        }
+                    }
+                }
+                & p {
+                    color: var(--tg-color-white-default);
+                    margin-bottom: 25px;
+                }
+            }
+        }
+        &-form {
+            & .form-grp {
+                margin-bottom: 10px;
+                & textarea,
+                & input {
+                    border: none;
+                }
+            }
+            & button {
+                width: 100%;
+                border: none;
+                font-size: 18px;
+                font-weight: 600;
+                background: var(--tg-theme-primary);
+                color: var(--tg-color-white-default);
+                @include border-radius(6px);
+                padding: 12px 20px;
+                &:hover {
+                    background: var(--tg-color-sky-blue);
+                }
+            }
+            &-two {
+                & .row {
+                    --bs-gutter-x: 10px;
+                }
+                & .form-grp {
+                    margin-bottom: 10px;
+                    & textarea,
+                    & input {
+                        background: #1B5AFF;
+                        color: var(--tg-color-white-default);
+                        font-size: 14px;
+                        border: none;
+                        &::placeholder {
+                            color: var(--tg-color-white-default);
+                            font-size: 14px;
+                        }
+                    }
+                }
+                & button {
+                    width: 100%;
+                    border: none;
+                    font-size: 16px;
+                    font-weight: 600;
+                    background: var(--tg-color-white-default);
+                    color: var(--tg-theme-secondary);
+                    @include border-radius(6px);
+                    padding: 16px 20px;
+                    text-transform: uppercase;
+                    &:hover {
+                        background: var(--tg-theme-secondary);
+                        color: var(--tg-color-white-default);
+                    }
+                }
+            }
+        }
+        &-shape {
+            & img {
+                position: absolute;
+                z-index: -1;
+                &:nth-child(1) {
+                    left: 0;
+                    top: 0;
+                    @media #{$xl} {
+                        max-width: 500px;
+                    }
+                }
+                &:nth-child(2) {
+                    left: 11%;
+                    bottom: 0;
+                }
+                &:nth-child(3) {
+                    left: 20%;
+                    bottom: 11%;
+                    @media #{$xl} {
+                        left: 8%;
+                    }
+                    @media #{$xs} {
+                        display: none;
+                    }
+                }
+                &:nth-child(4) {
+                    right: 11%;
+                    top: 18%;
+                    @media #{$xl} {
+                        right: 3%;
+                    }
+                    @media #{$lg} {
+                        right: 3%;
+                        top: 7%;
+                    }
+                }
+                &:nth-child(5) {
+                    right: 0;
+                    bottom: 0;
+                    mix-blend-mode: luminosity;
+                    opacity: .5;
+                    @media #{$xl} {
+                        max-width: 200px;
+                    }
+                }
+            }
+            &-two {
+                & img {
+                    position: absolute;
+                    z-index: -1;
+                    &:nth-child(1) {
+                        left: 0;
+                        bottom: 0;
+                        mix-blend-mode: luminosity;
+                    }
+                    &:nth-child(2) {
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                    &:nth-child(3) {
+                        right: 0;
+                        top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+

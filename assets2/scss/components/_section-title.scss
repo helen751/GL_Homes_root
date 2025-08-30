@@ -1,0 +1,115 @@
+@use '../utils' as *;
+
+/*=============================
+	00. Section Title
+===============================*/
+.section__title {
+    position: relative;
+    & .sub-title {
+        display: block;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.4;
+        color: var(--tg-theme-primary);
+        margin-bottom: 12px;
+    }
+    & .title {
+        font-size: 36px;
+        line-height: 1.2;
+        margin: 0 0;
+        text-transform: capitalize;
+        font-weight: 700;
+        @media #{$xs} {
+            font-size: 30px;
+        }
+        @media #{$sm} {
+            font-size: 34px;
+        }
+        & span {
+            font-weight: 500;
+        }
+        & br {
+            @media #{$md} {
+                display: none;
+            }
+        }
+        & svg {
+            color: var(--tg-theme-primary);
+        }
+    }
+    & p {
+        margin-bottom: 0;
+        margin-top: 15px;
+        & br {
+            @media #{$xs} {
+                display: none;
+            }
+        }
+    }
+    &.white-title {
+        & .sub-title {
+            color: var(--tg-color-white-default);
+        }
+        & .title {
+            color: var(--tg-color-white-default);
+        }
+        & p {
+            color: #ACAACC;
+        }
+        &-two {
+            & p {
+                color: var(--tg-color-gray-4);
+            }
+        }
+    }
+    &-semiBold {
+        & .title {
+            font-weight: 600;
+        }
+    }
+    &-two {
+        & .title {
+            font-size: 40px;
+            margin-bottom: 0;
+            @media #{$xs} {
+            font-size: 30px;
+            }
+            @media #{$sm} {
+                font-size: 34px;
+            }
+        }
+    }
+}
+
+.section__content {
+    margin-left: 115px;
+    @media #{$lg} {
+        margin-left: 60px;
+    }
+    @media #{$md} {
+        margin-left: 0;
+    }
+    & p {
+        margin-bottom: 0;
+    }
+    &.white-content {
+        & p {
+            color: var(--tg-color-white-default);
+        }
+    }
+}
+
+.section__title.mb-70,
+.section__title.mb-60 {
+    @media #{$md} {
+        margin-bottom: 40px;
+    }
+}
+
+.section__divider {
+    width: 100%;
+    height: 1px;
+    background: #D9D9D9;
+    display: block;
+}

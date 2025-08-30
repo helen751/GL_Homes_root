@@ -1,0 +1,219 @@
+/*
+*    ______ _       _   _
+*    |  ____| |     | | (_)
+*    | |__  | | __ _| |_ _  ___ ___  _ __
+*    |  __| | |/ _` | __| |/ __/ _ \| '_ \
+*    | |    | | (_| | |_| | (_| (_) | | | |
+*    |_|    |_|\__,_|\__|_|\___\___/|_| |_|
+*
+*         https://www.flaticon.com
+*/
+
+@font-face {
+    font-family: "tg_flaticon";
+    src: url("../fonts/flat-icon/tg-flaticon.woff2?9e8d632884dc1231224de856e63972c4") format("woff2"),
+    url("../fonts/flat-icon/tg-flaticon.woff?9e8d632884dc1231224de856e63972c4") format("woff"),
+    url("../fonts/flat-icon/tg-flaticon.eot?9e8d632884dc1231224de856e63972c4#iefix") format("embedded-opentype"),
+    url("../fonts/flat-icon/tg-flaticon.ttf?9e8d632884dc1231224de856e63972c4") format("truetype"),
+    url("../fonts/flat-icon/tg-flaticon.svg?9e8d632884dc1231224de856e63972c4#flaticon_bkfhm") format("svg")
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: tg_flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+[class*="flaticon-"] {
+    display: block;
+    line-height: 0;
+}
+
+.flaticon-placeholder:before {
+    content: "\f101";
+}
+.flaticon-phone-call:before {
+    content: "\f102";
+}
+.flaticon-telephone:before {
+    content: "\f103";
+}
+.flaticon-envelope:before {
+    content: "\f104";
+}
+.flaticon-clock:before {
+    content: "\f105";
+}
+.flaticon-clock-1:before {
+    content: "\f106";
+}
+.flaticon-search:before {
+    content: "\f107";
+}
+.flaticon-left-chevron:before {
+    content: "\f108";
+}
+.flaticon-investment:before {
+    content: "\f109";
+}
+.flaticon-pie-chart:before {
+    content: "\f10a";
+}
+.flaticon-money:before {
+    content: "\f10b";
+}
+.flaticon-calculator:before {
+    content: "\f10c";
+}
+.flaticon-target:before {
+    content: "\f10d";
+}
+.flaticon-hand:before {
+    content: "\f10e";
+}
+.flaticon-pie-chart-1:before {
+    content: "\f10f";
+}
+.flaticon-startup:before {
+    content: "\f110";
+}
+.flaticon-megaphone:before {
+    content: "\f111";
+}
+.flaticon-statistics:before {
+    content: "\f112";
+}
+.flaticon-report:before {
+    content: "\f113";
+}
+.flaticon-savings:before {
+    content: "\f114";
+}
+.flaticon-accountant:before {
+    content: "\f115";
+}
+.flaticon-startup-1:before {
+    content: "\f116";
+}
+.flaticon-start-up:before {
+    content: "\f117";
+}
+.flaticon-achievement:before {
+    content: "\f118";
+}
+.flaticon-handshake:before {
+    content: "\f119";
+}
+.flaticon-medal:before {
+    content: "\f11a";
+}
+.flaticon-wallet:before {
+    content: "\f11b";
+}
+.flaticon-personal:before {
+    content: "\f11c";
+}
+.flaticon-calculator-1:before {
+    content: "\f11d";
+}
+.flaticon-money-bag:before {
+    content: "\f11e";
+}
+.flaticon-certificate:before {
+    content: "\f11f";
+}
+.flaticon-briefcase:before {
+    content: "\f120";
+}
+.flaticon-database:before {
+    content: "\f121";
+}
+.flaticon-target-1:before {
+    content: "\f122";
+}
+.flaticon-partner:before {
+    content: "\f123";
+}
+.flaticon-rating:before {
+    content: "\f124";
+}
+.flaticon-money-bag-1:before {
+    content: "\f125";
+}
+.flaticon-credit-card:before {
+    content: "\f126";
+}
+.flaticon-envelope-1:before {
+    content: "\f127";
+}
+.flaticon-umbrella:before {
+    content: "\f128";
+}
+.flaticon-idea:before {
+    content: "\f129";
+}
+.flaticon-paper-plane:before {
+    content: "\f12a";
+}
+.flaticon-insurance:before {
+    content: "\f12b";
+}
+.flaticon-luggage:before {
+    content: "\f12c";
+}
+.flaticon-real-estate:before {
+    content: "\f12d";
+}
+.flaticon-family:before {
+    content: "\f12e";
+}
+.flaticon-house:before {
+    content: "\f12f";
+}
+.flaticon-tax:before {
+    content: "\f130";
+}
+.flaticon-growth:before {
+    content: "\f131";
+}
+.flaticon-analytics:before {
+    content: "\f132";
+}
+.flaticon-seo:before {
+    content: "\f133";
+}
+.flaticon-digital-marketing:before {
+    content: "\f134";
+}
+.flaticon-email:before {
+    content: "\f135";
+}
+.flaticon-health-insurance:before {
+    content: "\f136";
+}
+.flaticon-protection:before {
+    content: "\f137";
+}
+.flaticon-design:before {
+    content: "\f138";
+}
+.flaticon-money-1:before {
+    content: "\f139";
+}
+.flaticon-mobile-app:before {
+    content: "\f13a";
+}
+.flaticon-live-chat:before {
+    content: "\f13b";
+}
+.flaticon-road:before {
+    content: "\f13c";
+}
+.flaticon-diamond:before {
+    content: "\f13d";
+}
+

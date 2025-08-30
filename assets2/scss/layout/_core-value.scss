@@ -1,0 +1,95 @@
+@use '../utils' as *;
+
+/*=============================
+    	20. Core Value
+===============================*/
+.core {
+    &__value {
+        &-bg {
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            z-index: 1;
+        }
+        &-img {
+            position: relative;
+            margin-right: 90px;
+            @media #{$lg} {
+                margin-right: 0;
+            }
+            @media #{$md} {
+                margin-bottom: 50px;
+            }
+            & img {
+                &:nth-child(2) {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    @include border-radius(7px);
+                    border: 8px solid var(--tg-color-white-default);
+                    width: 273px;
+                    height: 163px;
+                    object-fit: cover;
+                    @media #{$lg} {
+                        width: 205px;
+                        height: 122px;
+                    }
+                    @media #{$md} {
+                        width: 260px;
+                        height: 156px;
+                    }
+                    @media #{$xs} {
+                        display: none;
+                    }
+                    @media #{$sm} {
+                        display: block;
+                        width: 232px;
+                        height: 140px;
+                    }
+                }
+                &.shape {
+                    position: absolute;
+                    top: 8%;
+                    left: 6%;
+                    @media #{$lg} {
+                        top: 2%;
+                        left: 2%;
+                    }
+                    @media #{$xs} {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &-content {
+            margin-left: -40px;
+            @media #{$lg} {
+                margin-left: 0;
+            }
+            & > p {
+                margin-bottom: 50px;
+                color: var(--tg-color-white-default);
+            }
+        }
+        &-shape {
+            & img {
+                position: absolute;
+                right: 13%;
+                top: 13%;
+                z-index: -1;
+                @media #{$xl} {
+                    right: 5%;
+                    top: 6%;
+                }
+                @media #{$xs} {
+                    right: 7%;
+                    top: 34%;
+                    max-width: 80px;
+                }
+                @media #{$sm} {
+                    top: 3%;
+                }
+            }
+        }
+    }
+}

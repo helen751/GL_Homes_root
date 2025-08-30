@@ -1,0 +1,150 @@
+@use '../utils' as *;
+
+/*=============================
+    	21. Pricing
+===============================*/
+.pricing {
+    &__tab {
+        @include flexbox();
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+        & .tab-btn {
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            user-select: none;
+            transition: .3s;
+            color: var(--tg-body-color);
+            &.annual_tab_title.active {
+                color: var(--tg-theme-primary);
+            }
+            &.monthly_tab_title {
+                color: var(--tg-theme-primary);
+                &.active {
+                    color: var(--tg-body-color);
+                }
+            }
+            & strong {
+                background: #00AB4D;
+                color: var(--tg-color-white-default);
+                font-weight: 600;
+                font-size: 12px;
+                padding: 4px 10px;
+                @include border-radius(5px);
+                line-height: 1;
+                text-transform: capitalize;
+                margin-left: 15px;
+            }
+        }
+        & .pricing-tab-switcher {
+            height: 30px;
+            width: 58px;
+            display: inline-block;
+            border-radius: 30px;
+            position: relative;
+            margin: 0 15px;
+            -webkit-transform: translateY(0px);
+            -ms-transform: translateY(0px);
+            transform: translateY(0px);
+            cursor: pointer;
+            background: var(--tg-theme-primary);
+            &::before {
+                content: "";
+                position: absolute;
+                left: 2px;
+                top: 2px;
+                bottom: 2px;
+                width: 26px;
+                border-radius: 50%;
+                background: var(--tg-color-white-default);
+                transition: .3s;
+            }
+            &.active::before {
+                left: calc(100% - 28px);
+            }
+        }
+    }
+    &__box {
+        border: 1px solid #e0e0e0;
+        border-radius: 20px;
+        background: #FCFBFB;
+        padding: 45px 50px 50px;
+        @media #{$lg} {
+            padding: 30px 25px 40px;
+        }
+        @media #{$xs} {
+            padding: 30px 30px 30px;
+        }
+    }
+    &__top {
+        margin-bottom: 25px;
+        & .title {
+            margin-bottom: 10px;
+            font-weight: 500;
+            font-size: 20px;
+        }
+        & p {
+            margin-bottom: 0;
+            line-height: 1.5;
+        }
+    }
+    &__price {
+        margin-bottom: 30px;
+        & .price {
+            margin-bottom: 0;
+            font-weight: 600;
+            font-size: 36px;
+            & span {
+                font-size: 16px;
+                display: block;
+                text-transform: capitalize;
+                font-weight: 400;
+                color: var(--tg-body-color);
+            }
+            &.annual_price {
+                display: none;
+            }
+        }
+        &.change-subs-duration {
+            & .price.monthly_price {
+                display: none;
+            }
+            & .price.annual_price {
+                display: block;
+            }
+        }
+    }
+    &__button {
+        margin-bottom: 35px;
+        & .tg-btn {
+            width: 100%;
+            justify-content: center;
+            box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.15);
+        }
+    }
+    &__list {
+        &-title {
+            margin-bottom: 20px;
+            font-weight: 500;
+            font-size: 18px;
+        }
+        & .list-wrap {
+            & li {
+                @include flexbox();
+                align-items: flex-start;
+                gap: 10px;
+                font-size: 18px;
+                text-transform: capitalize;
+                margin-bottom: 10px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                & svg {
+                    color: var(--tg-theme-primary);
+                    transform: translateY(6px);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,179 @@
+@use '../utils' as *;
+
+/*=============================
+    	22. Login
+===============================*/
+.login {
+    &__left {
+        &-side {
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            padding: 64px 48px;
+            @include flexbox();
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+            @media #{$md} {
+                padding: 32px;
+            }
+            @media #{$xs} {
+                padding: 25px;
+                height: 350px;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.01) 0%, rgb(0 0 0 / 43%) 100%);
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+        }
+        &-content {
+            & p {
+                font-size: 20px;
+                color: var(--tg-color-white-default);
+                font-weight: 500;
+                line-height: 1.4;
+                margin-bottom: 1.5rem;
+                @media #{$xs} {
+                    font-size: 18px;
+                }
+            }
+            & .title {
+                font-size: 1.125rem;
+                color: var(--tg-color-white-default);
+                margin-bottom: 8px;
+                font-weight: 600;
+            }
+            & span {
+                display: block;
+                line-height: 1;
+                color: var(--tg-color-white-default);
+                opacity: .8;
+            }
+        }
+    }
+    &__form {
+        &-wrap {
+            text-align: center;
+            padding: 30px 15px;
+            width: 400px;
+            margin: 0 auto;
+            @include flexbox();
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            @media #{$md} {
+                width: 360px;
+            }
+            @media #{$xs} {
+                width: 100%;
+            }
+            @media #{$sm} {
+                width: 80%;
+            }
+            & .title {
+                font-size: 36px;
+                text-transform: capitalize;
+                margin-bottom: 30px;
+            }
+            & .divider {
+                display: block;
+                padding: 30px 0;
+                text-transform: uppercase;
+            }
+        }
+        &-social {
+            @include flexbox();
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            & a {
+                font-size: 20px;
+                @include flexbox();
+                height: 48px;
+                flex: 1 1 0%;
+                align-items: center;
+                justify-content: center;
+                color: var(--tg-color-white-default);
+                background: #212529;
+                border-radius: 8px;
+                &:nth-child(2) {
+                    background: #066ec2;
+                }
+            }
+        }
+        & .form__grp {
+            margin-bottom: 15px;
+        }
+        & .tg-btn {
+            width: 100%;
+            justify-content: center;
+            margin-top: 30px;
+        }
+    }
+}
+.account__check {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.account__check-remember {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    gap: 5px;
+    & input {
+        width: 20px;
+        height: 20px;
+        margin-inline-end: 3px;
+        padding: 0;
+    }
+    & label {
+        user-select: none;
+        & a {
+            font-weight: 600;
+            text-decoration: underline;
+            margin-left: 5px;
+        }
+    }
+}
+.account__check-forgot a {
+    color: var(--tg-theme-primary);
+    font-size: 16px;
+    text-decoration: underline;
+    font-weight: 600;
+}
+.account__switch {
+    margin-top: 30px;
+    & p {
+        margin-bottom: 0;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+    & a {
+        color: var(--tg-theme-primary);
+        text-decoration: underline;
+        font-weight: 600;
+    }
+}

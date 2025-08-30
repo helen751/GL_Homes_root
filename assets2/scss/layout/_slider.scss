@@ -1,0 +1,728 @@
+@use '../utils' as *;
+
+/*=============================
+    	03. Slider
+===============================*/
+.slider {
+    &__area {
+        position: relative;
+        z-index: 1;
+        &-two {
+            position: relative;
+            z-index: 1;
+        }
+        &-four {
+            position: relative;
+            z-index: 1;
+        }
+        &-five {
+            position: relative;
+            z-index: 1;
+            & .swiper-slide {
+                min-height: 750px;
+                padding: 100px 0;
+                @include flexbox();
+                align-items: center;
+                background: var(--tg-color-gray-13);
+                @media #{$xl} {
+                    min-height: 600px;
+                }
+                @media #{$md} {
+                    min-height: 500px;
+                    padding: 90px 0 120px;
+                }
+            }
+        }
+    }
+    &__bg {
+        min-height: 900px;
+        @include flexbox();
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        padding: 200px 0 120px;
+        @media #{$xl} {
+            min-height: 750px;
+        }
+        @media #{$md} {
+            min-height: 700px;
+        }
+        @media #{$xs} {
+            padding: 150px 0 100px;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+            background: linear-gradient(78deg, #000 100%, #222 100%);
+            z-index: -1;
+        }
+        &-two {
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            min-height: 740px;
+            @include flexbox();
+            align-items: center;
+            padding: 120px 0;
+            @media #{$xl} {
+                min-height: 600px;
+            }
+            @media #{$lg} {
+                min-height: 550px;
+            }
+            @media #{$md} {
+                min-height: 500px;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                left: 36.5%;
+                bottom: -30px;
+                width: 80px;
+                height: 105px;
+                background: #002A96;
+                clip-path: polygon(50% 0%, 100% 0%, 50% 100%, 0% 100%);
+                transform: rotate(1.692deg);
+                @media #{$xxl} {
+                    left: 35.5%;
+                    transform: rotate(-0.308deg);
+                }
+                @media #{$lg} {
+                    left: 38.5%;
+                    transform: rotate(-6.308deg);
+                }
+                @media #{$md} {
+                    display: none;
+                }
+            }
+            & .shape {
+                & img {
+                    position: absolute;
+                    left: 5px;
+                    bottom: -20px;
+                    @media #{$xxl} {
+                        width: 170px;
+                    }
+                    @media #{$xl} {
+                        width: 130px;
+                    }
+                    @media #{$lg} {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &-three {
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 60%;
+            clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+            z-index: -1;
+            @media #{$lg} {
+                width: 55%;
+            }
+            @media #{$md} {
+                display: none;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                left: 23%;
+                bottom: 12px;
+                width: 158px;
+                height: 243px;
+                background: rgb(0 42 150 / 90%);
+                clip-path: polygon(56% 0%, 100% 0%, 44% 100%, 0% 100%);
+                transform: rotate(1.251deg);
+                @media #{$xxl} {
+                    transform: rotate(-1deg);
+                }
+                @media #{$xl} {
+                    left: 20%;
+                    bottom: 15px;
+                }
+                @media #{$lg} {
+                    display: none;
+                }
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                left: 148px;
+                top: 50%;
+                transform: translateY(-50%) rotate(21deg);
+                width: 220px;
+                height: 200%;
+                background: rgba(0, 71, 255, 0.95);
+                @media #{$xxl} {
+                    transform: translateY(-50%) rotate(19deg);
+                    left: 90px;
+                }
+                @media #{$xl} {
+                    left: 20px;
+                }
+                @media #{$lg} {
+                    left: -62px;
+                    transform: translateY(-50%) rotate(14deg);
+                }
+            }
+        }
+        &-four {
+            background-size: cover;
+            background-position: center;
+            min-height: 740px;
+            @include flexbox();
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            padding: 100px 0;
+            cursor: grab;
+            @media #{$xl} {
+                min-height: 650px;
+            }
+            @media #{$md} {
+                min-height: 600px;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, rgba(0, 0, 0, 0.20) 15.68%, rgba(0, 0, 0, 0.00) 77.23%);
+                z-index: -1;
+            }
+            & .shape {
+                & img {
+                    position: absolute;
+                    z-index: -1;
+                    &:nth-child(1) {
+                        left: 0;
+                        bottom: 0;
+                        @media #{$xl} {
+                            max-width: 230px;
+                        }
+                        @media #{$xs} {
+                            max-width: 150px;
+                        }
+                    }
+                    &:nth-child(2) {
+                        right: 0;
+                        top: 0;
+                        @media #{$xl} {
+                            max-width: 250px;
+                        }
+                        @media #{$lg} {
+                            max-width: 200px;
+                        }
+                        @media #{$md} {
+                            max-width: 170px;
+                        }
+                        @media #{$xs} {
+                            max-width: 150px;
+                        }
+                    }
+                }
+            }
+        }
+        &-five {
+            background-size: cover;
+            background-position: center;
+            padding: 250px 0 120px;
+            min-height: 820px;
+            @include flexbox();
+            align-items: center;
+            @media #{$xl} {
+                min-height: 740px;
+            }
+            @media #{$lg} {
+                min-height: 650px;
+                padding: 230px 0 110px;
+            }
+            @media #{$md} {
+                min-height: 570px;
+                padding: 130px 0 100px;
+            }
+        }
+        &-six {
+            background-size: cover;
+            background-position: center;
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            @media #{$md} {
+                display: none;
+            }
+        }
+        &-shape {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+    &__content {
+        margin-top: 20px;
+        @media #{$md} {
+            margin-top: 0;
+            text-align: center;
+        }
+        & .title {
+            margin-bottom: 20px;
+            font-size: 80px;
+            color: var(--tg-color-white-default);
+            text-transform: capitalize;
+            @media #{$xl} {
+                font-size: 75px;
+            }
+            @media #{$lg} {
+                font-size: 65px;
+            }
+            @media #{$xs} {
+                font-size: 60px;
+            }
+        }
+        & p {
+            margin-bottom: 30px;
+            font-size: 18px;
+            color: var(--tg-color-gray-4);
+            text-transform: capitalize;
+            width: 95%;
+            @media #{$lg} {
+                width: 100%;
+            }
+        }
+        &-two {
+            margin-top: -35px;
+            position: relative;
+            @media #{$md} {
+                text-align: center;
+            }
+            & .sub-title {
+                display: block;
+                color: var(--tg-theme-primary);
+                text-transform: uppercase;
+                font-weight: 500;
+                line-height: 1.4;
+                margin-bottom: 3px;
+            }
+            & .title {
+                margin-bottom: 12px;
+                font-size: 60px;
+                font-weight: 700;
+                text-transform: capitalize;
+                line-height: 1.1;
+                @media #{$xl} {
+                    font-size: 55px;
+                }
+                @media #{$lg} {
+                    font-size: 48px;
+                }
+                @media #{$xs} {
+                    font-size: 45px;
+                }
+            }
+            & p {
+                margin-bottom: 27px;
+                font-size: 18px;
+                line-height: 1.55;
+                text-transform: capitalize;
+            }
+        }
+        &-three {
+            margin-top: -30px;
+            @media #{$md} {
+                text-align: center;
+                margin-top: 0;
+            }
+            & .sub-title {
+                font-size: 16px;
+                font-weight: 500;
+                text-transform: uppercase;
+                color: var(--tg-color-white-default);
+                display: block;
+                line-height: 1.2;
+                margin-bottom: 5px;
+            }
+            & .title {
+                margin-bottom: 10px;
+                color: var(--tg-color-white-default);
+                font-size: 60px;
+                text-transform: capitalize;
+                @media #{$lg} {
+                    font-size: 50px;
+                }
+                @media #{$xs} {
+                    font-size: 45px;
+                }
+            }
+            & p {
+                margin-bottom: 25px;
+                font-size: 18px;
+                font-weight: 500;
+                color: var(--tg-color-white-default);
+                line-height: 1.6;
+            }
+        }
+        &-four {
+            @media #{$md} {
+                text-align: center;
+            }
+            & .sub-title {
+                display: block;
+                font-size: 16px;
+                text-transform: uppercase;
+                color: var(--tg-theme-primary);
+                font-weight: 500;
+                line-height: 1.2;
+                margin-bottom: 5px;
+            }
+            & .title {
+                margin-bottom: 10px;
+                font-size: 60px;
+                text-transform: capitalize;
+                @media #{$lg} {
+                    font-size: 50px;
+                }
+                @media #{$xs} {
+                    font-size: 40px;
+                }
+                @media #{$sm} {
+                    font-size: 42px;
+                }
+            }
+            & p {
+                margin-bottom: 30px;
+                font-size: 18px;
+                line-height: 1.6;
+                width: 85%;
+                @media #{$lg} {
+                    margin-bottom: 20px;
+                    font-size: 18px;
+                    line-height: 1.6;
+                    width: 100%;
+                }
+            }
+        }
+        &-five {
+            @media #{$xl} {
+                margin-left: 90px;
+            }
+            @media #{$lg} {
+                margin-left: 0;
+            }
+            @media #{$md} {
+                text-align: center;
+            }
+            & .sub-title {
+                display: block;
+                font-size: 16px;
+                font-weight: 500;
+                text-transform: uppercase;
+                color: var(--tg-theme-primary);
+                margin-bottom: 12px;
+            }
+            & .title {
+                font-size: 50px;
+                text-transform: capitalize;
+                margin-bottom: 17px;
+                @media #{$xl} {
+                    font-size: 45px;
+                }
+                @media #{$xs} {
+                    font-size: 38px;
+                }
+                @media #{$sm} {
+                    font-size: 42px;
+                }
+            }
+            & p {
+                margin-bottom: 28px;
+                font-size: 18px;
+                line-height: 1.6;
+            }
+        }
+    }
+    &__nav {
+        @include flexbox();
+        align-items: center;
+        gap: 15px;
+        position: absolute;
+        right: 85px;
+        top: 50%;
+        z-index: 1;
+        flex-direction: column;
+        transform: translateY(-50%);
+        @media #{$md} {
+            display: none;
+        }
+        & button {
+            width: 45px;
+            height: 70px;
+            border: none;
+            @include border-radius(125px);
+            background: var(--tg-color-white-default);
+            color: var(--tg-theme-secondary);
+            &:hover {
+                background: var(--tg-theme-primary);
+                color: var(--tg-color-white-default);
+            }
+        }
+        &-two {
+            @include flexbox();
+            align-items: center;
+            position: absolute;
+            right: 98px;
+            bottom: 36%;
+            z-index: 1;
+            flex-direction: column;
+            gap: 10px;
+            @media #{$md} {
+                display: none;
+            }
+            & button {
+                width: 48px;
+                height: 48px;
+                @include flexbox();
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                @include border-radius(6px);
+                border: 1px solid #D1D1D1;
+                background: var(--tg-color-white-default);
+                color: var(--tg-heading-color);
+                &:hover {
+                    background: var(--tg-theme-primary);
+                    color: var(--tg-color-white-default);
+                    border-color: var(--tg-theme-primary);
+                }
+            }
+        }
+        &-three {
+            @include flexbox();
+            align-items: center;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            z-index: 1;
+            @media #{$md} {
+                transform: translateX(-50%);
+            }
+            & button {
+                border: none;
+                width: 60px;
+                height: 60px;
+                @include flexbox();
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                color: var(--tg-color-white-default);
+                background: var(--tg-theme-primary);
+                &.slider-button-next {
+                    background: #1f5dff;
+                }
+            }
+        }
+    }
+    &__pagination {
+        @include flexbox();
+        align-items: center;
+        position: absolute;
+        left: 17.8% !important;
+        bottom: 115px !important;
+        z-index: 2;
+        gap: 5px;
+        @media #{$xxl} {
+            left: 11.8% !important;
+        }
+        @media #{$xl} {
+            left: 5% !important;
+        }
+        @media #{$lg} {
+            left: 4% !important;
+            bottom: 85px !important;
+        }
+        @media #{$md} {
+            left: 50% !important;
+            transform: translateX(-50%);
+            bottom: 50px !important;
+            justify-content: center;
+        }
+        & span {
+            width: 18px;
+            height: 18px;
+            padding: 0;
+            position: relative;
+            border: 1px solid #ADAFBB;
+            background: transparent;
+            @include border-radius(50%);
+            opacity: 1;
+            margin: 0 !important;
+            @include transition(.2s);
+            &::before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 8px;
+                height: 8px;
+                @include border-radius(50%);
+                background: var(--tg-body-color);
+                @include transition(.2s);
+            }
+            &.swiper-pagination-bullet-active {
+                width: 24px;
+                height: 24px;
+                &::before {
+                    width: 12px;
+                    height: 12px;
+                    background-color: var(--tg-theme-primary);
+                }
+            }
+        }
+    }
+}
+
+
+.slider__bg {
+    &.swiper-slide-active {
+        & .slider__content {
+            & .title {
+                -webkit-animation-delay: .3s;
+                animation-delay: .3s;
+                -webkit-animation-duration: .8s;
+                animation-duration: .8s;
+                -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
+                -webkit-animation-name: fadeInUp2;
+                animation-name: fadeInUp2;
+            }
+            & p {
+                -webkit-animation-delay: .6s;
+                animation-delay: .6s;
+                -webkit-animation-duration: .8s;
+                animation-duration: .8s;
+                -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
+                -webkit-animation-name: fadeInUp2;
+                animation-name: fadeInUp2;
+            }
+            & .tg-btn {
+                -webkit-animation-delay: .9s;
+                animation-delay: .9s;
+                -webkit-animation-duration: .8s;
+                animation-duration: .8s;
+                -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
+                -webkit-animation-name: fadeInUp2;
+                animation-name: fadeInUp2;
+            }
+        }
+    }
+}
+
+.swiper-slide {
+    &.swiper-slide-active {
+        & .slider__content-five,
+        & .slider__content-four,
+        & .slider__content-three,
+        & .slider__content-two {
+            & .sub-title {
+                -webkit-animation-delay: .3s;
+                animation-delay: .3s;
+                -webkit-animation-duration: .8s;
+                animation-duration: .8s;
+                -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
+                -webkit-animation-name: fadeInUp2;
+                animation-name: fadeInUp2;
+            }
+            & .title {
+                -webkit-animation-delay: .6s;
+                animation-delay: .6s;
+                -webkit-animation-duration: .8s;
+                animation-duration: .8s;
+                -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
+                -webkit-animation-name: fadeInUp2;
+                animation-name: fadeInUp2;
+            }
+            & p {
+                -webkit-animation-delay: .9s;
+                animation-delay: .9s;
+                -webkit-animation-duration: .8s;
+                animation-duration: .8s;
+                -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
+                -webkit-animation-name: fadeInUp2;
+                animation-name: fadeInUp2;
+            }
+            & .tg-btn {
+                -webkit-animation-delay: 1.2s;
+                animation-delay: 1.2s;
+                -webkit-animation-duration: .8s;
+                animation-duration: .8s;
+                -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
+                -webkit-animation-name: fadeInUp2;
+                animation-name: fadeInUp2;
+            }
+        }
+        & .shape {
+            & img {
+                -webkit-animation-delay: 1.2s;
+                animation-delay: 1.2s;
+                -webkit-animation-duration: .8s;
+                animation-duration: .8s;
+                -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
+                -webkit-animation-name: fadeInUp2;
+                animation-name: fadeInUp2;
+            }
+        }
+        &.slider__bg-four {
+            & .shape {
+                & img {
+                    &:nth-child(1) {
+                        -webkit-animation-delay: 1.2s;
+                        animation-delay: 1.2s;
+                        -webkit-animation-duration: .8s;
+                        animation-duration: .8s;
+                        -webkit-animation-fill-mode: both;
+                        animation-fill-mode: both;
+                        -webkit-animation-name: fadeInUp2;
+                        animation-name: fadeInUp2;
+                    }
+                    &:nth-child(2) {
+                        -webkit-animation-delay: 1.2s;
+                        animation-delay: 1.2s;
+                        -webkit-animation-duration: .8s;
+                        animation-duration: .8s;
+                        -webkit-animation-fill-mode: both;
+                        animation-fill-mode: both;
+                        -webkit-animation-name: fadeDown2;
+                        animation-name: fadeDown2;
+                    }
+                }
+            }
+        }
+    }
+}

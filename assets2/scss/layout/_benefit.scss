@@ -1,0 +1,131 @@
+@use '../utils' as *;
+
+/*=============================
+    	25. Benefit
+===============================*/
+.benefit {
+    &__area {
+        background: var(--tg-color-gray-2);
+        &-two {
+            background: var(--tg-color-gray-2);
+        }
+    }
+    &__img {
+        position: relative;
+        margin: 0 20px;
+        z-index: 1;
+        @media #{$lg} {
+            margin: 0 0;
+        }
+        @media #{$md} {
+            margin: 0 0 50px 0;
+        }
+        & img {
+            &:nth-child(1) {
+                width: 100%;
+            }
+            &:nth-child(2) {
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 1;
+                width: 100%;
+            }
+            &:nth-child(3) {
+                position: absolute;
+                left: -12%;
+                bottom: -8%;
+                z-index: -1;
+            }
+        }
+        &-two {
+            @media #{$md} {
+                margin-bottom: 50px;
+            }
+            & img {
+                @include border-radius(15px);
+                @media #{$md} {
+                    width: 100%;
+                    max-height: 400px;
+                    object-fit: cover;
+                }
+            }
+        }
+        &-three {
+            text-align: right;
+        }
+    }
+    &__content {
+        & > p {
+            margin-bottom: 30px;
+        }
+        &-two {
+            & .title {
+                margin-bottom: 10px;
+                font-weight: 600;
+                font-size: 20px;
+            }
+            & p {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__item {
+        margin-bottom: 30px;
+        &-top {
+            @include flexbox();
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 17px;
+            & .title {
+                font-size: 20px;
+                font-weight: 600;
+                text-transform: capitalize;
+                margin-bottom: 0;
+                line-height: 1.4;
+            }
+        }
+        & p {
+            margin-bottom: 0;
+        }
+        &-two {
+            border: 1px solid #cfd5ed;
+            @include border-radius(12px);
+            padding: 30px 24px 25px;
+            @include flexbox();
+            align-items: flex-start;
+            gap: 14px;
+            background: var(--tg-color-white-default);
+            margin-bottom: 24px;
+            @include transition(.3s);
+            @media #{$lg} {
+                padding: 27px 20px 22px;
+            }
+            @media #{$md} {
+                padding: 30px 24px 25px;
+            }
+            &:hover {
+                transform: translateY(-5px);
+            }
+        }
+    }
+    &__icon {
+        width: 70px;
+        height: 70px;
+        @include flexbox();
+        align-items: center;
+        flex: 0 0 auto;
+        background: var(--tg-color-white-default);
+        font-size: 40px;
+        justify-content: center;
+        color: var(--tg-theme-primary);
+        &-two {
+            font-size: 60px;
+            line-height: 1;
+            color: var(--tg-theme-primary);
+            @media #{$lg} {
+                font-size: 50px;
+            }
+        }
+    }
+}

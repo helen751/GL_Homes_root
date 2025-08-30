@@ -1,0 +1,277 @@
+@use '../utils' as *;
+
+/*=============================
+	 Button style
+===============================*/
+.tg-button-wrap {
+    @include flexbox();
+}
+.tg-btn {
+    user-select: none;
+    -moz-user-select: none;
+    background: var(--tg-theme-primary) none repeat scroll 0 0;
+    color: var(--tg-color-white-default);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: var(--tg-fw-semi-bold);
+    letter-spacing: 0;
+    line-height: 1;
+    margin-bottom: 0;
+    padding: 18px 25px;
+    text-align: center;
+    text-transform: capitalize;
+    touch-action: manipulation;
+    @include transition(.3s);
+    vertical-align: middle;
+    @include border-radius(0);
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 100px;
+    --arrow-hover-move-x: -110%;
+    gap: 10px;
+    z-index: 1;
+    position: relative;
+    border: none;
+    & svg {
+        transition: all 0.3s ease-out 0s;
+        & path {
+            transition: transform .38s cubic-bezier(.37, .08, .02, .93), opacity .18s ease-out;
+            &:nth-of-type(1) {
+                transform: translateX(0);
+                opacity: 1;
+                transition-delay: .15s, .15s;
+            }
+            &:nth-of-type(2) {
+                transform: translateX(calc(1 * var(--arrow-hover-move-x)));
+                opacity: .5;
+                transition-delay: 0s, 0s;
+            }
+        }
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        -webkit-transition-duration: 800ms;
+        transition-duration: 800ms;
+        width: 200%;
+        height: 200%;
+        top: 110%;
+        left: 50%;
+        background: var(--tg-theme-secondary);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -o-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%;
+        z-index: -1;
+    }
+    &:hover,
+    &:focus-visible {
+        background: var(--tg-theme-primary);
+        color: var(--tg-color-white-default);
+        border-color: var(--tg-theme-primary);
+        & svg {
+            & path {
+                &:nth-of-type(1) {
+                    transform: translateX(calc(-1 * var(--arrow-hover-move-x)));
+                    opacity: 0;
+                    transition-delay: 0s, 0s;
+                }
+                &:nth-of-type(2) {
+                    transform: translateX(0);
+                    opacity: 1;
+                    transition-delay: .15s, .15s;
+                }
+            }
+        }
+        &::before {
+            top: -40%;
+        }
+    }
+    &.white-btn {
+        background: var(--tg-color-white-default);
+        color: var(--tg-theme-secondary);
+        & svg path {
+            stroke: var(--tg-theme-secondary);
+        }
+    }
+}
+
+.white-btn-two {
+    background: var(--tg-color-white-default);
+    color: var(--tg-theme-primary);
+    &::before {
+        background: var(--tg-theme-primary);
+    }
+    &:hover {
+        color: var(--tg-color-white-default);
+        background: var(--tg-color-white-default);
+    }
+}
+
+.tg-hover-btn {
+    &::before {
+        background: var(--tg-color-sky-blue);
+    }
+}
+
+.tg-btn-two {
+    background: var(--tg-color-gray-1);
+    color: var(--tg-body-color);
+    & svg {
+        color: var(--tg-theme-primary);
+    }
+    &::before {
+        background: var(--tg-theme-primary);
+    }
+    &:hover {
+        color: var(--tg-color-white-default);
+        background: var(--tg-color-gray-1);
+        & svg {
+            color: var(--tg-color-white-default);
+        }
+    }
+}
+
+.tg-btn-three {
+    @include border-radius(10px);
+}
+
+.tg-btn-four {
+    background: transparent;
+    border-radius: 8px;
+    border: 1px solid var(--tg-color-white-default);
+    padding: 17px 25px;
+    --arrow-hover-move-x: 110%;
+    --arrow-hover-move-y: 100%;
+    & svg {
+        & path {
+            &:nth-of-type(1) {
+                transform: translateX(0) translateY(0);
+            }
+            &:nth-of-type(2) {
+                transform: translateX(calc(-1 * var(--arrow-hover-move-x))) translateY(var(--arrow-hover-move-y));
+            }
+        }
+    }
+    &:hover,
+    &:focus-visible {
+        background: var(--tg-theme-primary);
+        color: var(--tg-color-white-default);
+        border-color: var(--tg-theme-primary);
+        & svg {
+            & path {
+                &:nth-of-type(1) {
+                    transform: translateX(var(--arrow-hover-move-x)) translateY(calc(-1 * var(--arrow-hover-move-y)));
+                }
+                &:nth-of-type(2) {
+                    transform: translateX(0) translateY(0);
+                }
+            }
+        }
+    }
+    &::before {
+        display: none;
+    }
+}
+
+.tg-btn-five {
+    border-color: var(--tg-theme-primary);
+    color: var(--tg-theme-primary);
+}
+
+
+.tg-btn-six {
+    background: var(--tg-theme-primary);
+    border: none;
+    gap: 40px;
+    padding: 18px 24px;
+    &::after {
+        content: "";
+        position: absolute;
+        right: 54px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 18px;
+        background: var(--tg-color-white-default);
+        @include transition(.3s);
+    }
+    &::before {
+        display: block;
+    }
+}
+
+.tg-btn-seven {
+    @include border-radius(4px 12px);
+}
+
+.tg-btn-eight {
+    @include border-radius(0);
+    padding: 18px 24px;
+}
+
+.tg-border-btn {
+    border: 1px solid var(--tg-color-white-default);
+    background: transparent;
+    color: var(--tg-color-white-default);
+    padding: 17px 25px;
+    &:hover {
+        background: var(--tg-theme-secondary);
+        color: var(--tg-color-white-default);
+        border-color: var(--tg-theme-secondary);
+    }
+    &::before {
+        display: none;
+    }
+    &-two {
+        background: transparent;
+        border: 1px solid var(--tg-theme-primary);
+        color: var(--tg-theme-primary);
+        &::after {
+            background: var(--tg-theme-primary);
+        }
+        &::before {
+            display: none;
+        }
+        &:hover {
+            &::after {
+                background: var(--tg-color-white-default);
+            }
+        }
+    }
+}
+
+.tg-btn-lavender {
+    background: var(--tg-color-gray-1);
+    color: var(--tg-theme-primary);
+    &::after {
+        background: var(--tg-theme-primary);
+    }
+    &::before {
+        background: var(--tg-theme-secondary);
+    }
+    &:hover {
+        background: var(--tg-color-gray-1);
+        color: var(--tg-color-white-default);
+        &::after {
+            background: var(--tg-color-white-default);
+        }
+    }
+}
+
+.link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--tg-body-color);
+}

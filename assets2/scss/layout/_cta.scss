@@ -1,0 +1,415 @@
+@use '../utils' as *;
+
+/*=============================
+    	07. CTA
+===============================*/
+.cta {
+    &__area {
+        background: var(--tg-theme-secondary);
+        padding: 82px 0;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        &-two {
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+        }
+        &-three {
+            position: relative;
+            z-index: 2;
+            margin-top: -85px;
+        }
+        &-four {
+            background: var(--tg-theme-primary);
+            position: relative;
+            z-index: 1;
+            padding: 97px 0;
+            @media #{$lg} {
+                padding: 80px 0;
+            }
+            @media #{$md} {
+                padding: 60px 0;
+            }
+        }
+        &-five {
+            background: var(--tg-theme-primary);
+            position: relative;
+            z-index: 1;
+            padding: 49px 0;
+        }
+        &-six {
+            background: var(--tg-theme-secondary);
+        }
+        &-seven {
+            background: var(--tg-theme-primary);
+            position: relative;
+            z-index: 1;
+            padding: 78px 0;
+            @media #{$lg} {
+                padding: 55px 0;
+            }
+            @media #{$md} {
+                padding: 40px 0;
+            }
+        }
+        &-eight {
+            background: var(--tg-color-gray-1);
+        }
+    }
+    &__inner-wrap {
+        background: var(--tg-theme-secondary);
+        padding: 63px 0 63px 75px;
+        z-index: 1;
+        position: relative;
+        @media #{$lg} {
+            padding: 63px 0 63px 40px;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 500%;
+            height: 100%;
+            background: var(--tg-theme-secondary);
+            z-index: -1;
+        }
+        &-two {
+            background: var(--tg-theme-primary);
+            @include border-radius(20px);
+            padding: 65px 65px;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            @media #{$lg} {
+                padding: 65px 30px;
+            }
+            @media #{$md} {
+                padding: 45px 30px;
+                text-align: center;
+            }
+        }
+        &-three {
+            @include border-radius(10px 0px 0px 50px);
+            &::before {
+                @include border-radius(10px 0px 0px 50px);
+            }
+        }
+        &-four {
+            position: relative;
+            z-index: 2;
+            @include border-radius(0);
+        }
+        &-five {
+            @include border-radius(20px);
+            padding: 63px 75px 63px 75px;
+            @media #{$lg} {
+                padding: 63px 50px 63px 50px;
+            }
+            @media #{$xs} {
+                padding: 40px 30px;
+            }
+            &::before {
+                display: none;
+            }
+        }
+    }
+    &__wrap {
+        background: var(--tg-theme-primary);
+        position: relative;
+        z-index: 1;
+        padding: 72px 60px;
+        overflow: hidden;
+        @media #{$lg} {
+            padding: 50px 35px;
+        }
+        @media #{$md} {
+            padding: 30px 35px;
+            text-align: center;
+        }
+        & .shape {
+            & img {
+                position: absolute;
+                z-index: -1;
+                &:nth-child(1) {
+                    left: 0;
+                    bottom: 0;
+                }
+                &:nth-child(2) {
+                    right: 0;
+                    top: 0;
+                }
+            }
+        }
+    }
+    &__content {
+        @media #{$md} {
+            text-align: center;
+        }
+        &-two {
+            @media #{$md} {
+                text-align: center;
+            }
+            & .title {
+                color: var(--tg-color-white-default);
+                font-size: 30px;
+                text-transform: capitalize;
+                margin-bottom: 10px;
+            }
+            & p {
+                margin-bottom: 0;
+                font-weight: 500;
+                color: var(--tg-color-white-default);
+            }
+        }
+        &-three {
+            @media #{$md} {
+                margin-bottom: 30px;
+            }
+            & .title {
+                margin-bottom: 0;
+                color: var(--tg-color-white-default);
+                font-size: 30px;
+                font-weight: 600;
+                text-transform: capitalize;
+                width: 90%;
+                @media #{$lg} {
+                    width: 100%;
+                }
+            }
+        }
+        &-right {
+            @include flexbox();
+            align-items: center;
+            justify-content: flex-end;
+            gap: 35px;
+            @media #{$lg} {
+                gap: 25px;
+            }
+            @media #{$md} {
+                justify-content: center;
+                text-align: left;
+            }
+            @media #{$xs} {
+                flex-wrap: wrap;
+            }
+            &-two {
+                @include flexbox();
+                align-items: center;
+                justify-content: flex-end;
+                gap: 30px 50px;
+                @media #{$lg} {
+                    gap: 20px 30px;
+                }
+                @media #{$md} {
+                    justify-content: center;
+                }
+                @media #{$xs} {
+                    flex-wrap: wrap;
+                }
+            }
+            &-three {
+                gap: 15px;
+            }
+        }
+        &-four {
+            @media #{$md} {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+        }
+        &-five {
+            @media #{$md} {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            & .title {
+                margin-bottom: 0;
+                color: var(--tg-color-white-default);
+                text-transform: capitalize;
+                font-size: 30px;
+            }
+        }
+        &-six {
+            @media #{$md} {
+                margin-bottom: 30px;
+            }
+            & span {
+                display: block;
+                color: var(--tg-color-white-default);
+                font-size: 16px;
+                font-weight: 600;
+                text-transform: capitalize;
+                line-height: 1.2;
+                margin-bottom: 10px;
+            }
+            & .title {
+                margin-bottom: 0;
+                color: var(--tg-color-white-default);
+                font-size: 30px;
+            }
+        }
+        &-seven {
+            @media #{$md} {
+                text-align: center;
+            }
+            & .title {
+                font-size: 38px;
+                @media #{$lg} {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+    &__contact {
+        @include flexbox();
+        align-items: center;
+        gap: 10px;
+        & .icon {
+            font-size: 50px;
+            color: var(--tg-color-white-default);
+        }
+        & .content {
+            & span {
+                display: block;
+                line-height: 1;
+                font-size: 16px;
+                color: var(--tg-color-white-default);
+                margin-bottom: 10px;
+            }
+            & a {
+                display: block;
+                color: var(--tg-color-white-default);
+                font-size: 28px;
+                font-weight: 600;
+                line-height: 1;
+                @media #{$lg} {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    &__btn {
+        text-align: right;
+        @media #{$md} {
+            text-align: center;
+            margin-top: 30px;
+        }
+        &-two {
+            text-align: right;
+            @media #{$md} {
+                text-align: center;
+                margin-top: 30px;
+            }
+        }
+        &-three {
+            @media #{$md} {
+                text-align: center !important;
+            }
+        }
+        &-four {
+            text-align: right;
+            @media #{$md} {
+                text-align: center;
+            }
+            & .tg-btn {
+                border: 1px solid var(--tg-color-white-default);
+            }
+        }
+    }
+    &__shape-wrap {
+        & img {
+            position: absolute;
+            z-index: -1;
+            &:nth-child(1) {
+                left: 0;
+                bottom: 0;
+                mix-blend-mode: luminosity;
+            }
+            &:nth-child(2) {
+                right: 16%;
+                bottom: 0;
+            }
+            &:nth-child(3) {
+                right: 15%;
+                top: 0;
+            }
+        }
+        &-two {
+            & img {
+                position: absolute;
+                z-index: -1;
+                &:nth-child(1) {
+                    left: 14%;
+                    top: 0;
+                    @media #{$xl} {
+                        left: 1%;
+                    }
+                }
+                &:nth-child(2) {
+                    right: 7%;
+                    top: 0;
+                    @media #{$xl} {
+                        right: -7%;
+                    }
+                    @media #{$md} {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    &__shape {
+        &-two {
+            & img {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                z-index: 1;
+                mix-blend-mode: luminosity;
+                @media #{$xs} {
+                    display: none;
+                }
+            }
+        }
+        &-three {
+            & img {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                z-index: -1;
+                mix-blend-mode: luminosity;
+            }
+        }
+        &-four {
+            & img {
+                @media #{$lg} {
+                    display: none;
+                }
+            }
+        }
+        &-five {
+            & img {
+                position: absolute;
+                right: 35%;
+                bottom: -10px;
+                z-index: -1;
+                @media #{$xl} {
+                    right: 28%;
+                }
+                @media #{$lg} {
+                    max-width: 160px;
+                }
+                @media #{$md} {
+                    max-width: 120px;
+                    right: 8%;
+                }
+                @media #{$xs} {
+                    max-width: 100px;
+                    right: 4%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,245 @@
+@use '../utils' as *;
+
+/*=============================
+    	21. Career
+===============================*/
+.career {
+    &__img {
+        margin-bottom: 40px;
+        & img {
+            width: 100%;
+            @include border-radius(15px);
+            min-height: 320px;
+            object-fit: cover;
+        }
+    }
+    &__content {
+        text-align: center;
+        & p {
+            margin-bottom: 40px;
+        }
+    }
+    &__item {
+        border: 1px solid #d9e4ff;
+        background: var(--tg-color-white-default);
+        @include border-radius(10px);
+        padding: 35px 40px;
+        @include transition(.3s);
+        @media #{$lg} {
+            padding: 30px 30px;
+        }
+        &:hover {
+            border-color: var(--tg-theme-primary);
+        }
+        &-content {
+            & .title {
+                font-size: 24px;
+                text-transform: capitalize;
+                margin-bottom: 25px;
+            }
+            & p {
+                margin-bottom: 10px;
+                & span {
+                    color: var(--tg-heading-color);
+                    font-weight: 600
+                }
+            }
+        }
+        & .list-wrap {
+            @include flexbox();
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            margin-top: 15px;
+            & li {
+                & a {
+                    color: rgba(0, 0, 0, 0.4);
+                    border: 1px solid #eaf0ff;
+                    @include border-radius(100px);
+                    display: block;
+                    line-height: 1;
+                    padding: 8px 16px;
+                    &:hover {
+                        border-color: var(--tg-theme-primary);
+                        color: var(--tg-theme-primary);
+                    }
+                }
+            }
+        }
+        &-bottom {
+            @include flexbox();
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+            & .salary {
+                margin-bottom: 0;
+                font-weight: 500;
+                font-size: 16px;
+                background: #eaf0ff;
+                padding: 10px 10px;
+                min-height: 40px;
+                @include border-radius(5px);
+                & span {
+                    font-size: 12px;
+                    color: rgba(0, 0, 0, 0.4);
+                }
+            }
+            & .tg-btn {
+                padding: 12px 25px;
+                height: 40px;
+                @include border-radius(5px);
+            }
+        }
+    }
+    &__details {
+        &-area {
+            background: #F4F6FF;
+            padding: 60px 0;
+        }
+        &-content {
+            @media #{$md} {
+                margin-bottom: 50px;
+            }
+            & .sub-title {
+                display: block;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 1;
+                color: var(--tg-theme-primary);
+                margin-bottom: 18px;
+            }
+            & .title {
+                margin-bottom: 15px;
+                font-size: 48px;
+                text-transform: capitalize;
+                @media #{$lg} {
+                    font-size: 42px;
+                }
+                @media #{$xs} {
+                    font-size: 38px;
+                }
+            }
+            & .salary {
+                margin-bottom: 26px;
+                font-weight: 600;
+                font-size: 32px;
+                @media #{$lg} {
+                    font-size: 28px;
+                }
+                @media #{$xs} {
+                    font-size: 26px;
+                }
+                & span {
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: rgba(0, 0, 0, 0.4);
+                }
+            }
+            & .list-wrap {
+                @include flexbox();
+                flex-wrap: wrap;
+                gap: 20px 40px;
+                & li {
+                    color: rgba(0, 0, 0, 0.4);
+                    line-height: 1;
+                    & span {
+                        display: block;
+                        font-weight: 500;
+                        font-size: 18px;
+                        color: var(--tg-heading-color);
+                        margin-bottom: 14px;
+                    }
+                }
+            }
+            &-inner {
+                margin-top: 35px;
+                & > p {
+                    margin-bottom: 12px !important;
+                }
+            }
+            &-two {
+                width: 90%;
+                @media #{$lg} {
+                    width: 95%;
+                }
+                @media #{$md} {
+                    width: 100%;
+                }
+                & .title {
+                    font-size: 24px;
+                    margin-bottom: 15px;
+                    text-transform: capitalize;
+                }
+                & p {
+                    margin-bottom: 0;
+                }
+                & ul {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &-benefit {
+            @media #{$md} {
+                margin-top: 70px;
+            }
+            & .title {
+                font-weight: 500;
+                font-size: 32px;
+                margin-bottom: 20px;
+            }
+            & .list-wrap {
+                & li {
+                    @include flexbox();
+                    align-items: flex-start;
+                    gap: 10px;
+                    margin-bottom: 10px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    & img {
+                        width: 20px;
+                        flex: 0 0 auto;
+                        transform: translateY(5px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.apply__box {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.05);
+    background: var(--tg-color-white-default);
+    border: 1px solid #eaf0ff;
+    border-radius: 10px;
+    padding: 40px 30px;
+    margin-left: 104px;
+    @media #{$lg} {
+        margin-left: 0;
+    }
+    & span {
+        display: block;
+        margin-bottom: 20px;
+    }
+    & .tg-btn {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    & p {
+        margin-bottom: 15px;
+        &:last-child {
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+        & a {
+            font-size: 14px;
+            color: var(--tg-heading-color);
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+            font-weight: 500;
+        }
+    }
+}

@@ -1,0 +1,447 @@
+@use '../utils' as *;
+
+/*=============================
+    	09. Counter
+===============================*/
+.counter {
+    &__area {
+        position: relative;
+        z-index: 2;
+        &-two {
+            position: relative;
+            z-index: 1;
+            &::before {
+                content: "";
+                position: absolute;
+                right: 30%;
+                top: -50px;
+                width: 400px;
+                height: 400px;
+                @include border-radius(50%);
+                background: #7838FF;
+                filter: blur(200px);
+                opacity: .1;
+                z-index: -1;
+            }
+        }
+        &-four {
+            position: relative;
+            z-index: 1;
+            background: var(--tg-color-gray-2);
+            padding: 300px 0 130px;
+            overflow: hidden;
+            margin-top: -210px;
+            @media #{$xs} {
+                padding: 300px 0 100px;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 285px;
+                height: 285px;
+                @include border-radius(50%);
+                background: #DFD2FB;
+                filter: blur(150px);
+                left: -116px;
+                z-index: -1;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 325px;
+                height: 325px;
+                @include border-radius(50%);
+                background: #C3CEFA;
+                filter: blur(150px);
+                right: -154px;
+                z-index: -1;
+            }
+        }
+        &-five {
+            padding-top: 110px;
+            @media #{$xs} {
+                padding-top: 80px;
+            }
+        }
+        &-six {
+            background: var(--tg-color-gray-1);
+        }
+        &-seven {
+            background: var(--tg-theme-secondary);
+            padding: 295px 0 130px;
+            margin-top: -155px;
+        }
+        &-eight {
+            background: var(--tg-color-gray-2);
+        }
+        &-nine {
+            background: var(--tg-color-gray-2);
+        }
+    }
+    &__wrap {
+        background: var(--tg-theme-primary);
+        position: relative;
+        z-index: 1;
+        padding: 80px 30px 45px;
+        &::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 300%;
+            height: 100%;
+            background: var(--tg-theme-primary);
+            z-index: -1;
+        }
+        &-two {
+            z-index: 2;
+        }
+    }
+    &__item {
+        margin-bottom: 30px;
+        text-align: center;
+        & .count {
+            margin-bottom: 5px;
+            color: var(--tg-color-white-default);
+            font-size: 60px;
+            font-weight: 700;
+            line-height: .8;
+            @media #{$xl} {
+                font-size: 55px;
+            }
+            @media #{$xs} {
+                font-size: 50px;
+            }
+        }
+        & p {
+            margin-bottom: 0;
+            color: var(--tg-color-gray-4);
+            font-weight: 500;
+        }
+        &-two {
+            background: var(--tg-color-white-default);
+            box-shadow: 0px 11px 30px 0px #E9EAF2;
+            border: 1px solid var(--tg-color-white-default);
+            @include border-radius(30px);
+            text-align: center;
+            padding: 40px 30px 35px;
+            @include transition(.3s);
+            @media #{$xs} {
+                padding: 20px 15px 20px;
+            }
+            &:hover {
+                transform: translateY(-5px);
+                & .counter__icon {
+                    & i {
+                        transform: rotateY(180deg);
+                    }
+                }
+            }
+        }
+        &-three {
+            @include flexbox();
+            align-items: center;
+            gap: 20px;
+            @media #{$xs} {
+                gap: 10px;
+            }
+            &:hover {
+                & .counter__icon-two {
+                    & i {
+                        transform: rotateY(180deg);
+                    }
+                }
+            }
+        }
+        &-four {
+            text-align: center;
+            & p {
+                margin-bottom: 20px;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 1;
+                @media #{$xs} {
+                    font-size: 16px;
+                    margin-bottom: 12px;
+                }
+            }
+            & .count {
+                margin-bottom: 0;
+                font-size: 100px;
+                font-weight: 600;
+                line-height: .8;
+                display: inline-flex;
+                align-items: center;
+                color: var(--tg-theme-primary);
+                @media #{$xl} {
+                    font-size: 90px;
+                }
+                @media #{$lg} {
+                    font-size: 70px;
+                }
+                @media #{$xs} {
+                    font-size: 50px;
+                }
+                @media #{$sm} {
+                    font-size: 60px;
+                }
+            }
+        }
+        &-five {
+            text-align: center;
+            & p {
+                margin-bottom: 12px;
+                font-size: 20px;
+                font-weight: 500;
+                color: var(--tg-color-gray-4);
+                @media #{$xs} {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                }
+            }
+            & .count {
+                margin-bottom: 0;
+                line-height: .8;
+                font-size: 100px;
+                font-weight: 600;
+                text-transform: uppercase;
+                @include flexbox();
+                align-items: center;
+                color: transparent;
+                -webkit-text-stroke: 2px var(--tg-color-gray-4);
+                justify-content: center;
+                @media #{$lg} {
+                    font-size: 75px;
+                    line-height: .9;
+                }
+                @media #{$xs} {
+                    font-size: 50px;
+                }
+                @media #{$sm} {
+                    font-size: 60px;
+                }
+            }
+        }
+        &-six {
+            width: 50%;
+            flex: 0 0 auto;
+            text-align: left;
+            @media #{$md} {
+                text-align: center;
+            }
+            & .count {
+                line-height: 0.9;
+                font-size: 90px;
+                margin-bottom: 12px;
+                justify-content: flex-start;
+                @media #{$lg} {
+                    font-size: 72px;
+                }
+                @media #{$md} {
+                    justify-content: center;
+                }
+                @media #{$xs} {
+                    font-size: 50px;
+                }
+                @media #{$sm} {
+                    font-size: 60px;
+                }
+            }
+            & p {
+                margin-bottom: 0;
+                line-height: 1.2;
+            }
+        }
+        &-seven {
+            & .counter__icon-two {
+                &::before {
+                    @include border-radius(0);
+                }
+            }
+        }
+        &-wrap {
+            margin-left: 80px;
+            flex-wrap: wrap;
+            gap: 60px 0;
+            position: relative;
+            @media #{$lg} {
+                margin-left: 0;
+            }
+            @media #{$md} {
+                gap: 30px 0;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                left: 43%;
+                top: 0%;
+                width: 1px;
+                height: 125px;
+                background: #1F2042;
+                @media #{$md} {
+                    display: none;
+                }
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                left: 43%;
+                bottom: 0%;
+                width: 1px;
+                height: 125px;
+                background: #1F2042;
+                @media #{$md} {
+                    display: none;
+                }
+            }
+            & .line-one {
+                position: absolute;
+                left: 0%;
+                top: 50%;
+                width: 190px;
+                height: 1px;
+                background: #1F2042;
+                @media #{$md} {
+                    display: none;
+                }
+            }
+            & .line-two {
+                position: absolute;
+                right: 13%;
+                top: 50%;
+                width: 190px;
+                height: 1px;
+                background: #1F2042;
+                @media #{$md} {
+                    display: none;
+                }
+            }
+        }
+    }
+    &__icon {
+        position: relative;
+        display: inline-block;
+        z-index: 1;
+        font-size: 60px;
+        color: var(--tg-theme-primary);
+        padding: 10px 0 0 17px;
+        margin-bottom: 18px;
+        @media #{$xs} {
+            font-size: 50px;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 60px;
+            height: 60px;
+            background: var(--tg-color-gray-1);
+            @include border-radius(10px);
+            z-index: -1;
+            @media #{$xs} {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        & i {
+            @include transition(.5s);
+        }
+        &-two {
+            font-size: 70px;
+            @media #{$lg} {
+                font-size: 60px;
+            }
+            @media #{$xs} {
+                font-size: 50px;
+            }
+            &::before {
+                width: 70px;
+                height: 70px;
+                background: #EAF0FF;
+                @media #{$lg} {
+                    width: 60px;
+                    height: 60px;
+                }
+                @media #{$xs} {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+    &__content {
+        & .count {
+            margin-bottom: 8px;
+            font-size: 36px;
+            line-height: .9;
+        }
+        & p {
+            margin-bottom: 0;
+            font-weight: 500;
+            color: var(--tg-color-gray-11);
+        }
+        &-two {
+            & .count {
+                margin-bottom: 10px;
+                line-height: 0.8;
+                font-size: 60px;
+                @media #{$lg} {
+                    font-size: 50px;
+                }
+                @media #{$xs} {
+                    font-size: 35px;
+                    line-height: 1;
+                }
+            }
+            & p {
+                margin-bottom: 0;
+                font-weight: 500;
+                color: var(--tg-color-gray-11);
+                line-height: 1;
+            }
+        }
+        &-three {
+            @media #{$md} {
+                margin-top: 50px;
+            }
+            & p {
+                color: var(--tg-color-gray-4);
+                margin-bottom: 40px;
+                width: 85%;
+                @media #{$lg} {
+                    width: 95%;
+                }
+                @media #{$md} {
+                    width: 100%;
+                }
+            }
+        }
+        &-bottom {
+            gap: 40px;
+            flex-wrap: wrap;
+            @media #{$lg} {
+                gap: 25px;
+            }
+        }
+    }
+    &__shape {
+        & img {
+            position: absolute;
+            z-index: -1;
+            right: 0;
+            bottom: 120px;
+            max-width: 276px;
+            @media #{$xxl} {
+                max-width: 200px;
+            }
+            @media #{$md} {
+                display: none;
+            }
+        }
+    }
+}

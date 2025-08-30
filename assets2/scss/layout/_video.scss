@@ -1,0 +1,428 @@
+@use '../utils' as *;
+
+/*=============================
+    	10. Video
+===============================*/
+.video {
+    &__area {
+        position: relative;
+        z-index: 1;
+        padding: 335px 0 220px;
+        margin-top: -120px;
+        @media #{$lg} {
+            padding: 285px 0 160px;
+        }
+        @media #{$xs} {
+            padding: 240px 0 100px;
+        }
+        &-two {
+            position: relative;
+            padding: 270px 0;
+            @media #{$xl} {
+                padding: 220px 0;
+            }
+            @media #{$lg} {
+                padding: 200px 0;
+            }
+        }
+        &-three {
+            position: relative;
+            z-index: 2;
+        }
+        &-four {
+            position: relative;
+            z-index: 1;
+            height: 700px;
+            padding: 100px 0;
+            @include flexbox();
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            @media #{$xl} {
+                height: 550px;
+            }
+            @media #{$md} {
+                height: 500px;
+            }
+            @media #{$xs} {
+                height: 460px;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                left: 7.3%;
+                bottom: 0;
+                width: 80px;
+                height: 70px;
+                background: rgba(0, 42, 150, 0.9);
+                clip-path: polygon(35% 0%, 100% 0%, 65% 100%, 0% 100%);
+                @media #{$xxl} {
+                    left: 5.3%;
+                }
+                @media #{$lg} {
+                    left: 0.3%;
+                }
+                @media #{$md} {
+                    display: none;
+                }
+            }
+        }
+        &-five {
+            position: relative;
+            height: 650px;
+            z-index: 1;
+            @media #{$xl} {
+                height: 550px;
+            }
+            @media #{$md} {
+                height: 500px;
+            }
+        }
+        &-six {
+            height: auto;
+            height: 750px;
+            margin-top: -115px;
+            @media #{$xl} {
+                height: 700px;
+            }
+            @media #{$lg} {
+                height: 650px;
+            }
+            @media #{$md} {
+                height: 600px;
+            }
+        }
+    }
+    &__bg {
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-attachment: fixed;
+        mix-blend-mode: luminosity;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+            background: linear-gradient(99deg, #01022E 27.88%, #000 75.46%);
+        }
+        &-two {
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-attachment: fixed;
+        }
+        &-three {
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-attachment: fixed;
+            background-blend-mode: luminosity;
+            background-color: var(--tg-theme-secondary);
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0.4;
+                background: #111;
+            }
+        }
+        &-four {
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-attachment: fixed;
+            background-blend-mode: luminosity;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 18%;
+                top: 50%;
+                transform: translateY(-50%) rotate(20deg);
+                width: 215px;
+                height: 200%;
+                background: rgba(0, 71, 255, 0.9);
+                @media #{$xl} {
+                    width: 170px;
+                }
+                @media #{$lg} {
+                    width: 140px;
+                }
+                @media #{$md} {
+                    width: 100px;
+                }
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                left: 24%;
+                bottom: 0;
+                width: 158px;
+                height: 240px;
+                background: rgba(0, 42, 150, 0.9);
+                clip-path: polygon(56% 0%, 100% 0%, 44% 100%, 0% 100%);
+                @media #{$xxl} {
+                    left: 25%;
+                }
+                @media #{$xl} {
+                    left: 25%;
+                }
+                @media #{$lg} {
+                    left: 24%;
+                }
+                @media #{$md} {
+                    width: 135px;
+                    height: 200px;
+                    left: 21%;
+                }
+                @media #{$xs} {
+                    left: 28%;
+                }
+                @media #{$sm} {
+                    left: 24%;
+                }
+            }
+        }
+        &-five {
+            background-size: cover;
+            background-position: center;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            background-attachment: fixed;
+        }
+    }
+    &__inner-wrap {
+        position: relative;
+        z-index: 1;
+        height: 570px;
+        @include flexbox();
+        align-items: center;
+        justify-content: center;
+        @include border-radius(200px 20px);
+        overflow: hidden;
+        @media #{$lg} {
+            height: 460px;
+        }
+        @media #{$md} {
+            height: 420px;
+            @include border-radius(150px 20px);
+        }
+        @media #{$xs} {
+            height: 400px;
+            @include border-radius(100px 20px);
+        }
+    }
+    &__content {
+        @media #{$md} {
+            text-align: center;
+        }
+        & .sub-title {
+            display: block;
+            color: var(--tg-color-white-default);
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        & .title {
+            font-size: 40px;
+            text-transform: capitalize;
+            color: var(--tg-color-white-default);
+            margin-bottom: 20px;
+            @media #{$xs} {
+                font-size: 32px;
+            }
+        }
+        & p {
+            margin-bottom: 0;
+            color: var(--tg-color-gray-1);
+            width: 78%;
+            @media #{$lg} {
+                width: 90%;
+            }
+            @media #{$md} {
+                width: 100%;
+            }
+        }
+    }
+    &__btn {
+        margin-right: 100px;
+        @media #{$lg} {
+            margin-right: 80px;
+        }
+        @media #{$md} {
+            margin: 0;
+        }
+        &-two {
+            margin-right: 0;
+            text-align: center;
+            & .play__btn {
+                background: var(--tg-theme-primary);
+                margin: 0 auto;
+            }
+        }
+        &-four {
+            & .play-btn {
+                width: 102px;
+                height: 102px;
+                @include flexbox();
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background: var(--tg-color-white-default);
+                color: var(--tg-theme-primary);
+                @include border-radius(50%);
+                &:hover {
+                    background: var(--tg-theme-primary);
+                    color: var(--tg-color-white-default);
+                }
+            }
+        }
+        &-five {
+            & .play-btn {
+                margin-top: 50px;
+            }
+        }
+    }
+    &__shape {
+        & img {
+            position: absolute;
+            z-index: -1;
+            &:nth-child(1) {
+                left: -17px;
+                top: -17px;
+                @media #{$md} {
+                    left: -30px;
+                    top: -30px;
+                }
+                @media #{$xs} {
+                    left: -37px;
+                    top: -47px;
+                }
+            }
+            &:nth-child(2) {
+                bottom: 0;
+                right: 0;
+                @media #{$xs} {
+                    right: -53px;
+                }
+            }
+        }
+    }
+}
+
+.play__btn {
+    width: 160px;
+    height: 160px;
+    @include flexbox();
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.10);
+    @include border-radius(50%);
+    margin-left: auto;
+    position: relative;
+    @media #{$md} {
+        margin: 0 auto 50px;
+    }
+    & img {
+        transform: translateY(-2px);
+    }
+    &-two {
+        width: 80px;
+        height: 80px;
+        @include flexbox();
+        @include border-radius(50%);
+        color: var(--tg-theme-primary);
+        background: var(--tg-color-white-default);
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--tg-color-white-default);
+            border-radius: 50%;
+            transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+            animation: pulse-border 1500ms ease-out infinite;
+        }
+        &:hover {
+            background: var(--tg-theme-primary);
+            color: var(--tg-color-white-default);
+        }
+    }
+    &-three {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--tg-color-white-default);
+            border-radius: 50%;
+            transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+            animation: pulse-border 1500ms ease-out infinite;
+        }
+        & svg {
+            width: 25px;
+            height: auto;
+        }
+    }
+}
+
+.play-btn {
+    &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 100%;
+        height: 100%;
+        border: 1px solid var(--tg-color-white-default);
+        border-radius: 50%;
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        animation: pulse-border 1500ms ease-out infinite;
+    }
+}

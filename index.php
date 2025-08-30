@@ -144,30 +144,109 @@ if (isset($_GET['trxref']) && isset($_GET['id'])) {
 
 <body class="font-body">
 
-    <!-- Navbar Start -->
-    <div class="flex flex-col bg-white">
-        <nav id="nav" class="py-6 md:border-b-0 border-b" role="navigation">
-            <div class="container mx-auto px-2 flex items-center flex-no-wrap justify-between">
-                <a href="https://glhomesltd.com" class="flex items-center">
-                    <img src="images/Logo-sm.png" alt="GL Homes Ltd" class="h-20">
-                </a>
-                <div
-                    class="w-auto transition-all ease-out duration-300 transition-none md:flex-grow flex items-center justify-between opacity-0 opacity-100">
-                    <ul class="flex duration-300 ease-out sm:transition-none ms-auto md:mt-0">
-                        <li>
-                            <a class="pt-3 px-3 md:px-6 font-medium font-secondary block text-blue-500 text-lg" href="#"
-                                title="https://glhomesltd.com">GL Homes Limited</a>
-                        </li>
-                        <li>
-                            <a class="pt-3 px-3 md:px-6 font-medium font-secondary block text-black/70 hover:text-blue-500 text-lg"
-                                href="#companies" title="About">Our Companies</a>
-                        </li>
-                        
-                    </ul>
+     <!-- header-area -->
+    <header class="transparent-header">
+        <div id="header-fixed-height"></div>
+        <div id="sticky-header" class="tg-header__area tg-header__area-two">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="tgmenu__wrap">
+                            <nav class="tgmenu__nav">
+                                <div class="logo">
+                                    <a href="index"><img src="images/Logo-sm.png" alt="Logo"></a>
+                                </div>
+                                <div class="tgmenu__navbar-wrap tgmenu__main-menu d-none d-lg-flex">
+                                    <ul class="navigation">
+                                        <li class="active"><a href="index">Home</a></li>
+                                        <li><a href="#about">About us</a></li>
+                                        <li class="active menu-item-has-children tg-mega-menu-has-children"><a href="#">Our Companies</a>
+                                            <div class="tg-mega-menu-wrap">
+                                                <div class="row row-cols-1 row-cols-lg-6 row-cols-xl-6">
+                                                    <div class="col">
+                                                        <div class="mega-menu-item">
+                                                            <div class="mega-menu-thumb">
+                                                                <a href="https://realestate.glhomesltd.com"><img src="images/r1.webp" alt="img"></a>
+                                                            </div>
+                                                            <div class="mega-menu-content">
+                                                                <h4 class="title"><a href="https://realestate.glhomesltd.com">GL Real Estate</a></h4>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="mega-menu-item active">
+                                                            <div class="mega-menu-thumb">
+                                                                <a href="https://construction.glhomesltd.com"><img src="images/c2.webp" alt="img"></a>
+                                                            </div>
+                                                            <div class="mega-menu-content">
+                                                                <h4 class="title"><a href="https://construction.glhomesltd.com">GL Homes Construction</a></h4>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="mega-menu-item">
+                                                            <div class="mega-menu-thumb">
+                                                                <a href="https://tech.glhomesltd.com"><img src="images/t4.webp" alt="img"></a>
+                                                            </div>
+                                                            <div class="mega-menu-content">
+                                                                <h4 class="title"><a href="https://tech.glhomesltd.com">GL Homes Tech</a></h4>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </li>
+                                        
+                                        <li class="menu-item-has-children"><a href="#">Masterclasses</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#msplan">Access Plans</a></li>
+                                                <li><a href="#masterclass">Beyond the Horizon</a></li>
+                                                <li><a href="#msclass">Mindset Shift</a></li>
+                                            </ul>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="tgmenu__action tgmenu__action-two">
+                                    <ul class="list-wrap">
+                                        <li class="header-btn header-btn-two">
+                                            <a href="attend" class="tg-btn">Register now</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mobile-nav-toggler"><i class="tg-flaticon-menu"></i></div>
+                            </nav>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </div>
+        </div>
+
+        <!-- Mobile Menu  -->
+        <div class="tgmobile__menu">
+            <nav class="tgmobile__menu-box">
+                <div class="close-btn"><i class="tg-flaticon-close-1"></i></div>
+                <div class="nav-logo">
+                    <a href="index"><img src="images/Logo-sm.png" alt="Logo"></a>
+                </div>
+                <div class="tgmobile__menu-outer">
+                    <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                </div>
+                <div class="social-links">
+                    <ul class="list-wrap">
+                        <li><a target="_blank" href="https://www.facebook.com/share/1LakCWxsgr/"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a target="_blank" href="https://wa.me/+2349067274433"><i class="fab fa-whatsapp"></i></a></li>
+                        <li><a target="_blank" href="https://youtube.com/@GLHOMESLTD"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="tgmobile__menu-backdrop"></div>
+        <!-- End Mobile Menu -->
+
+    </header>
+    <!-- header-area-end -->
     
     <div class="container mx-auto">
             <div class="text-center text-dark relative">
