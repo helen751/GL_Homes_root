@@ -264,6 +264,9 @@ if (isset($_GET['trxref']) && isset($_GET['id'])) {
     <!-- header-area-end -->
     
     <main class="main-area fix">
+
+<section class="banner__area-two fix">
+            <div class="container">
     <div class="container mx-auto">
             <div class="text-center text-dark relative">
                 <h2 class="text-5xl font-semibold capitalize text-transparent bg-clip-text bg-gradient-to-r from-red-700 via-blue-600 to-blue-400 mt-2" id="ready-text">Are you ready?</h2>
@@ -312,8 +315,6 @@ if (isset($_GET['trxref']) && isset($_GET['id'])) {
     
 
 
-<section class="banner__area-two fix">
-            <div class="container">
 
     <div class="forny-container mt-4">
         
