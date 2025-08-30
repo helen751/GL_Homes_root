@@ -263,7 +263,7 @@ if (isset($_GET['trxref']) && isset($_GET['id'])) {
     </header>
     <!-- header-area-end -->
     
-    <div class="container mx-auto">
+    <!-- <div class="container mx-auto">
             <div class="text-center text-dark relative">
                 <h2 class="text-5xl font-semibold capitalize text-transparent bg-clip-text bg-gradient-to-r from-red-700 via-blue-600 to-blue-400 mt-2" id="ready-text">Are you ready?</h2>
                 <p class="text-base mt-2 mb-7" id="ready-text2">Countdown to MINDSET SHIFT Business Masterclass</p>
@@ -308,7 +308,7 @@ if (isset($_GET['trxref']) && isset($_GET['id'])) {
                 </div>
             </div>
         </div>
-    
+     -->
 
 
      
