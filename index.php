@@ -644,6 +644,36 @@
             </div>
         </section>
        
+        <section class="cta__area-two">
+            <div class="container">
+                <div class="cta__inner-wrap-two">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="cta__content-three">
+                                <h2 class="title">Message us for any issues regarding this class or registration</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="cta__content-right">
+                                <div class="cta__contact">
+                                    <div class="icon">
+                                        <i class="flaticon-telephone"></i>
+                                    </div>
+                                    <div class="content">
+                                        <span>Do you have any Question?</span>
+                                        <a href="mailto:masterclass@glhomesltd.com">masterclass@glhomesltd.com</a>
+                                    </div>
+                                </div>
+                                <a href="tel:+2349067274433" class="tg-btn tg-border-btn ">Call us <img src="assets/img/icons/right_arrow.svg" alt="" class="injectable"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cta__shape-three">
+                        <img src="assets/img/images/h2_cta_shape.svg" alt="shape">
+                    </div>
+                </div>
+            </div>
+        </section>
 
        <div class="container mt-5" id="team">
                 <div class="row align-items-center">
