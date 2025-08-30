@@ -103,7 +103,7 @@ if ($check && $check->num_rows > 0) {
 
 // Prepare for Paystack payment
 $reference = "GLHOMES_" . time() . "_" . rand(1000, 9999);
-$callback_url = "https://glhomesltd.com?id={$insert_id}&amount={$amount}"; // Redirect after payment
+$callback_url = "https://glhomesltd.com/attend?id={$insert_id}&amount={$amount}"; // Redirect after payment
 
 $paymentData = [
     "email" => $email,

@@ -5,7 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>GL Homes Masterclass</title>
-    <meta name="description" content="GL Homes Masterclass">
+    <meta
+        content="GL Homes Limited is a leading real estate, construction and Automation tech company specializing in residential and commercial properties. With a commitment to quality and innovation, we create exceptional living spaces and infrastructure that enhance communities and lifestyles. "
+        name="description" />
+    <meta content="GL Homes" name="author" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="shortcut icon" type="image/x-icon" href="images/Logo-sm.png">
