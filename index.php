@@ -664,12 +664,12 @@
                                         <a href="mailto:masterclass@glhomesltd.com">masterclass@glhomesltd.com</a>
                                     </div>
                                 </div>
-                                <a href="tel:+2349067274433" class="tg-btn tg-border-btn ">Call us <img src="assets/img/icons/right_arrow.svg" alt="" class="injectable"></a>
+                                <a href="tel:+2349067274433" class="tg-btn tg-border-btn ">Call us <img src="assets2/img/icons/right_arrow.svg" alt="" class="injectable"></a>
                             </div>
                         </div>
                     </div>
                     <div class="cta__shape-three">
-                        <img src="assets/img/images/h2_cta_shape.svg" alt="shape">
+                        <img src="assets2/img/images/h2_cta_shape.svg" alt="shape">
                     </div>
                 </div>
             </div>
