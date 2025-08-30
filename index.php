@@ -86,6 +86,21 @@ if (isset($_GET['trxref']) && isset($_GET['id'])) {
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/common.css" rel="stylesheet">
     <link href="css/theme-02.css" rel="stylesheet">
+
+
+     <link rel="stylesheet" href="assets2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets2/css/animate.min.css">
+    <link rel="stylesheet" href="assets2/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets2/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets2/css/tg-flaticon.css">
+    <link rel="stylesheet" href="assets2/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets2/css/default.css">
+    <link rel="stylesheet" href="assets2/css/default-icons.css">
+    <link rel="stylesheet" href="assets2/css/odometer.css">
+    <link rel="stylesheet" href="assets2/css/aos.css">
+    <link rel="stylesheet" href="assets2/css/tg-cursor.css">
+    <link rel="stylesheet" href="assets2/css/main.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
     <style>
         /* Align phone input inside your form design */
@@ -294,211 +309,7 @@ if (isset($_GET['trxref']) && isset($_GET['id'])) {
             </div>
         </div>
     
-    <!-- features-section - start
-		================================================== -->
-		<section class="features-section sec-ptb-160 clearfix">
-			<div class="container">
 
-				<div class="feature-item mb-0">
-					<div class="row justify-content-lg-between justify-content-md-center">
-
-						<div class="col-lg-5 col-md-8 col-sm-12">
-							<div class="feature-image-2 text-center">
-								<span class="item-image">
-									<img src="assets/images/bms.png" alt="image_not_found">
-								</span>
-								<a class="popup-video" href="https://youtu.be/pmm-1T9Av-g" data-aos="zoom-in" data-aos-delay="100">
-									<i class='uil uil-play'></i>
-								</a>
-							</div>
-						</div>
-
-						<div class="col-lg-6 col-md-8 col-sm-12">
-							<div class="feature-content p-0">
-								<h2 class="feature-item-title">ABOUT US / <span>Who we are</span></h2>
-								<p class="mb-0">
-									GL HOMES Beyond Horizon Leadership and Business Masterclass is a value-based leadership and entrepreneurial development platform, established in 2017, with a mission to raise transformational leaders, innovators, and entrepreneurs across Africa. It is a faith-rooted initiative focused on disrupting mindsets, raising ethical leaders, and driving sustainable development through practical, principle-based business education.
-
-The platform has continued to expand since inception, never looking back. The first edition featured participants from 8 countries, while the most recent Masterclass welcomed professionals from 5 countries and over 20 cities. This growing community is driven by one common cause— to build Africa by raising 
-								</p>
-
-								<div class="service-list ul-li clearfix">
-									<ul class="clearfix">
-										<li>
-											<div class="item-icon" style="background-image: url(assets/images/icons/bg-6.png);">
-												<i class='uil uil-compass'></i>
-											</div>
-											<div class="item-content">
-												<h3 class="item-title mb-15">Our Mission</h3>
-												<p class="mb-0">
-													To build, equip, and mentor bold and transformational business leaders, innovators, and entrepreneurs who are driven by purpose and values, capable of disrupting the status quo and igniting sustainable change in Africa and beyond.
-
-												</p>
-											</div>
-										</li>
-										<li>
-											<div class="item-icon" style="background-image: url(assets/images/icons/bg-7.png);">
-												<i class='uil uil-lightbulb-alt'></i>
-											</div>
-											<div class="item-content">
-												<h3 class="item-title mb-15">Our Vision</h3>
-												<p class="mb-0">
-													To empower and impact visionary leaders and
-                                                    entrepreneurs with a sound mindset, strategies, and skills
-                                                    needed to scale up their businesses, inspire high-
-                                                    performance teams, and create lasting impact in a rapidly
-                                                    evolving global economy.
-												</p>
-											</div>
-										</li>
-										
-									</ul>
-								</div>
-
-							</div>
-						</div>
-
-					</div>
-				</div>
-
-			</div>
-		</section>
-		<!-- features-section - end
-		================================================== -->
-
-
-		<!-- service-section - start
-		================================================== -->
-		<section id="service-section" class="service-section sec-ptb-160 pt-0 clearfix">
-			<div class="container">
-				<div class="row">
-
-					
-
-					<div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="service-grid-item text-center">
-							<span class="item-icon" style="background-image: url(assets/images/icons/bg-2.png);">
-								<i class='uil uil-users-alt'></i>
-							</span>
-							<h2 class="item-title mb-30">Participants</h2>
-							<p>
-								<div class="counter-items-list ul-li-center clearfix">
-						<ul class="clearfix">
-							<li>
-								<h2 style="all: revert;"><span class="count-text">200</span>+</h2>
-							</li>
-						</ul>
-					</div>
-							</p>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="service-grid-item text-center">
-							<span class="item-icon" style="background-image: url(assets/images/icons/bg-3.png);">
-								<i class='uil uil-globe'></i>
-							</span>
-							<h2 class="item-title mb-30">Demographics</h2>
-							<p>
-								<div class="counter-items-list ul-li-center clearfix">
-						<ul class="clearfix">
-							<li class="mr-3">
-								<h3 style="all: revert;"><span class="count-text">13</span>+</h3>
-								<small class="counter-title">Countries</small>
-							</li>
-							<li>
-								<h3 style="all: revert;"><span class="count-text">30</span>+</h3>
-								<small class="counter-title">Cities</small>
-							</li>
-						</ul>
-					</div>
-							</p>
-						</div>
-					</div>
-
-                    <div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="service-grid-item text-center">
-							<span class="item-icon" style="background-image: url(assets/images/icons/bg-1.png);">
-								<i class="uil uil-layer-group-slash"></i>
-							</span>
-							<h2 class="item-title mb-30">Testimonials</h2>
-							<p>
-								<div class="counter-items-list ul-li-center clearfix">
-						<ul class="clearfix">
-							<li>
-								<h2 style="all: revert;"><span class="count-text">30</span>+</h2>
-							</li>
-						</ul>
-					</div>
-							</p>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-		</section>
-		<!-- service-section - end
-		================================================== -->
-
-
-
-
-    <!-- Section Start -->
-    <section class="section py-2 bg-white" id="home">
-        <div class="container mx-auto px-10">
-            <h1 class="text-4xl/snug font-semibold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-blue-600 to-blue-400 mb-4 text-center">
-                        GL HOMES PRESENTS: MINDSET SHIFT 2025 
-                        </h1>
-            <div class="grid lg:grid-cols-2 gap-10 items-center">
-                <div class="mx-2">
-                    
-                        <span class="text-2xl text-gray-600">A Business Masterclass Like No Other!
-                        </span>
-                    
-                    <p class="text-base text-zinc-800 max-w-lg mb-2">
-                        Are you ready for a mindset shift towards your business?
-                        This exclusive Masterclass brings together visionary leaders across governance, banking, and investment to share practical insights on building sustainable systems, global leadership, and innovative investment opportunities. Participants will gain actionable strategies that bridge ethics, finance, and real estate to unlock long-term impact.<br>
-
-                        ✓ Ethical governance as the foundation for sustainable business growth<br>
-                        ✓ Expanding leadership influence from regional to global markets<br>
-                        ✓ Unlocking wealth through agricultural investment in real estate<br>
-                        ✓ Practical strategies to build transparency, trust, and long-term impact<br>
-
-                    </p>
-                    <strong class="text-2xl text-zinc-600 mb-1">Date: Sunday, 21 <sup>st</sup> September 2025</strong><br>
-                    <strong class="text-2xl text-zinc-600 mb-1">Time: 6:00PM WAT</strong><br>
-                    <strong class="text-2xl text-zinc-600 mb-1">Venue: Google Meet</strong><br>
-                    <strong class="text-2xl text-zinc-600 mb-1">Registration Fee: 
-                        <strong class="text-red-600 line-through">₦25,000 NGN</strong>
-                        <strong class="text-blue-600">₦10,000 (early rate – price will increase as date approaches!)</strong> 
-                        <!-- <strong class="text-zinc-600">or</strong>
-                        <strong class="text-red-600 line-through">25 USD</strong>
-                        <strong class="text-blue-600">$10 USD(outside Nigeria)</strong>  --></strong>
-                    <br><br>
-                    <strong class="text-zinc-600 mb-1">The executive access allows you to meet any of our guest speakers of your choice and have a one-on-one session with them.</strong><br>
-                    <strong class="text-2xl text-red-600 mb-4">Executive Access- ₦250,000 NGN</strong><br><br>
-                    <p class="text-base text-zinc-800 max-w-lg mb-6">
-                        Don’t miss this opportunity to transform your business mindset and strategies for the year ahead.
-
-                    </p>
-                    <a class="w-auto inline-flex items-center font-semibold gap-2 px-6 py-2.5 rounded-full transition-all duration-300 text-white bg-blue-600 hover:bg-blue-700"
-                        href="#register">
-                        Register below <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" data-lucide="eye" class="lucide lucide-eye h-5 w-5">
-                            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
-                            <circle cx="12" cy="12" r="3"></circle>
-                        </svg>
-                    </a>
-                </div>
-                <div class="max-w-lg mx-auto">
-                    <img src="images/ms.webp" alt="GL Homes class" class="max-w-full w-auto">
-                </div>
-            </div>
-
-            
-        </div>
-    </section>
 
      
 
@@ -618,269 +429,92 @@ The platform has continued to expand since inception, never looking back. The fi
     </div>
     <!-- Section End -->
 
-<!-- team-section - start
-		================================================== -->
-		<section class="team-section sec-ptb-160 bg-light-gray clearfix">
-			<div class="container">
 
-				<div class="row justify-content-center">
-					<div class="col-lg-6 col-md-8 col-sm-12">
-						<div class="section-title text-center">
-							<h2 class="title-text mb-30">Meet with GLHOMES Masterclass Team</h2>
-							<p class="paragraph-text mb-0">
-								We would like to take the opportunity to introduce to our experienced team, bringing this masterclass to live.
-							</p>
-						</div>
-					</div>
-				</div>
 
-				<div class="row">
-
-					<div class="col-lg-3 col-md-6 col-sm-12">
-						<div class="team-member-grid text-center">
-							<div class="member-image image-container clearfix">
-								<img src="assets/images/team/emmanuel2.webp" alt="CEO GLHomes Limited">
-								<ul class="member-social-links clearfix">
-									<li><a href="https://www.facebook.com/share/1Yku9SmJvz/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-									<li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
-								</ul>
-							</div>
-							<div class="member-info">
-								<h3 class="member-name">Emmanuel Onyedikachi</h3>
-								<span class="member-title">Visionary/Founder</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-3 col-md-6 col-sm-12">
-						<div class="team-member-grid text-center">
-							<div class="member-image image-container clearfix">
-								<img src="assets/images/team/pauline.webp" alt="GL Homes Masterclass Team">
-								<ul class="member-social-links clearfix">
-									<li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
-									<li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
-								</ul>
-							</div>
-							<div class="member-info">
-								<h3 class="member-name">Dr Pauline Ogbo</h3>
-								<span class="member-title">Business Advisor</span>
-							</div>
-						</div>
-					</div>
-
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-						<div class="team-member-grid text-center">
-							<div class="member-image image-container clearfix">
-								<img src="assets/images/team/comfort.webp" alt="GL Homes Masterclass Team">
-								<ul class="member-social-links clearfix">
-									<li><a href="https://www.facebook.com/share/1716a4iDaA/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-									<li><a href="https://www.linkedin.com/in/comfort-okereke-ijeoma?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-								</ul>
-							</div>
-							<div class="member-info">
-								<h3 class="member-name">Comfort Ijeoma Okereke</h3>
-								<span class="member-title">Project Manager</span>
-							</div>
-						</div>
-					</div>
-
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-						<div class="team-member-grid text-center">
-							<div class="member-image image-container clearfix">
-								<img src="assets/images/team/helen.webp" alt="GL Homes Masterclass Team">
-								<ul class="member-social-links clearfix">
-									<li><a href="https://www.facebook.com/share/1Dx5sqpAvF/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-									<li><a href="https://www.linkedin.com/in/helen-okereke-432323205" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-								</ul>
-							</div>
-							<div class="member-info">
-								<h3 class="member-name">Helen ugoeze Okereke</h3>
-								<span class="member-title">Tech Specialist</span>
-							</div>
-						</div>
-					</div>
+    <!-- footer-area -->
+    <footer class="footer__area-two fix">
+        <div class="container">
+            <div class="footer__top-two">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="footer__widget">
+                            <!-- <div class="footer__logo-two">
+                                <a href="index"><img src="images/Logo-sm.png" alt="logo"></a>
+                            </div> -->
+                            <div class="footer__contact">
+                                <ul class="list-wrap">
+                                    <li><i class="flaticon-placeholder"></i>91 Okigwe Road, Aba, Abia State. Nigeria</li>
+                                    <li><i class="flaticon-telephone"></i><a href="tel:+2349067274433">+234 (0)90 6727 4433</a></li>
+                                    <li><i class="flaticon-envelope"></i><a href="mailto:masterclass@glhomesltd">masterclass@glhomesltd</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-
-			</div>
-		</section>
-		<!-- team-section - end
-		================================================== -->
-
-
-    <!-- testimonial-section - start
-		================================================== -->
-		<section id="testimonial-section" class="testimonial-section sec-ptb-160 pb-0 clearfix">
-			<div class="container">
-
-				<div class="section-title mb-100 text-center">
-					<span class="sub-title mb-15">Partcipants Testimonials</span>
-					<h2 class="title-text mb-0">Stories of some of Our Participants</h2>
-				</div>
-
-				<div id="testimonial-carousel" class="testimonial-carousel owl-carousel owl-theme">
-					<div class="item item-style-2 clearfix">
-						<div class="hero-image">
-							<img src="assets/images/testimonial/sharon.jpg" alt="image_not_found">
-							<span class="icon" data-aos="zoom-in" data-aos-duration="450"><i class="flaticon-quotation"></i></span>
-							<small class="design-image">
-								<img src="assets/images/testimonial/design-image-1.png" alt="image_not_found">
-							</small>
-							<small class="shape-image">
-								<img src="assets/images/testimonial/shape-1.png" alt="Innocent Sharon Chidinma">
-							</small>
-						</div>
-						<div class="testimonial-content">
-							<div class="hero-info mb-5">
-								<h4 class="hero-name">Innocent Sharon Chidinma</h4>
-								<span class="hero-title">BML Attendee</span>
-								<div class="rating-star ul-li clearfix">
-									<ul class="clearfix">
-										<li class="rated"><i class="fas fa-star"></i></li>
-										<li class="rated"><i class="fas fa-star"></i></li>
-										<li class="rated"><i class="fas fa-star"></i></li>
-										<li class="rated"><i class="fas fa-star"></i></li>
-										<li class="rated"><i class="fas fa-star"></i></li>
-									</ul>
-								</div>
-							</div>
-							<p class="paragraph-text mb-0">
-								I attended the (Beyond the Horizon) and I must say it was both awesome and impactful.
-
-What stood out the most was the practical approach the team adopted throughout the session. Rather than overwhelming participants with theory, they focused on actionable insights and real-world examples that made the concepts easy to grasp, regardless of one’s prior investment knowledge.
-
-Overall, this session was a valuable experience. I left feeling more informed, inspired, and ready to take smarter steps toward financial independence. I highly recommend any future sessions by GLHomes  to anyone looking to grow their investment awareness.
-							</p>
-						</div>
-					</div>
-
-					<div class="item item-style-2 clearfix">
-						<div class="hero-image">
-							<img src="assets/images/testimonial/evelyn.jpg" alt="GLHomes masterclass testimonial">
-							<span class="icon" data-aos="zoom-in" data-aos-duration="450"><i class="flaticon-quotation"></i></span>
-							<small class="design-image">
-								<img src="assets/images/testimonial/design-image-1.png" alt="image_not_found">
-							</small>
-							<small class="shape-image">
-								<img src="assets/images/testimonial/shape-1.png" alt="Evelyn Ogonna Okereke">
-							</small>
-						</div>
-						<div class="testimonial-content">
-							<div class="hero-info mb-5">
-								<h4 class="hero-name">Evelyn Ogonna Okereke</h4>
-								<span class="hero-title">BML Attendee</span>
-								<div class="rating-star ul-li clearfix">
-									<ul class="clearfix">
-										<li class="rated"><i class="fas fa-star"></i></li>
-										<li class="rated"><i class="fas fa-star"></i></li>
-										<li class="rated"><i class="fas fa-star"></i></li>
-										<li class="rated"><i class="fas fa-star"></i></li>
-										<li class="rated"><i class="fas fa-star"></i></li>
-									</ul>
-								</div>
-							</div>
-							<p class="paragraph-text mb-0">
-								Attending the Business masterclass helped me gain insights into key business concepts, developing strategic thinking, enhancing leadership capabilities, and learning actionable techniques for problem-solving and decision-making. 
-							</p>
-						</div>
-					</div>
-
-					<div class="item item-style-2 clearfix">
-						<div class="hero-image">
-							<img src="assets/images/testimonial/dummy.png" alt="image_not_found">
-							<span class="icon" data-aos="zoom-in" data-aos-duration="450"><i class="flaticon-quotation"></i></span>
-							<small class="design-image">
-								<img src="assets/images/testimonial/design-image-1.png" alt="image_not_found">
-							</small>
-							<small class="shape-image">
-								<img src="assets/images/testimonial/shape-1.png" alt="image_not_found">
-							</small>
-						</div>
-						<div class="testimonial-content">
-							<div class="hero-info mb-5">
-								<h4 class="hero-name">Chinwuba Onyinye</h4>
-								<span class="hero-title">BML Attendee</span>
-								<div class="rating-star ul-li clearfix">
-									<ul class="clearfix">
-										<li class="rated"><i class="fas fa-star"></i></li>
-										<li class="rated"><i class="fas fa-star"></i></li>
-										<li class="rated"><i class="fas fa-star"></i></li>
-										<li class="rated"><i class="fas fa-star"></i></li>
-										<li class="rated"><i class="fas fa-star"></i></li>
-									</ul>
-								</div>
-							</div>
-							<p class="paragraph-text mb-0">
-								I appreciate the power packed insight of the class, and mostly I appreciate the brains behind the success of the class infact, the team deserves an accolade.
-                                <br>
-                                I am so grateful for the opportunity to be part of this class, it was a great experience and I look forward to more of such classes.
-							</p>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</section>
-		<!-- testimonial-section - end
-		================================================== -->
-
-
-
-
-
-    <!-- shuffle portfolio -->
-    <section class="section" id="companies">
-        <div class="mx-4 md:mx-16 bg-slate-100 p-6 md:p-16 rounded-[40px]">
-            <h3 class="text-3xl text-center font-semibold mb-10">VISIT OUR COMPANIES</h3>
-            <div class="flex flex-wrap justify-center">
-                <div class="w-full md:w-1/2 xl:w-1/3 p-3">
-                    <div class="mx-auto bg-white px-4 pt-4 pb-2 rounded-xl">
-                        <a href="https://realestate.glhomesltd.com/" target="_blank">
-                            <img src="images/r1.webp" class="rounded" alt="GL Homes Real Estate">
-                        </a>
-                        <h4 class="text-lg text-center mt-4 font-medium">GL Homes Real Estate</h4>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer__widget">
+                            <h4 class="footer__widget-title footer__widget-title-two">Quick Links</h4>
+                            <ul class="footer__widget-link footer__widget-link-two list-wrap">
+                                <li><a href="index">Home </a></li>
+                                <li><a href="#about">About us</a></li>
+                                <li><a href="#attend">Register</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer__widget">
+                            <h4 class="footer__widget-title footer__widget-title-two">Masterclass</h4>
+                            <ul class="footer__widget-link footer__widget-link-two list-wrap">
+                                <li><a href="#masterclass">Beyond the Horizon</a></li>
+                                <li><a href="#msclass">Mindset Shift</a></li>
+                                <li><a href="#testimonial">Testimonials</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="footer__widget">
+                            <h4 class="footer__widget-title footer__widget-title-two">Company Links</h4>
+                            <div class="footer__instagram">
+                                <ul class="list-wrap">
+                                    <!-- <li>
+                                        <a href="https://realestate.glhomesltd.com/" target="_blank"><img src="images/r1.webp" alt="img"></a>
+                                    </li> -->
+                                    <li>
+                                        <a href="https://tech.glhomesltd.com" target="_blank"><img src="images/companies/tech.png" alt="img"></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://construction.glhomesltd.com" target="_blank"><img src="images/companies/const.jpeg" alt="img"></a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="w-full md:w-1/2 xl:w-1/3 p-3">
-                    <div class="mx-auto bg-white px-4 pt-4 pb-2 rounded-xl">
-                        <a href="https://tech.glhomesltd.com" target="_blank">
-                            <img src="images/t4.webp" class="rounded" alt="GL Homes Tech">
-                        </a>
-                        <h4 class="text-lg text-center mt-4 font-medium">GL Homes Tech Website</h4>
-                    </div>
-                </div>
-
-                <div class="w-full md:w-1/2 xl:w-1/3 p-3">
-                    <div class="mx-auto bg-white px-4 pt-4 pb-2 rounded-xl">
-                        <a href="https://construction.glhomesltd.com" target="_blank">
-                            <img src="images/c2.webp" class="rounded" alt="GL Homes Construction">
-                        </a>
-                        <h4 class="text-lg text-center mt-4 font-medium">GL Homes construction Website</h4>
-                    </div>
-                </div>
-
             </div>
-        </div>
-    </section>
-
-
-    <footer class="py-8">
-        <div class="container mx-auto px-10">
-
-            <div class="flex">
-                <div class="w-full">
-                    <div class="text-center">
-                        <p class="text-muted"> ©
+            <div class="footer__bottom-two">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="copyright__content-two">
+                            <p> ©
                             <script>document.write(new Date().getFullYear())</script> GL Homes Limited. By <a class="font-medium" href="https://tech.glhomesltd">GL Homes Tech</a>
                         </p>
-
+                        </div>
                     </div>
+                    
                 </div>
             </div>
-            <!-- end row -->
-
+        </div>
+        <div class="footer__shape-wrap-two">
+            <img src="assets2/img/images/h2_footer_shape01.svg" alt="shape">
+            <img src="assets2/img/images/h2_footer_shape02.svg" alt="shape">
+            <img src="assets2/img/images/h2_footer_shape03.svg" alt="shape">
         </div>
     </footer>
+    <!-- footer-area-end -->
+
+
+
+
  <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script src="js2/bootstrap.min.js"></script>
     <script src="js2/main.js"></script>
@@ -912,6 +546,24 @@ Overall, this session was a valuable experience. I left feeling more informed, i
 
 		<!-- custom - jquery include -->
 		<script src="assets/js/custom.js"></script>
+        <!-- JS here -->
+    <script src="assets2/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets2/js/bootstrap.min.js"></script>
+    <script src="assets2/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets2/js/jquery.odometer.min.js"></script>
+    <script src="assets2/js/jquery.appear.js"></script>
+    <script src="assets2/js/swiper-bundle.min.js"></script>
+    <script src="assets2/js/jquery.parallaxScroll.min.js"></script>
+    <script src="assets2/js/jquery.marquee.min.js"></script>
+    <script src="assets2/js/tg-cursor.min.js"></script>
+    <script src="assets2/js/ajax-form.js"></script>
+    <script src="assets2/js/svg-inject.min.js"></script>
+    <script src="assets2/js/wow.min.js"></script>
+    <script src="assets2/js/aos.js"></script>
+    <script src="assets2/js/main.js"></script>
+    <script>
+        SVGInject(document.querySelectorAll("img.injectable"));
+    </script>
 <script>
 document.getElementById("executive").addEventListener("change", function() {
     const inputDiv = document.getElementById("executive-options");
