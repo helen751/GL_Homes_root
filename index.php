@@ -1,94 +1,18 @@
-<?php
-$host = "localhost";
-$db = "glhorgia_users";  
-$user = "glhorgia_admin";     
-$pass = "GLHOMES_DB_ADMIN06";  
-
-
-$conn = new mysqli($host, $user, $pass, $db);
-
-$swal_success = "";
-$swal_error = "";
-
-if (isset($_GET['trxref']) && isset($_GET['id'])) {
-    $id = (int) $_GET['id'];
-    $ref = $_GET['trxref'];
-    $amount = $_GET['amount'];
-
-    $curl = curl_init();
-    curl_setopt_array($curl, [
-        CURLOPT_URL => "https://api.paystack.co/transaction/verify/" . rawurlencode($ref),
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_HTTPHEADER => [
-            "Authorization: Bearer sk_live_9c7dd14bedec1d3c18abc60e6bcdb5a269f8ca24",
-            "Content-Type: application/json"
-        ]
-    ]);
-
-    $response = curl_exec($curl);
-    curl_close($curl);
-    $result = json_decode($response, true);
-
-    if (isset($result['status']) && $result['status'] === true) {
-        $payment_status = $result['data']['status'];
-
-        if ($payment_status === 'success') {
-            $ref = $conn->real_escape_string($ref);
-            $conn->query("UPDATE mindset_shift_attendees SET payment_status = 1, payment_reference = '$ref', payment_amount = '$amount' WHERE id = $id");
-
-            // Retrieve user info for email
-            $result = $conn->query("SELECT fullname, email FROM mindset_shift_attendees WHERE id = $id");
-            $user = $result->fetch_assoc();
-            $name = $user['fullname'];
-            $email = $user['email'];
-
-            // Email content
-            $subject = "GL Homes Masterclass Payment Confirmation";
-            $message = "
-            Dear $name,\n
-            Thank you for registering for the GL Homes Masterclass.
-            Your payment has been confirmed successfully.\n
-            Payment Reference: $ref
-            We will keep in touch and share the event invite and access link with you before the masterclass start date.\n
-            Best regards,
-            GL Homes Team";
-
-            $headers = "From: masterclass@glhomesltd.com\r\n" .
-                    "Reply-To: masterclass@glhomesltd.com\r\n" .
-                    "X-Mailer: PHP/" . phpversion();
-
-            // Send email
-            mail($email, $subject, $message, $headers);
-
-            // Trigger success alert
-            $swal_success = "Payment successful! A confirmation email has been sent to you.";
-        }
-        else {
-            $swal_error = "Transaction failed or was not completed.";
-        }
-    }
-    else {
-        $swal_error = "Failed to verify transaction. Please try again.";
-    } 
-}
-?>
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html class="no-js" lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <title> GL Homes Limited</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta
-        content="GL Homes Limited is a leading real estate, construction and Automation tech company specializing in residential and commercial properties. With a commitment to quality and innovation, we create exceptional living spaces and infrastructure that enhance communities and lifestyles. "
-        name="description" />
-    <meta content="GL Homes" name="author" />
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/common.css" rel="stylesheet">
-    <link href="css/theme-02.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>GL Homes Masterclass</title>
+    <meta name="description" content="GL Homes Masterclass">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="shortcut icon" type="image/x-icon" href="images/Logo-sm.png">
+    <!-- Place favicon.ico in the root directory -->
 
-     <link rel="stylesheet" href="assets2/css/bootstrap.min.css">
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets2/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets2/css/animate.min.css">
     <link rel="stylesheet" href="assets2/css/magnific-popup.css">
     <link rel="stylesheet" href="assets2/css/fontawesome-all.min.css">
@@ -100,66 +24,28 @@ if (isset($_GET['trxref']) && isset($_GET['id'])) {
     <link rel="stylesheet" href="assets2/css/aos.css">
     <link rel="stylesheet" href="assets2/css/tg-cursor.css">
     <link rel="stylesheet" href="assets2/css/main.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
-    <style>
-        /* Align phone input inside your form design */
-        .intl-tel-input {
-            width: 100%;
-        }
-        .intl-tel-input .form-control {
-            height: 100%;
-        }
-        .intl-tel-input input {
-            width: 100%;
-            padding-left: 58px !important; /* adjusts for dial code */
-        }
-    </style>
-
-
-    <!-- favicon -->
-    <link rel="shortcut icon" href="images/Logo-sm.png">
-
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
-
-    <!-- Tailwind css Cdn -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <script src="tailwind.config.js"></script>
-    <!-- SweetAlert2 CSS + JS -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- custom - css include -->
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-
-    <!-- icon - css include -->
-		<link rel="stylesheet" type="text/css" href="assets/css/unicons.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/flaticon.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/fontawesome-all.css">
-
-
-    <!-- carousel - css include -->
-		<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/owl.theme.default.min.css">
-
-		<!-- magnific popup - css include -->
-		<link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
-
-		<!-- scroll animation - css include -->
-		<link rel="stylesheet" type="text/css" href="assets/css/aos.css">
-
-        <style>
-            .service-section .service-grid-item {
-    border-color: #e3e8fe;
-}
-        </style>
-
 </head>
 
-<body class="font-body">
+<body class="theme-gray">
 
-     <!-- header-area -->
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- preloader-end -->
+
+    <!-- Scroll-top -->
+    <button class="scroll__top scroll-to-target" data-target="html">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <!-- Scroll-top-end-->
+
+    <!-- header-area -->
     <header class="transparent-header">
         <div id="header-fixed-height"></div>
         <div id="sticky-header" class="tg-header__area tg-header__area-two">
@@ -262,180 +148,691 @@ if (isset($_GET['trxref']) && isset($_GET['id'])) {
 
     </header>
     <!-- header-area-end -->
-    
+
+
+
+    <!-- main-area -->
     <main class="main-area fix">
 
-<section class="banner__area-two fix">
+
+        <!-- banner-area -->
+        <section class="banner__area-two fix">
             <div class="container">
-    <div class="container mx-auto">
-            <div class="text-center text-dark relative">
-                <h2 class="text-5xl font-semibold capitalize text-transparent bg-clip-text bg-gradient-to-r from-red-700 via-blue-600 to-blue-400 mt-2" id="ready-text">Are you ready?</h2>
-                <p class="text-base mt-2 mb-7" id="ready-text2">Countdown to MINDSET SHIFT Business Masterclass</p>
-                <div id="countdown" class="my-10 z-30">
-                    <div class="flex flex-wrap items-center justify-center">
-                        <div>
-                            <div class="sm:h-40 sm:w-48 h-32 w-32 flex items-center justify-center bg-white/10 border border-white/20">
-                                <div>
-                                    <span id="days" class="text-3xl md:text-6xl"></span>
-                                    <p class="text-xs font-semibold uppercase mt-5">days</p>
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-6 col-md-10 order-0 order-lg-2">
+                        <div class="banner__img-two">
+                            <div class="main-img">
+                                <img src="images/ms1.jpeg" alt="img">
+                            </div>
+                            <div class="business-growth-box" data-aos="fade-left" data-aos-delay="400">
+                                <div class="icon">
+                                    <i class="flaticon-investment"></i>
+                                </div>
+                                <div class="content">
+                                    <h4 class="title">Business Growth</h4>
+                                    <h3 class="count">100%</h3>
+                                </div>
+                            </div>
+                            <div class="shape-wrap">
+                                <img src="assets2/img/banner/h2_hero_img01.svg" alt="shape" class="rightToLeft">
+                                <img src="assets2/img/banner/h2_hero_img02.svg" alt="shape" class="rotateme">
+                                <img src="assets2/img/banner/h2_hero_img03.svg" alt="shape" class="alltuchtopdown">
+                                <img src="assets2/img/banner/h2_hero_img04.svg" alt="shape" data-aos="fade-right" data-aos-delay="400">
+                                <img src="assets2/img/banner/h2_hero_img05.svg" alt="shape">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="banner__content-two">
+                            <h2 class="title" data-aos="fade-up" data-aos-delay="0">GL HOMES PRESENTS: MINDSET SHIFT 2025 </h2>
+                            <p data-aos="fade-up" data-aos-delay="300"> Are you ready for a mindset shift towards your business?
+                        This exclusive Masterclass brings together visionary leaders across governance, banking, and investment to share practical insights on building sustainable systems, global leadership, and innovative investment opportunities. Participants will gain actionable strategies that bridge ethics, finance, and real estate to unlock long-term impact.</p>
+                           
+                                <button type="button" class="tg-btn">Learn more <img src="assets2/img/icons/right_arrow.svg" alt="" class="injectable"></button>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- banner-area-end -->
+
+        <!-- brand-area -->
+        <div class="brand__area-two mb-3" id="about">
+            <div class="container">
+                <div class="brand__content">
+                    <h4 class="title">Over
+                        <span>5 countries
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="7" viewBox="0 0 50 7" fill="none">
+                                <path d="M0.99992 5.59566C9.42209 2.58449 30.6892 -1.69455 48.3803 5.27862" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </span>
+                        Our Impact expanded to business owners all over the world.
+                    </h4>
+                </div>
+                <div class="swiper-container brand-active fix">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="brand-item">
+                                <img src="images/ng.png" alt="img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-item">
+                                <img src="images/ger.png" alt="img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-item">
+                                <img src="images/us.png" alt="img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-item">
+                                <img src="images/uk.png" alt="img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-item">
+                                <img src="images/can.png" alt="img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-item">
+                                <img src="images/bra.png" alt="img">
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- brand-area-end -->
+ <!-- about-area -->
+        <section class="about__area-two mt-5">
+            <div class="container" id="masterclass">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-6 col-md-9">
+                        <div class="about__img-wrap-two">
+                            <img src="images/ms-banner.png" alt="img">
+                            <div class="shape">
+                                <img src="assets2/img/images/h2_about-shape01.svg" alt="shape" class="alltuchtopdown">
+                                <img src="assets2/img/images/h2_about-shape02.svg" alt="shape" class="rightToLeft">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about__content-two">
+                            <div class="section__title mb-10">
+                                <span class="sub-title">About our history</span>
+                                <h2 class="title">Who we are</h2>
+                            </div>
+                            <p>GL HOMES Beyond Horizon Masterclass is a faith-rooted platform raising ethical leaders and entrepreneurs across Africa through principle-based business education. </p>
+                            <div class="about__inner-wrap-two">
+                                <div class="client__box">
+                                    <div class="icon">
+                                        <i class="flaticon-achievement"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h2 class="count">10,000+</h2>
+                                        <span>Satisfied Businesses</span>
+                                    </div>
+                                </div>
+                                <ul class="list-wrap about__list-item-two">
+                                    <li>
+                                        <div class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11" fill="none">
+                                                <path d="M12.091 2L5.091 9L1.90918 5.81818" stroke="currentColor" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        100% Attendees Satisfaction
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11" fill="none">
+                                                <path d="M12.091 2L5.091 9L1.90918 5.81818" stroke="currentColor" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        Empowering Business Leaders
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="about" class="tg-btn">More about us <img src="assets2/img/icons/right_arrow.svg" alt="" class="injectable"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about-area-end -->
+ <!-- services-area -->
+        <section class="services__area section-py-130">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="section__title text-center mb-40">
+                            <span class="sub-title">Our Dedicated Drive</span>
+                            <h2 class="title">The mission and vision <br> Driving GL Homes Masterclass</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gutter-y-30 justify-content-center">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="services__item-two">
+                            <div class="services__icon-two">
+                                <i class="flaticon-analytics"></i>
+                            </div>
+                            <div class="services__content-two">
+                                <h4 class="title"><a href="about">Our Vision</a></h4>
+                                <p>To empower and impact visionary leaders and
+                                                    entrepreneurs with a sound mindset, strategies, and skills
+                                                    needed to scale up their businesses, inspire high-
+                                                    performance teams, and create lasting impact in a rapidly
+                                                    evolving global economy.</p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="services__item-two">
+                            <div class="services__icon-two">
+                                <i class="flaticon-report"></i>
+                            </div>
+                            <div class="services__content-two">
+                                <h4 class="title"><a href="about">Our Mision</a></h4>
+                                <p>To build, equip, and mentor bold and transformational business leaders, innovators, and entrepreneurs who are driven by purpose and values, capable of disrupting the status quo and igniting sustainable change in Africa and beyond.</p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- services-area-end -->
+
+
+         <!-- counter-area -->
+        <section class="counter__area-two">
+            <div class="container">
+                <div class="row gutter-y-30">
+                    <div class="col-lg-3 col-6 col-sm-6">
+                        <div class="counter__item-two">
+                            <div class="counter__icon">
+                                <i class="flaticon-partner"></i>
+                            </div>
+                            <div class="counter__content">
+                                <h2 class="count"><span class="odometer" data-count="5"></span>+</h2>
+                                <p>Countries Reached</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6 col-sm-6">
+                        <div class="counter__item-two">
+                            <div class="counter__icon">
+                                <i class="flaticon-rating"></i>
+                            </div>
+                            <div class="counter__content">
+                                <h2 class="count"><span class="odometer" data-count="200"></span>+</h2>
+                                <p>Participants</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6 col-sm-6">
+                        <div class="counter__item-two">
+                            <div class="counter__icon">
+                                <i class="flaticon-achievement"></i>
+                            </div>
+                            <div class="counter__content">
+                                <h2 class="count"><span class="odometer" data-count="30"></span>+</h2>
+                                <p>Testimonials</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6 col-sm-6">
+                        <div class="counter__item-two">
+                            <div class="counter__icon">
+                                <i class="flaticon-statistics"></i>
+                            </div>
+                            <div class="counter__content">
+                                <h2 class="count"><span class="odometer" data-count="20"></span>+</h2>
+                                <p>Cities</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- counter-area-end -->
+
+
+        <section class="project__details-area-two section-py-130" id="msclass">
+            <div class="container">
+                <div class="project__details-wrap">
+                    <div class="row">
+                    <div class="col-lg-8">
+                        <div class="project__details-content-two">
+                            <h2 class="title">Mindset Shift Masterclass Details</h2>
+                            <p>A Business Masterclass Like No Other!</p>
+                            <p>Are you ready for a mindset shift towards your business?
+                        This exclusive Masterclass brings together visionary leaders across governance, banking, and investment to share practical insights on building sustainable systems, global leadership, and innovative investment opportunities. Participants will gain actionable strategies that bridge ethics, finance, and real estate to unlock long-term impact.</p>
+                           
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <aside class="project__sidebar-two">
+                            <div class="sidebar__widget">
+                                <div class="project__details-info-wrap-two project__details-info-wrap-three">
+                                    <ul class="list-wrap">
+                                        <li class="project__details-info-item">
+                                            <div><span>THEME:</span>Mindset Shift</div>
+                                            <div><span>Location:</span>Google Meet</div>
+                                        </li>
+                                        <li class="project__details-info-item">
+                                            <div><span>Date:</span>21<sup>st</sup>, Sept 2025</div>
+                                            <div><span>Time:</span>6pm WAT</div>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                    </div>
+                    
+                   
+                    <div class="row justify-content-center mt-35">
+                        <div class="col-lg-5 col-md-8">
+                            <div class="project__details-thumb-five">
+                                <img src="images/ms.webp" alt="img">
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="project__details-challenge-two mb-40">
+                                <h2 class="title-two">Benefits of Attending:</h2>
+                                <ul class="list-wrap about__list-item">
+                                    <li>
+                                        <div class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                                <path d="M11.5252 3.5L5.30301 9.72222L2.47473 6.89394" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </div>
+                                        Ethical governance as the foundation for sustainable business growth
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                                <path d="M11.5252 3.5L5.30301 9.72222L2.47473 6.89394" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </div>
+                                        Expanding leadership influence from regional to global markets
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                                <path d="M11.5252 3.5L5.30301 9.72222L2.47473 6.89394" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </div>
+                                       Unlocking wealth through agricultural investment in real estate
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                                <path d="M11.5252 3.5L5.30301 9.72222L2.47473 6.89394" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </div>
+                                       Practical strategies to build transparency, trust, and long-term impact
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="project__details-challenge-two">
+                                <div class="section__title mb-50">
+                                   <h2 class="title-two">Speakers:</h2>
+                                </div>
+                                <div class="row">
+                            <div class="col-lg-6">
+                                
+                                <div class="benefit__item-two">
+                                    
+                                    <div class="benefit__content-two">
+                                        <h4 class="title">Mr. Alex Alozie (Executive Director, UBA North Bank)
+</h4>
+                                        <p>From Regional to Global Leadership Thinking
+</p>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="col-lg-6">
+                                <div class="benefit__item-two">
+                                    
+                                    <div class="benefit__content-two">
+                                        <h4 class="title">Dr. Nnaemeka Onyeka Obiaraeri
+</h4>
+                                        <p> Agricultural Investment Through Real Estate
+
+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="benefit__item-two">
+                                    
+                                    <div class="benefit__content-two">
+                                        <h4 class="title">Mr. Michael Hadi Ango (Chairman, FCT Federal Inland Revenue Service)
+</h4>
+                                        <p>Topic: Rethinking Governance: Building Ethical and Transparent Business Systems for Long-Term Impact
+</p>
+                                    </div>
+                                </div>
+                                
+                               
+                            </div>
+                        </div>
+                               
+                            </div>
+                           
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+       
+      
+        <section class="career__area-two mb-5" id="msplan">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="section__title text-center mb-50">
+                            <span class="sub-title">Masterclass</span>
+                            <h2 class="title">Registration Plans</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gutter-y-30">
+                    <div class="col-lg-6">
+                        <div class="career__item">
+                            <div class="career__item-content">
+                                <h4 class="title">Basic Plan</h4>
+                                <p><span>Benefits:</span> </p>
+                               <ul class="list-wrap about__list-item">
+                                    <li>
+                                        <div class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                                <path d="M11.5252 3.5L5.30301 9.72222L2.47473 6.89394" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </div>
+                                       Access to the full Masterclass session
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                                <path d="M11.5252 3.5L5.30301 9.72222L2.47473 6.89394" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </div>
+                                        Participation in interactive Q&A sessions (1 Question)
+                                    </li>
+                                    <li>
+                                        <div class="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" viewBox="0 0 16 16">
+  <!-- Circle -->
+  <circle cx="8" cy="8" r="7.5" stroke="red" stroke-width="1.5" fill="none"/>
+  <!-- X -->
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg>
+
+                                        </div>
+                                        No access to speakers or exclusive Breakout rooms for one-on-one interaction
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="list-wrap">
+                                <li><a href="#!">Partical Access</a></li>
+                            </ul>
+                            <div class="career__item-bottom">
+                                <h2 class="salary"><span class="text-decoration-line-through">₦25,000</span> - ₦10,000 <span>NGN</span></h2>
+                                <a href="attend" class="tg-btn tg-btn-three">Register now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="career__item">
+                            <div class="career__item-content">
+                                <h4 class="title">Executive Access</h4>
+                                <p><span>Benefits:</span> </p>
+                            </div>
+                            <ul class="list-wrap about__list-item">
+                                    <li>
+                                        <div class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                                <path d="M11.5252 3.5L5.30301 9.72222L2.47473 6.89394" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </div>
+                                        Direct interaction with the main speakers in a private setting
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                                <path d="M11.5252 3.5L5.30301 9.72222L2.47473 6.89394" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </div>
+                                        Priority access to ask questions and get expert advice
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                                <path d="M11.5252 3.5L5.30301 9.72222L2.47473 6.89394" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </div>
+                                        Exclusive breakout rooms (3 rooms, one per speaker) for closer engagement
+                                    </li>
+                                </ul>
+                            <ul class="list-wrap">
+                               
+                                <li><a href="#!">Full Access</a></li>
+                            </ul>
+                            <div class="career__item-bottom">
+                                <h2 class="salary"><span class="text-decoration-line-through">₦300,000</span> - ₦250,000 <span>NGN</span></h2>
+                                <a href="attend" class="tg-btn tg-btn-three">Register now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+
+       <div class="container mt-5" id="team">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="section__title mb-50 mb-md-30">
+                            <span class="sub-title">Core Team</span>
+                            <h2 class="title">Meet with GLHOMES Masterclass Team</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="section__content mb-50">
+                            <p>We would like to take the opportunity to introduce to our experienced team, bringing this masterclass to live.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gutter-y-30 justify-content-center">
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="team__item-three">
+                            <div class="team__thumb-three">
+                                <img src="assets2/img/team/emm.webp" alt="img">
+                            </div>
+                            <div class="team__content-three">
+                                <h2 class="title"><a href="#">Emmanuel Onyedikachi</a></h2>
+                                <span>Visionary/Founder</span>
+                                <div class="team__social-three">
+                                    <ul class="list-wrap">
+                                        <li><a href="https://www.facebook.com/" target="_blank"><img src="assets2/img/icons/facebook.svg" alt="" class="injectable"></a></li>
+                                        <li><a href="https://x.com/home" target="_blank"><img src="assets2/img/icons/twitter.svg" alt="" class="injectable"></a></li>
+                                        <li><a href="https://www.instagram.com/" target="_blank"><img src="assets2/img/icons/instagram.svg" alt="" class="injectable"></a></li>
+                                        <li><a href="https://www.pinterest.com/" target="_blank"><img src="assets2/img/icons/pinterest.svg" alt="" class="injectable"></a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-
-                        <div>
-                            <div class="sm:h-40 sm:w-48 h-32 w-32 flex items-center justify-center bg-white/10 border border-white/20">
-                                <div>
-                                    <span id="hours" class="text-3xl md:text-6xl"></span>
-                                    <p class="text-xs font-semibold uppercase mt-5">Hours</p>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="team__item-three">
+                            <div class="team__thumb-three">
+                                <img src="assets2/img/team/pauline.webp" alt="img">
+                            </div>
+                            <div class="team__content-three">
+                                <h2 class="title"><a href="#">Dr Pauline Ogbo</a></h2>
+                                <span>Business Advisor</span>
+                                <div class="team__social-three">
+                                    <ul class="list-wrap">
+                                        <li><a href="https://www.facebook.com/" target="_blank"><img src="assets2/img/icons/facebook.svg" alt="" class="injectable"></a></li>
+                                        <li><a href="https://x.com/home" target="_blank"><img src="assets2/img/icons/twitter.svg" alt="" class="injectable"></a></li>
+                                        <li><a href="https://www.instagram.com/" target="_blank"><img src="assets2/img/icons/instagram.svg" alt="" class="injectable"></a></li>
+                                        <li><a href="https://www.pinterest.com/" target="_blank"><img src="assets2/img/icons/pinterest.svg" alt="" class="injectable"></a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-
-                        <div>
-                            <div class="sm:h-40 sm:w-48 h-32 w-32 flex items-center justify-center bg-white/10 border border-white/20">
-                                <div>
-                                    <span id="minutes" class="text-3xl md:text-6xl"></span>
-                                    <p class="text-xs font-semibold uppercase mt-5">Minutes</p>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="team__item-three">
+                            <div class="team__thumb-three">
+                                <img src="assets2/img/team/comfort.webp" alt="img">
+                            </div>
+                            <div class="team__content-three">
+                                <h2 class="title"><a href="#">Comfort Ijeoma Okereke</a></h2>
+                                <span>Project Manager</span>
+                                <div class="team__social-three">
+                                    <ul class="list-wrap">
+                                        <li><a href="https://www.facebook.com/" target="_blank"><img src="assets2/img/icons/facebook.svg" alt="" class="injectable"></a></li>
+                                        <li><a href="https://x.com/home" target="_blank"><img src="assets2/img/icons/twitter.svg" alt="" class="injectable"></a></li>
+                                        <li><a href="https://www.instagram.com/" target="_blank"><img src="assets2/img/icons/instagram.svg" alt="" class="injectable"></a></li>
+                                        <li><a href="https://www.pinterest.com/" target="_blank"><img src="assets2/img/icons/pinterest.svg" alt="" class="injectable"></a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-
-                        <div>
-                            <div class="sm:h-40 sm:w-48 h-32 w-32 flex items-center justify-center bg-white/10 border border-white/20">
-                                <div>
-                                    <span id="seconds" class="text-3xl md:text-6xl"></span>
-                                    <p class="text-xs font-semibold uppercase mt-5">Seconds</p>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="team__item-three">
+                            <div class="team__thumb-three">
+                                <img src="assets2/img/team/helen.webp" alt="img">
+                            </div>
+                            <div class="team__content-three">
+                                <h2 class="title"><a href="#">Helen ugoeze Okereke</a></h2>
+                                <span>Tech Specialist</span>
+                                <div class="team__social-three">
+                                    <ul class="list-wrap">
+                                        <li><a href="https://www.facebook.com/" target="_blank"><img src="assets2/img/icons/facebook.svg" alt="" class="injectable"></a></li>
+                                        <li><a href="https://x.com/home" target="_blank"><img src="assets2/img/icons/twitter.svg" alt="" class="injectable"></a></li>
+                                        <li><a href="https://www.instagram.com/" target="_blank"><img src="assets2/img/icons/instagram.svg" alt="" class="injectable"></a></li>
+                                        <li><a href="https://www.pinterest.com/" target="_blank"><img src="assets2/img/icons/pinterest.svg" alt="" class="injectable"></a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    
 
-
-
-    <div class="forny-container mt-4">
-        
-<div class="forny-inner">
-    <div class="forny-form" id="register">
-        <div class="text-center">
-            <h2 class="text-4xl/snug font-semibold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-blue-600 to-blue-400 mb-2">Register for Mindset Shift</h2>
-            <p class="text-1xl text-center font-semibold mb-5">Fill in your details and proceed to payment. <br>
-            <strong>NOTE:</strong>We will contact you after payment</p>
-        </div>
-        <form>
-     <div class="form-group">
-        <div class="input-group">
-            <input required class="form-control" name="name" id="name" type="text" placeholder="Full Name">   
-        </div>
-    </div>        
-    <div class="form-group">
-        <div class="input-group">
-            <input required class="form-control" name="email" id="email" type="email" placeholder="Email Address">
-        </div>
-    </div>
-
-    <!-- Phone Number Input -->
-    <div class="form-group">
-        <div class="input-group">
-            <input required class="form-control" id="phone" type="tel" name="phone" placeholder="Phone Number">
-        </div>
-    </div>
-
-    <!-- Gender Dropdown -->
-<div class="form-group">
-    <div class="input-group">
-        <select id="gender" class="form-control" required>
-            <option value="">Select Gender</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            <option value="Other">Other</option>
-        </select>
-    </div>
-</div>
-<!-- Gender Dropdown -->
-<div class="form-group">
-    <div class="input-group">
-        <select id="category" class="form-control" required>
-            <option value="">Which Category can you Identify in?</option>
-             <option value="Startup Owner">Startup Owner</option>
-            <option value="Business Aspirant">Business Aspirant</option>
-            <option value="Business Scale-up">Business Scale-up</option>
-            <option value="Business Consultancy">Business Consultancy</option>
-             <option value="Business Mentorship">Business Mentorship</option>
-        </select>
-    </div>
-</div>
-    <!-- Country Dropdown -->
-    <div class="form-group">
-        <div class="input-group">
-            <select id="country" class="form-control" required>
-                <option value="">Select Country</option>
-            </select>
-        </div>
-    </div>
-
-    <!-- State Dropdown -->
-    <div class="form-group">
-        <div class="input-group">
-            <select id="state" class="form-control" required>
-                <option value="">Select State/Province</option>
-            </select>
-        </div>
-    </div>
-
-    <!-- City Input -->
-    <div class="form-group">
-        <div class="input-group">
-            <input type="text" class="form-control" id="city" placeholder="Enter your city" required>
-        </div>
-    </div>
-    <div class="mt-3 custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input" id="executive">
-        <label class="custom-control-label text-danger" for="executive">Include Executive Benefits (NGN 250,000)
-        </label>
-    </div>
-
-    <div class="form-group" id="executive-options" style="display: none; margin-top: 10px;">
-        <div class="input-group">
-            
-            <select id="executiveChoice" class="form-control">
-                <option value="">Select the Speaker to Engage:</option>
-                <option value="Mr. Michael Hadi Ango">Mr. Michael Hadi Ango (Chairman, FCT Federal Inland Revenue Service)</option>
-                <option value="Mr. Alex Alozie">Mr. Alex Alozie (Executive Director, UBA North Bank) </option>
-                <option value="Dr. Nnaemeka Onyeka Obiaraeri">Dr. Nnaemeka Onyeka Obiaraeri</option>
-                <option value="Mr. Emmanuel O. Emmanuel">Mr. Emmanuel O. Emmanuel (CEO, GL Homes Limited)</option>
-            </select>
-        </div>
-    </div>
-    
-
-    <div class="row mt-6 mb-6">
-        <div class="col-6 d-flex align-items-center"></div>
-    </div>
-    <strong class="text-1xl text-blue-600 mb-3">Any issue? message masterclass@glhomesltd.com</strong><br><br>
-<button class="btn text-white bg-blue-600 hover:bg-blue-700 btn-block col-xl-4 col-lg-4 col-md-4 col-12" id="pn" type="button" onclick="pay_now(this, 'NGN');">Pay in Naira</button>
-    <!-- <div class="row"> -->
-        
-        <!-- <div class="line col-xl-4 col-lg-4 col-12 col-md-4 mt-5 mb-3">
-                <span>or </span>
+        <!-- testimonial-area -->
+        <section class="testimonial__area-two section-py-130" id="testimonial">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-5 col-lg-7">
+                        <div class="section__title text-center mb-40">
+                            <span class="sub-title">Our Testimonials</span>
+                            <h2 class="title">Stories of some of Our Participants</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-container testimonial-active-two fix">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="testimonial__item-two">
+                                <div class="testimonial__rating-two">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p>“I attended Beyond the Horizon, and it was impactful. The practical, real-world approach made concepts easy to grasp and left me inspired to take smarter steps toward financial independence. I highly recommend GLHomes sessions.”</p>
+                                <div class="testimonial__author">
+                                    <div class="thumb">
+                                        <img src="assets2/img/testimonial/sharon.jpg" alt="img">
+                                    </div>
+                                    <div class="content">
+                                        <h3 class="title">Innocent Sharon Chidinma</h3>
+                                        <span>BML Attendee</span>
+                                    </div>
+                                </div>
+                                <div class="testimonial__icon-two">
+                                    <img src="assets2/img/icons/quote02.svg" alt="icon" class="injectable">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial__item-two">
+                                <div class="testimonial__rating-two">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p>“Attending the Business masterclass helped me gain insights into key business concepts, developing strategic thinking, enhancing leadership capabilities, and learning actionable techniques for problem-solving and decision-making.”</p>
+                                <div class="testimonial__author">
+                                    <div class="thumb">
+                                        <img src="assets2/img/testimonial/evelyn.jpg" alt="img">
+                                    </div>
+                                    <div class="content">
+                                        <h3 class="title">Evelyn Anasi</h3>
+                                        <span>BML Attendee</span>
+                                    </div>
+                                </div>
+                                <div class="testimonial__icon-two">
+                                    <img src="assets2/img/icons/quote02.svg" alt="icon" class="injectable">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial__item-two">
+                                <div class="testimonial__rating-two">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p>“This masterclass opened my eye to a whole new perspective on land banking. This revelation has empowered me to take proactive steps towards maximising the potential of my investment.
+                                <br>
+                               I loved it.”</p>
+                                <div class="testimonial__author">
+                                    <div class="thumb">
+                                        <img src="assets2/img/testimonial/Mrs.-Chryslene-Neher-Germany.jpg" alt="img">
+                                    </div>
+                                    <div class="content">
+                                        <h3 class="title">Mrs. Chrislyne Neher</h3>
+                                        <span>BML Attendee</span>
+                                    </div>
+                                </div>
+                                <div class="testimonial__icon-two">
+                                    <img src="assets2/img/icons/quote02.svg" alt="icon" class="injectable">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-         <button class="btn text-white bg-blue-600 hover:bg-blue-700 btn-block col-4 col-xl-4 col-lg-4 col-12 col-md-4" id="pn2" type="button" onclick="pay_now(this, 'USD');">Pay in USD</button> -->
-    <!-- </div> -->
-</form>
+        </section>
+        <!-- testimonial-area-end -->
 
-    </div>
-</div>
+       
 
-    </div>
-            </div>
-</section>
-</main>
-    <!-- Section End -->
-
-
+    </main>
+    <!-- main-area-end -->
 
     <!-- footer-area -->
     <footer class="footer__area-two fix">
@@ -462,7 +859,7 @@ if (isset($_GET['trxref']) && isset($_GET['id'])) {
                             <ul class="footer__widget-link footer__widget-link-two list-wrap">
                                 <li><a href="index">Home </a></li>
                                 <li><a href="#about">About us</a></li>
-                                <li><a href="#attend">Register</a></li>
+                                <li><a href="attend">Register</a></li>
                             </ul>
                         </div>
                     </div>
@@ -521,38 +918,10 @@ if (isset($_GET['trxref']) && isset($_GET['id'])) {
 
 
 
- <script src="assets/js/jquery-3.3.1.min.js"></script>
-    <script src="js2/bootstrap.min.js"></script>
-    <script src="js2/main.js"></script>
-    <script src="js2/demo.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <!-- carousel - jquery include -->
-		<script src="assets/js/owl.carousel.min.js"></script>
 
-		<!-- magnific popup - jquery include -->
-		<script src="assets/js/jquery.magnific-popup.min.js"></script>
 
-		<!-- scroll animation - jquery include -->
-		<script src="assets/js/aos.js"></script>
-		<script src="assets/js/parallax.min.js"></script>
 
-        <!-- multy countdown - jquery include -->
-		<script src="assets/js/jquery.countdown.js"></script>
-
-		<!-- counter - jquery include -->
-		<script src="assets/js/waypoints.min.js"></script>
-		<script src="assets/js/jquery.counterup.min.js"></script>
-
-		<!-- google - jquery include -->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhrdEzlfpnsnfq4MgU1e1CCsrvVx2d59s"></script>
-        <script src="assets/js/gmaps.js"></script>
-
-		<!-- mCustomScrollbar for sidebar menu - jquery include -->
-        <script src="assets/js/jquery.mCustomScrollbar.js"></script>
-
-		<!-- custom - jquery include -->
-		<script src="assets/js/custom.js"></script>
-        <!-- JS here -->
+    <!-- JS here -->
     <script src="assets2/js/vendor/jquery-3.6.0.min.js"></script>
     <script src="assets2/js/bootstrap.min.js"></script>
     <script src="assets2/js/jquery.magnific-popup.min.js"></script>
@@ -570,232 +939,6 @@ if (isset($_GET['trxref']) && isset($_GET['id'])) {
     <script>
         SVGInject(document.querySelectorAll("img.injectable"));
     </script>
-<script>
-document.getElementById("executive").addEventListener("change", function() {
-    const inputDiv = document.getElementById("executive-options");
-    if (this.checked) {
-      inputDiv.style.display = "block"; // Show input when checked
-    } else {
-      inputDiv.style.display = "none"; // Hide input when unchecked
-    }
-  });
-</script>
-    <script>
-        var accepting_registration = true
-
-        if (!accepting_registration){
-            document.querySelector('.forny-container').innerHTML = `
-                <div class="text-center">
-                    <h2 class="text-2xl font-semibold text-red-600">Masterclass Registration is currently closed.</h2>
-                    <p class="text-gray-600 mb-2">Please keep an eye on your email to get our notifications.</p>
-                </div>
-            `;
-
-            countdown.style.display = 'none'; // Hide countdown if registration is closed
-            document.getElementById('ready-text').innerText = "Beyond the Horizon Masterclass Ended.";
-            document.getElementById('ready-text2').innerText = "We are not accepting any registrations at this time. We will let you know when the next masterclass is available.";
-        }
-
-        </script>
-        
-    <script>
-
-        //Show and hide hamburguer menu in small screens 
-        const menu = document.getElementById("menu");
-        const ulMenu = document.getElementById("ulMenu");
-
-        function menuToggle() {
-            menu.classList.toggle('navbar-show')
-        }
-
-        // Browser resize listener
-        window.addEventListener("resize", menuResize);
-
-        // Rezise menu if user changing the width with responsive menu opened
-        function menuResize() {
-            // first get the size from the window
-            const window_size = window.innerWidth || document.body.clientWidth;
-            if (window_size > 640) {
-                menu.classList.remove('navbar-show');
-            }
-        }
-    </script>
-<script>
-let userCountry = '';
-
-// Detect country
-fetch('https://ipapi.co/json/')
-  .then(res => res.json())
-  .then(data => {
-    userCountry = data.country_name;
-    console.log("User is at:", userCountry); // Optional debug
-  })
-  .catch(err => {
-    console.error("Geolocation error:", err);
-    userCountry = 'Unknown';
-  });
-</script>
-<!-- Phone Input Script -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
-<script>
-    const phoneInput = document.querySelector("#phone");
-    window.intlTelInput(phoneInput, {
-        separateDialCode: true,
-        preferredCountries: ["ng", "us", "gb"],
-        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.min.js"
-    });
-</script>
-
-<!-- Countries & States using CountriesNow API -->
-<script>
-    const countrySelect = document.getElementById('country');
-    const stateSelect = document.getElementById('state');
-
-    // Fetch and populate countries
-    fetch('https://countriesnow.space/api/v0.1/countries/positions')
-        .then(res => res.json())
-        .then(data => {
-            data.data.forEach(country => {
-                const opt = document.createElement('option');
-                opt.value = country.name;
-                opt.textContent = country.name;
-                countrySelect.appendChild(opt);
-            });
-        });
-
-    // Fetch and populate states
-    countrySelect.addEventListener('change', function () {
-        const country = this.value;
-        stateSelect.innerHTML = '<option value="">Loading...</option>';
-        fetch('https://countriesnow.space/api/v0.1/countries/states', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ country })
-        })
-        .then(res => res.json())
-        .then(data => {
-            stateSelect.innerHTML = '<option value="">Select State/Province</option>';
-            data.data.states.forEach(state => {
-                const opt = document.createElement('option');
-                opt.value = state.name;
-                opt.textContent = state.name;
-                stateSelect.appendChild(opt);
-            });
-        });
-    });
-</script>
-<script>
-    //adding async to the form submission script
-  const payNairaButton = document.getElementById("pn");
-    // const payUsdButton = document.getElementById("pn2");
-
-async function pay_now(button, currency) {
-
-    const fullname = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const phoneInput = window.intlTelInputGlobals.getInstance(document.getElementById("phone"));
-    const phone = phoneInput.getNumber();
-    const country = document.getElementById("country").value;
-    const state = document.getElementById("state").value;
-    const city = document.getElementById("city").value.trim();
-    const gender = document.getElementById("gender").value;
-    const category = document.getElementById("category").value;
-    var executive = 0;
-    var executiveChoice = "";
-
-
-    // Validation
-    if (!fullname) return alert("Please enter your full name.");
-    if (!email || !/^\S+@\S+\.\S+$/.test(email)) return alert("Please enter a valid email.");
-    if (!phone) return alert("Please enter a valid phone number.");
-    if (!gender) return alert("Please select your gender.");
-    if (!category) return alert("Please choose a category you belong!");
-    if (!country) return alert("Please select a country.");
-    if (!state) return alert("Please select a state.");
-    if (!city) return alert("Please enter your city.");
-
-    if(!document.getElementById("executive").checked){
-        executive = 0;
-        executiveChoice = "";
-    } else {
-        executive = 1;
-        executiveChoice = document.getElementById("executiveChoice").value;
-        if (!executiveChoice) return alert("Please select the speaker you want to engage with.");
-    }
-
-    const data = {
-        fullname,
-        email,
-        phone,
-        phone_full: phone,
-        country,
-        state,
-        gender,
-        city,
-        category,
-        currency,
-        executive,
-        executiveChoice
-    };
-    // pay now button should be disabled to prevent multiple clicks and show please wait message
-    
-    //disabling the 2 buttons of pay with Naira and USD
-//   if (currency == "NGN" && userCountry !== "Nigeria") {
-//         Swal.fire({
-//             icon: 'warning',
-//             title: 'Unavailable',
-//             text: 'Payment in Naira is only available to users located in Nigeria. Please use the USD option.',
-//             confirmButtonColor: '#d33'
-//         });
-//     }
-//     else{
-        payNairaButton.disabled = true;
-        //payUsdButton.disabled = true;
-        button.textContent = "Please wait...";
-
-        await fetch("process.php", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data)
-        })
-        .then(res => res.json())
-        .then(response => {
-            if (response.status === "success") {
-                window.location.href = response.payment_link;
-            } else {
-                alert("Error: " + response.message);
-            }
-        })
-        .catch(err => {
-            console.error(err);
-            alert("An error occurred. Please try again.");
-        });
-
-        payNairaButton.disabled = false;
-        //payUsdButton.disabled = false;
-        button.textContent = "Pay in " + currency;
-    //}
-}
-</script>
-
-<script>
-<?php if (!empty($swal_success)): ?>
-    Swal.fire({
-        icon: 'success',
-        title: 'Success',
-        text: '<?= addslashes($swal_success) ?>',
-        confirmButtonColor: '#3085d6'
-    });
-<?php elseif (!empty($swal_error)): ?>
-    Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: '<?= addslashes($swal_error) ?>',
-        confirmButtonColor: '#d33'
-    });
-<?php endif; ?>
-</script>
-<script src="js/theme.js"></script>
 </body>
 
 </html>
