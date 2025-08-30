@@ -191,7 +191,7 @@
                             <p data-aos="fade-up" data-aos-delay="300"> Are you ready for a mindset shift towards your business?
                         This exclusive Masterclass brings together visionary leaders across governance, banking, and investment to share practical insights on building sustainable systems, global leadership, and innovative investment opportunities. Participants will gain actionable strategies that bridge ethics, finance, and real estate to unlock long-term impact.</p>
 
-                                <button type="button" class="tg-btn"><a href="#msclass"> Learn more <img src="assets2/img/icons/right_arrow.svg" alt="" class="injectable"></a></button>
+                                <a href="#msclass"><button type="button" class="tg-btn"> Learn more <img src="assets2/img/icons/right_arrow.svg" alt="" class="injectable"></button></a>
 
                         </div>
                     </div>
