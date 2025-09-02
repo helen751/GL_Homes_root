@@ -111,6 +111,7 @@ $paymentData = [
     "currency" => $currency,
     "reference" => $reference,
     "callback_url" => $callback_url,
+    "bearer" => "customer",
     "metadata" => [
         "custom_fields" => [
             [
