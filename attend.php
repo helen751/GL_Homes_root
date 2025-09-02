@@ -450,7 +450,7 @@ if (isset($_GET['trxref']) && isset($_GET['id'])) {
                                     </div>
                                     <div class="content">
                                         <span>Do you have any Question?</span>
-                                        <a href="mailto:masterclass@glhomesltd.com" style="font-size: 18px;">masterclass@glhomesltd.com</a>
+                                        <a href="mailto:masterclass@glhomesltd.com" style="font-size: 18px; text-transform:lowercase;">masterclass@glhomesltd.com</a>
                                     </div>
                                 </div>
                                 <a href="tel:+2349067274433" class="tg-btn tg-border-btn ">Call us <img src="assets2/img/icons/right_arrow.svg" alt="" class="injectable"></a>
