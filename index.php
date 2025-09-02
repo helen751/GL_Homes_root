@@ -591,7 +591,7 @@
                             </div>
                             <ul class="list-wrap">
                                 <li><a href="#!">Partial Access</a></li>
-                                <li><a href="#!" class="bg-danger">20 slots left!</a></li>
+                                <li><a href="#!" class="bg-danger text-light">20 slots left!</a></li>
                             </ul>
                             <div class="career__item-bottom">
                                 <h2 class="salary"><span class="text-decoration-line-through">₦25,000</span> - ₦10,000 <span>NGN</span></h2>
