@@ -912,9 +912,9 @@
                             <h4 class="footer__widget-title footer__widget-title-two">Company Links</h4>
                             <div class="footer__instagram">
                                 <ul class="list-wrap">
-                                    <!-- <li>
-                                        <a href="https://realestate.glhomesltd.com/" target="_blank"><img src="images/r1.webp" alt="img"></a>
-                                    </li> -->
+                                    <li>
+                                        <a href="https://realestate.glhomesltd.com/" target="_blank"><img src="images/companies/rs.jpg" alt="img"></a>
+                                    </li>
                                     <li>
                                         <a href="https://tech.glhomesltd.com" target="_blank"><img src="images/companies/tech.png" alt="img"></a>
                                     </li>
@@ -933,7 +933,8 @@
                     <div class="col-md-6">
                         <div class="copyright__content-two">
                             <p> ©
-                            <script>document.write(new Date().getFullYear())</script> GL Homes Limited. By <a class="font-medium" href="https://tech.glhomesltd">GL Homes Tech</a>
+                            <script>document.write(new Date().getFullYear())</script> GL Homes Limited. In partnership with <a href="#" target="_blank" class="font-medium">FLOZYTECH</a>. All Rights Reserved.
+                            <!-- By <a class="font-medium" href="https://tech.glhomesltd">GL Homes Tech</a> -->
                         </p>
                         </div>
                     </div>
