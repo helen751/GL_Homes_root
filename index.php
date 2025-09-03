@@ -913,7 +913,7 @@
                             <div class="footer__instagram">
                                 <ul class="list-wrap">
                                     <li>
-                                        <a href="https://realestate.glhomesltd.com/" target="_blank"><img src="images/companies/rs.jpg" alt="img"></a>
+                                        <a href="https://realestate.glhomesltd.com/" target="_blank"><img src="images/companies/rs2.jpg" alt="img"></a>
                                     </li>
                                     <li>
                                         <a href="https://tech.glhomesltd.com" target="_blank"><img src="images/companies/tech.png" alt="img"></a>
