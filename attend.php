@@ -404,7 +404,7 @@ if (isset($_GET['trxref']) && isset($_GET['id'])) {
             <select id="executiveChoice" class="form-control">
                 <option value="">Select the Speaker to Engage:</option>
                 <option value="Mr. Michael Hadi Ango">Mr. Michael Hadi Ango (Chairman, FCT Federal Inland Revenue Service)</option>
-                <option value="Mr. Alex Alozie">Mr. Alex Alozie (Executive Director, UBA North Bank) </option>
+                <!-- <option value="Mr. Alex Alozie">Mr. Alex Alozie (Executive Director, UBA North Bank) </option> -->
                 <option value="Dr. Nnaemeka Onyeka Obiaraeri">Dr. Nnaemeka Onyeka Obiaraeri</option>
                 <option value="Mr. Emmanuel O. Emmanuel">Mr. Emmanuel O. Emmanuel (CEO, GL Homes Limited)</option>
             </select>

@@ -493,7 +493,7 @@
                                    <h2 class="title-two">Speakers:</h2>
                                 </div>
                                 <div class="row">
-                            <div class="col-lg-6">
+                            <!-- <div class="col-lg-6">
                                 
                                 <div class="benefit__item-two">
                                     
@@ -504,7 +504,7 @@
 </p>
                                     </div>
                                 </div>
-                                </div>
+                                </div> -->
                                 <div class="col-lg-6">
                                 <div class="benefit__item-two">
                                     
@@ -591,7 +591,7 @@
                             </div>
                             <ul class="list-wrap">
                                 <li><a href="#!">Partial Access</a></li>
-                                <li><a href="#!" class="bg-danger text-light">20 slots left!</a></li>
+                                <li><a href="#!" class="bg-danger text-light">14 slots left!</a></li>
                             </ul>
                             <div class="career__item-bottom">
                                 <h2 class="salary"><span class="text-decoration-line-through">₦25,000</span> - ₦10,000 <span>NGN</span></h2>
