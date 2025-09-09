@@ -165,7 +165,7 @@
                     <div class="col-lg-6 col-md-10 order-0 order-lg-2">
                         <div class="banner__img-two">
                             <div class="main-img">
-                                <img src="images/ms4.jpeg" alt="img">
+                                <img src="images/ms5.jpeg" alt="img">
                             </div>
                             <div class="business-growth-box" data-aos="fade-left" data-aos-delay="400">
                                 <div class="icon">
