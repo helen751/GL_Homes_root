@@ -165,7 +165,7 @@
                     <div class="col-lg-6 col-md-10 order-0 order-lg-2">
                         <div class="banner__img-two">
                             <div class="main-img">
-                                <img src="images/ms1.jpeg" alt="img">
+                                <img src="images/ms4.jpeg" alt="img">
                             </div>
                             <div class="business-growth-box" data-aos="fade-left" data-aos-delay="400">
                                 <div class="icon">
@@ -594,7 +594,7 @@
                                 <li><a href="#!" class="bg-danger text-light">14 slots left!</a></li>
                             </ul>
                             <div class="career__item-bottom">
-                                <h2 class="salary"><span class="text-decoration-line-through">₦25,000</span> - ₦10,000 <span>NGN</span></h2>
+                                <h2 class="salary"><span class="text-decoration-line-through">₦25,000</span> - ₦5,000 <span>NGN</span></h2>
                                 <a href="attend" class="tg-btn tg-btn-three">Register now</a>
                             </div>
                         </div>

@@ -41,7 +41,7 @@ elseif ($currency == "USD" and $executive) {
     $amount = 250; // USD amount
 } 
 elseif ($currency == "NGN" and !$executive) {
-    $amount = 10000; // NGN amount
+    $amount = 5000; // NGN amount
 }
 elseif ($currency == "NGN" and $executive) {
     $amount = 250000; // NGN amount
