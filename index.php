@@ -493,7 +493,7 @@
                                    <h2 class="title-two">Speakers:</h2>
                                 </div>
                                 <div class="row">
-                            <!-- <div class="col-lg-6">
+                            <div class="col-lg-6">
                                 
                                 <div class="benefit__item-two">
                                     
@@ -504,7 +504,7 @@
 </p>
                                     </div>
                                 </div>
-                                </div> -->
+                                </div>
                                 <div class="col-lg-6">
                                 <div class="benefit__item-two">
                                     
