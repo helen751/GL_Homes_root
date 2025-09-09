@@ -58,7 +58,7 @@
                         <div class="tgmenu__wrap">
                             <nav class="tgmenu__nav">
                                 <div class="logo">
-                                    <a href="index" width="200"><img src="images/logo.png" alt="Logo"></a>
+                                    <a href="index"><img src="images/logo.png" alt="Logo" style="max-height: 70px;"></a>
                                 </div>
                                 <div class="tgmenu__navbar-wrap tgmenu__main-menu d-none d-lg-flex">
                                     <ul class="navigation">
