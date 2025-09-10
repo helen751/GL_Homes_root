@@ -64,7 +64,7 @@
                                     <ul class="navigation">
                                         <li class="active"><a href="index">Home</a></li>
                                         <li><a href="#about">About us</a></li>
-                                        <li class="active menu-item-has-children tg-mega-menu-has-children"><a href="#">Our Companies</a>
+                                        <li class="menu-item-has-children"><a href="#">Our Companies</a>
                                             <div class="tg-mega-menu-wrap">
                                                 <div class="row row-cols-1 row-cols-lg-6 row-cols-xl-6">
                                                     <div class="col">
