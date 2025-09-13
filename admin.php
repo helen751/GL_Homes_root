@@ -75,7 +75,7 @@ try {
         SELECT fullname, email, phone_number, payment_amount,
                CASE WHEN payment_status = 1 THEN 'Paid' ELSE 'Unpaid' END AS payment_status
         FROM mindset_shift_attendees
-        ORDER BY payment_status DESC, fullname
+        ORDER BY payment_status ASC, fullname
     ");
     $attendees = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
