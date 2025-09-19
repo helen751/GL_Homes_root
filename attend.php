@@ -410,6 +410,12 @@ if (isset($_GET['trxref']) && isset($_GET['id'])) {
             </select>
         </div>
     </div>
+
+    <div class="form-group">
+        <div class="input-group">
+            <input type="text" class="form-control" id="discount" placeholder="Enter your discount code to wave fee">
+        </div>
+    </div>
     
 
     <div class="row mt-6 mb-6">
@@ -731,6 +737,7 @@ async function pay_now(button, currency) {
     const city = document.getElementById("city").value.trim();
     const gender = document.getElementById("gender").value;
     const category = document.getElementById("category").value;
+    const discount = document.getElementById("discount").value.trim();
     var executive = 0;
     var executiveChoice = "";
 
@@ -752,6 +759,11 @@ async function pay_now(button, currency) {
         executive = 1;
         executiveChoice = document.getElementById("executiveChoice").value;
         if (!executiveChoice) return alert("Please select the speaker you want to engage with.");
+    }
+    if(discount){
+        if (discount !== "GLH2025MS"){
+            return alert("Invalid discount code. Remove the discount code if you dont have a valid one in order to register");
+        }
     }
 
     const data = {
