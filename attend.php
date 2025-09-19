@@ -808,7 +808,7 @@ async function pay_now(button, currency) {
                 if (payment_link == null){
                     Swal.fire({
                         icon: 'success',
-                        title: 'Success',
+                        title: 'Registration Successful!',
                         text: response.message,
                         confirmButtonColor: '#3085d6'
                     });
