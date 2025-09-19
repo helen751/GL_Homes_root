@@ -34,6 +34,7 @@ $discount     = trim($data["discount"]);
 $amount       = 0; // Default amount
 $executive    = $conn->real_escape_string($data["executive"]);
 $executiveChoice = $conn->real_escape_string($data["executiveChoice"]);
+$insert_id = 0;
 
 if($discount){
     $amount = 0;
@@ -105,7 +106,9 @@ else {
 
     $insert_id = $conn->insert_id; // Get inserted ID for redirect
 
-    if ($discount){
+}
+
+if ($discount){
         $sql = "UPDATE mindset_shift_attendees 
         SET payment_status = 1, payment_mode = 'discount_code'
         WHERE id = $insert_id";
@@ -126,7 +129,6 @@ else {
             mail($email, $subject, $message, $headers);
         }
     }
-}
 
 if($discount){    
     echo json_encode([
