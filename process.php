@@ -106,7 +106,7 @@ else {
     $insert_id = $conn->insert_id; // Get inserted ID for redirect
 }
 
-if(!$discount){    
+if($discount){    
     echo json_encode([
         "status" => "discounted",
         "message" => "Registration successful with discount code. No payment needed.",
