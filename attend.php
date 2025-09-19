@@ -805,7 +805,7 @@ async function pay_now(button, currency) {
         .then(res => res.json())
         .then(response => {
             if (response.status === "success") {
-                if (payment_link == null){
+                if (response.payment_link == null){
                     Swal.fire({
                         icon: 'success',
                         title: 'Registration Successful!',
