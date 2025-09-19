@@ -778,6 +778,7 @@ async function pay_now(button, currency) {
         category,
         currency,
         executive,
+        discount,
         executiveChoice
     };
     // pay now button should be disabled to prevent multiple clicks and show please wait message

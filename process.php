@@ -30,20 +30,24 @@ $city         = $conn->real_escape_string($data["city"]);
 $gender       = $conn->real_escape_string($data["gender"]);
 $category     = $conn->real_escape_string($data["category"]);
 $currency     = trim($data["currency"]);
+$discount     = trim($data["discount"]);
 $amount       = 0; // Default amount
 $executive    = $conn->real_escape_string($data["executive"]);
 $executiveChoice = $conn->real_escape_string($data["executiveChoice"]);
 
-if ($currency == "USD" and !$executive) {
+if($discount){
+    $amount = 0;
+}
+else if ($currency == "USD" and !$executive) {
     $amount = 10; // USD amount
 }
-elseif ($currency == "USD" and $executive) {
+else if ($currency == "USD" and $executive) {
     $amount = 250; // USD amount
 } 
-elseif ($currency == "NGN" and !$executive) {
+else if ($currency == "NGN" and !$executive) {
     $amount = 5000; // NGN amount
 }
-elseif ($currency == "NGN" and $executive) {
+else if ($currency == "NGN" and $executive) {
     $amount = 250000; // NGN amount
 }
 else {
