@@ -805,7 +805,17 @@ async function pay_now(button, currency) {
         .then(res => res.json())
         .then(response => {
             if (response.status === "success") {
-                window.location.href = response.payment_link;
+                if (payment_link == null){
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Success',
+                        text: response.message,
+                        confirmButtonColor: '#3085d6'
+                    });
+                }
+                else{
+                    window.location.href = response.payment_link;
+                }
             } else {
                 alert("Error: " + response.message);
             }

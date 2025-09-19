@@ -90,7 +90,8 @@ if ($check && $check->num_rows > 0) {
     }
     }
     // If payment not approved, reuse same record
-} else {
+} 
+else {
     // Insert into database (initial payment_status = 0)
     $sql = "INSERT INTO mindset_shift_attendees 
     (fullname, email, phone_number, country, state, city, gender, payment_amount, currency, category_group, payment_status, payment_mode, executive_list, Guest_to_see)
@@ -105,6 +106,14 @@ if ($check && $check->num_rows > 0) {
     $insert_id = $conn->insert_id; // Get inserted ID for redirect
 }
 
+if(!$discount){    
+    echo json_encode([
+        "status" => "discounted",
+        "message" => "Registration successful with discount code. No payment needed.",
+        "payment_link" => null
+    ]);
+    exit;
+}
 // Prepare for Paystack payment
 $reference = "GLHOMES_" . time() . "_" . rand(1000, 9999);
 $callback_url = "https://glhomesltd.com/attend?id={$insert_id}&amount={$amount}"; // Redirect after payment
