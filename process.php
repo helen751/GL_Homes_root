@@ -104,11 +104,33 @@ else {
     }
 
     $insert_id = $conn->insert_id; // Get inserted ID for redirect
+
+    if ($discount){
+        $sql = "UPDATE mindset_shift_attendees 
+        SET payment_status = 1, payment_mode = 'discount_code'
+        WHERE id = $insert_id";
+        if (!$conn->query($sql)) {
+            echo json_encode(["status" => "error", "message" => "Failed to update discount code status in database"]);
+            exit;
+        }
+        else{
+            // Send confirmation email for discount code registration
+            $to = $email;
+            $subject = "Mindset Shift Masterclass 2025 - Registration Confirmed";
+            $message = "Dear $fullname,\n\nThank you for registering for the Mindset Shift Masterclass 2025 using a discount code. Your registration is confirmed, and no payment is needed.\n\nWe look forward to seeing you at the event!\n\nBest regards,\nGLHomes BMS Team";
+            $headers = "From: masterclass@glhomesltd.com\r\n" .
+                    "Reply-To: masterclass@glhomesltd.com\r\n" .
+                    "X-Mailer: PHP/" . phpversion();
+
+            // Send email
+            mail($email, $subject, $message, $headers);
+        }
+    }
 }
 
 if($discount){    
     echo json_encode([
-        "status" => "discounted",
+        "status" => "success",
         "message" => "Registration successful with discount code. No payment needed.",
         "payment_link" => null
     ]);
@@ -175,4 +197,5 @@ if (isset($result["data"]["authorization_url"])) {
         "message" => isset($result["message"]) ? $result["message"] : "Payment link not generated"
     ]);
 }
+
 ?>
