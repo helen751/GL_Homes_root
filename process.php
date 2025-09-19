@@ -127,77 +127,78 @@ if ($discount){
 
             // Send email
             mail($email, $subject, $message, $headers);
+
+            echo json_encode([
+                "status" => "success",
+                "message" => "Registration successful with discount code. No payment needed.",
+                "payment_link" => null
+            ]);
+            exit;
         }
-    }
-
-if($discount){    
-    echo json_encode([
-        "status" => "success",
-        "message" => "Registration successful with discount code. No payment needed.",
-        "payment_link" => null
-    ]);
-    exit;
 }
-// Prepare for Paystack payment
-$reference = "GLHOMES_" . time() . "_" . rand(1000, 9999);
-$callback_url = "https://glhomesltd.com/attend?id={$insert_id}&amount={$amount}"; // Redirect after payment
 
-$paymentData = [
-    "email" => $email,
-    "amount" => $amount * 100, // Paystack uses kobo (multiply Naira by 100)
-    "currency" => $currency,
-    "reference" => $reference,
-    "callback_url" => $callback_url,
-    "bearer" => "customer",
-    "metadata" => [
-        "custom_fields" => [
-            [
-                "display_name" => "Customer Name",
-                "variable_name" => "name",
-                "value" => $fullname
-            ],
-            [
-                "display_name" => "Phone Number",
-                "variable_name" => "phone",
-                "value" => $phone_full
+else{
+
+    // Prepare for Paystack payment
+    $reference = "GLHOMES_" . time() . "_" . rand(1000, 9999);
+    $callback_url = "https://glhomesltd.com/attend?id={$insert_id}&amount={$amount}"; // Redirect after payment
+
+    $paymentData = [
+        "email" => $email,
+        "amount" => $amount * 100, // Paystack uses kobo (multiply Naira by 100)
+        "currency" => $currency,
+        "reference" => $reference,
+        "callback_url" => $callback_url,
+        "bearer" => "customer",
+        "metadata" => [
+            "custom_fields" => [
+                [
+                    "display_name" => "Customer Name",
+                    "variable_name" => "name",
+                    "value" => $fullname
+                ],
+                [
+                    "display_name" => "Phone Number",
+                    "variable_name" => "phone",
+                    "value" => $phone_full
+                ]
             ]
         ]
-    ]
-];
-//sk_live_9c7dd14bedec1d3c18abc60e6bcdb5a269f8ca24
-// Paystack cURL
-$ch = curl_init();
-curl_setopt_array($ch, [
-    CURLOPT_URL => "https://api.paystack.co/transaction/initialize",
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_POST => true,
-    CURLOPT_HTTPHEADER => [
-        "Authorization: Bearer sk_live_9c7dd14bedec1d3c18abc60e6bcdb5a269f8ca24", // Replace with your Paystack secret key
-        "Content-Type: application/json"
-    ],
-    CURLOPT_POSTFIELDS => json_encode($paymentData)
-]);
-
-$response = curl_exec($ch);
-$err = curl_error($ch);
-curl_close($ch);
-
-if ($err) {
-    echo json_encode(["status" => "error", "message" => "Curl error: $err"]);
-    exit;
-}
-
-$result = json_decode($response, true);
-if (isset($result["data"]["authorization_url"])) {
-    echo json_encode([
-        "status" => "success",
-        "payment_link" => $result["data"]["authorization_url"]
+    ];
+    //sk_live_9c7dd14bedec1d3c18abc60e6bcdb5a269f8ca24
+    // Paystack cURL
+    $ch = curl_init();
+    curl_setopt_array($ch, [
+        CURLOPT_URL => "https://api.paystack.co/transaction/initialize",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_POST => true,
+        CURLOPT_HTTPHEADER => [
+            "Authorization: Bearer sk_live_9c7dd14bedec1d3c18abc60e6bcdb5a269f8ca24", // Replace with your Paystack secret key
+            "Content-Type: application/json"
+        ],
+        CURLOPT_POSTFIELDS => json_encode($paymentData)
     ]);
-} else {
-    echo json_encode([
-        "status" => "error",
-        "message" => isset($result["message"]) ? $result["message"] : "Payment link not generated"
-    ]);
-}
 
+    $response = curl_exec($ch);
+    $err = curl_error($ch);
+    curl_close($ch);
+
+    if ($err) {
+        echo json_encode(["status" => "error", "message" => "Curl error: $err"]);
+        exit;
+    }
+
+    $result = json_decode($response, true);
+    if (isset($result["data"]["authorization_url"])) {
+        echo json_encode([
+            "status" => "success",
+            "payment_link" => $result["data"]["authorization_url"]
+        ]);
+    } else {
+        echo json_encode([
+            "status" => "error",
+            "message" => isset($result["message"]) ? $result["message"] : "Payment link not generated"
+        ]);
+    }
+}
 ?>
