@@ -595,7 +595,7 @@
                             </ul>
                             <div class="career__item-bottom">
                                 <h2 class="salary"><span class="text-decoration-line-through">₦25,000</span> - ₦5,000 <span>NGN</span></h2>
-                                <a href="attend" class="tg-btn tg-btn-three" disabled>Register now</a>
+                                <a href="attend" class="tg-btn tg-btn-three" >Register now</a>
                             </div>
                         </div>
                     </div>
