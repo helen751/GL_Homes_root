@@ -618,7 +618,7 @@ document.getElementById("executive").addEventListener("change", function() {
   });
 </script>
     <script>
-        var accepting_registration = true
+        var accepting_registration = false
 
         if (!accepting_registration){
             document.querySelector('.forny-container').innerHTML = `
