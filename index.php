@@ -933,8 +933,8 @@
                     <div class="col-md-6">
                         <div class="copyright__content-two">
                             <p> ©
-                            <script>document.write(new Date().getFullYear())</script> GL Homes Limited. In partnership with <a href="#" target="_blank" class="font-medium">FLOZYTECH</a>. All Rights Reserved.
-                            <!-- By <a class="font-medium" href="https://tech.glhomesltd">GL Homes Tech</a> -->
+                            <script>document.write(new Date().getFullYear())</script> GL Homes Limited. Developed by <a class="font-medium" href="https://tech.glhomesltd.com">GL Homes Tech</a>  All Rights Reserved.
+                    
                         </p>
                         </div>
                     </div>
