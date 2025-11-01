@@ -72,7 +72,7 @@ try {
 
     // Fetch attendees sorted with Paid first
     $stmt = $conn->query("
-        SELECT fullname, email, phone_number, payment_amount,
+        SELECT fullname, email, phone_number, payment_amount, category_group,
                CASE WHEN payment_status = 1 THEN 'Paid' ELSE 'Unpaid' END AS payment_status
         FROM mindset_shift_attendees
         ORDER BY payment_status ASC, created_at
@@ -117,6 +117,7 @@ try {
           <th>Phone Number</th>
           <th>Payment Amount</th>
           <th>Payment Status</th>
+          <th>Category Group</th>
         </tr>
       </thead>
       <tbody>
@@ -127,6 +128,7 @@ try {
             <td><?= htmlspecialchars($row['email']) ?></td>
             <td><?= htmlspecialchars($row['phone_number']) ?></td>
             <td><?= htmlspecialchars($row['payment_amount']) ?></td>
+            <td><?= htmlspecialchars($row['category_group']) ?></td>
             <td>
               <?php if ($row['payment_status'] === 'Paid'): ?>
                 <span class="badge bg-success">Paid</span>
