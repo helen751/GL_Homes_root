@@ -53,8 +53,8 @@ $response = curl_exec($ch);
 $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 curl_close($ch);
 
-http_response_code($httpCode);
-echo $response;
+$responseData = json_decode($response, true);
+$sentence = '';
 
 // =====================
 // New part to store last analysis with timestamp
@@ -85,3 +85,6 @@ if ($httpCode == 200 && isset($responseData['responses'][0])) {
     ];
     file_put_contents($analysisFile, json_encode($dataToStore));
 }
+// ✅ Return only the short sentence as JSON
+header('Content-Type: application/json');
+echo json_encode(['sentence' => $sentence]);
