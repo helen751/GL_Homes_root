@@ -732,7 +732,7 @@
                     <div class="col-xl-3 col-lg-4 col-sm-6">
                         <div class="team__item-three">
                             <div class="team__thumb-three">
-                                <img src="assets2/img/team/comfort.webp" alt="img">
+                                <img src="assets2/img/team/comfort.jpeg" alt="img">
                             </div>
                             <div class="team__content-three">
                                 <h2 class="title"><a href="#">Comfort Ijeoma Okereke</a></h2>
@@ -748,25 +748,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-4 col-sm-6">
-                        <div class="team__item-three">
-                            <div class="team__thumb-three">
-                                <img src="assets2/img/team/helen.webp" alt="img">
-                            </div>
-                            <div class="team__content-three">
-                                <h2 class="title"><a href="#">Helen ugoeze Okereke</a></h2>
-                                <span>Tech Specialist</span>
-                                <div class="team__social-three">
-                                    <ul class="list-wrap">
-                                        <li><a href="https://www.facebook.com/" target="_blank"><img src="assets2/img/icons/facebook.svg" alt="" class="injectable"></a></li>
-                                        <li><a href="https://x.com/home" target="_blank"><img src="assets2/img/icons/twitter.svg" alt="" class="injectable"></a></li>
-                                        <li><a href="https://www.instagram.com/" target="_blank"><img src="assets2/img/icons/instagram.svg" alt="" class="injectable"></a></li>
-                                        <li><a href="https://www.pinterest.com/" target="_blank"><img src="assets2/img/icons/pinterest.svg" alt="" class="injectable"></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
 
