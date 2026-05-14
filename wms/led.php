@@ -43,7 +43,7 @@ if(isset($_GET['toggle'])){
     file_put_contents("led.txt", $led1 . "," . $led2);
 
     // refresh page
-    header("Location: index.php");
+    header("Location: led.php");
     exit();
 }
 
