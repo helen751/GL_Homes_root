@@ -269,6 +269,8 @@ else $greeting = "Good evening";
     </style>
 </head>
 <body data-theme="<?php echo $currentTheme; ?>">
+    <button onclick="sendCommand('mode', 'manual')">Manual Mode</button>
+<button onclick="sendCommand('mode', 'auto')">Auto Mode</button>
 
 <div class="flex h-screen overflow-hidden">
     <!-- Sidebar -->

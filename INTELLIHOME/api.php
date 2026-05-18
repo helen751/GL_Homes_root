@@ -216,6 +216,20 @@ switch ($action) {
             sendResponse(false, "Device not found");
         }
         break;
+
+    case 'mode':
+    $command = isset($_POST['command']) ? $_POST['command'] : 'auto';
+
+    if ($command !== 'manual' && $command !== 'auto') {
+        sendResponse(false, 'Invalid mode command');
+    }
+
+    if (queueCommand($conn, 'mode', $command)) {
+        sendResponse(true, "Mode changed to " . strtoupper($command));
+    } else {
+        sendResponse(false, "Failed to queue mode command");
+    }
+    break;
     
     case 'reset_emergency':
         if (updateDeviceStatus($conn, 'emergency_flag', 0)) {
