@@ -4,9 +4,9 @@ header("Content-Type: application/json");
 
 // Database Configuration - Matches your database.sql schema
 $db_host = "localhost";
-$db_user = "root";
-$db_pass = "";
-$db_name = "home_automation"; // From your schema: CREATE DATABASE IF NOT EXISTS home_automation
+$db_user = "glhorgia_admin";
+$db_pass = "GLHOMES_DB_ADMIN06";
+$db_name = "glhorgia_wms_home_automation"; // From your schema: CREATE DATABASE IF NOT EXISTS home_automation
 
 // 1. Connect to MySQL Database
 $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
