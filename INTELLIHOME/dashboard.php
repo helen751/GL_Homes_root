@@ -746,48 +746,51 @@ else $greeting = "Good evening";
     
     // Fetch and update dashboard data
     async function fetchLiveData() {
-        try {
-            const response = await fetch('api.php?action=get_latest');
-            const data = await response.json();
-            
-            if (data.success && data.reading) {
-                const r = data.reading;
-                document.getElementById('tempValue').innerText = r.temperature ? r.temperature.toFixed(1) + '°C' : '--';
-                document.getElementById('humValue').innerText = r.humidity ? r.humidity.toFixed(1) + '%' : '--';
-                document.getElementById('smokeValue').innerText = r.smoke_level ? r.smoke_level + ' ppm' : '--';
-                document.getElementById('lightValue').innerText = r.light_level ? r.light_level + ' lx' : '--';
-                document.getElementById('bulb1Status').innerText = r.bulb1_status ? 'ON' : 'OFF';
-                document.getElementById('bulb2Status').innerText = r.bulb2_status ? 'ON' : 'OFF';
-                document.getElementById('buzzerStatus').innerText = r.buzzer_status ? 'ON' : 'OFF';
-                document.getElementById('emergencyFlag').innerText = r.emergency_flag ? 'ACTIVE' : 'CLEAR';
-                
-                // Update control tab statuses
-                const ctrlBulb1 = document.getElementById('ctrlBulb1Status');
-                const ctrlBulb2 = document.getElementById('ctrlBulb2Status');
-                const ctrlBuzzer = document.getElementById('ctrlBuzzerStatus');
-                if (ctrlBulb1) ctrlBulb1.innerText = r.bulb1_status ? 'ON' : 'OFF';
-                if (ctrlBulb2) ctrlBulb2.innerText = r.bulb2_status ? 'ON' : 'OFF';
-                if (ctrlBuzzer) ctrlBuzzer.innerText = r.buzzer_status ? 'ON' : 'OFF';
-                
-                // Update icons
-                const bulb1Icon = document.querySelector('#bulb1Status')?.closest('.glass-card')?.querySelector('.fa-lightbulb');
-                const bulb2Icon = document.querySelector('#bulb2Status')?.closest('.glass-card')?.querySelector('.fa-lightbulb');
-                if (bulb1Icon) bulb1Icon.className = `fas fa-lightbulb text-3xl ${r.bulb1_status ? 'text-yellow-500' : 'text-gray-400'}`;
-                if (bulb2Icon) bulb2Icon.className = `fas fa-lightbulb text-3xl ${r.bulb2_status ? 'text-green-500' : 'text-gray-400'}`;
-            }
-            
-            // Fetch stats
-            const statsResponse = await fetch('api.php?action=get_stats');
-            const statsData = await statsResponse.json();
-            if (statsData.success) {
-                // Update any stats displays if needed
-            }
-            
+    try {
+        const response = await fetch('api.php?action=get_latest&t=' + Date.now());
+        const data = await response.json();
+
+        console.log("Live data:", data);
+
+        if (data.success && data.reading) {
+            const r = data.reading;
+
+            const temperature = parseFloat(r.temperature);
+            const humidity = parseFloat(r.humidity);
+            const smoke = parseInt(r.smoke_level);
+            const light = parseInt(r.light_level);
+            const bulb1 = parseInt(r.bulb1_status);
+            const bulb2 = parseInt(r.bulb2_status);
+            const buzzer = parseInt(r.buzzer_status);
+            const emergency = parseInt(r.emergency_flag);
+
+            document.getElementById('tempValue').innerText = isNaN(temperature) ? '--' : temperature.toFixed(1) + '°C';
+            document.getElementById('humValue').innerText = isNaN(humidity) ? '--' : humidity.toFixed(1) + '%';
+            document.getElementById('smokeValue').innerText = isNaN(smoke) ? '--' : smoke + ' ppm';
+            document.getElementById('lightValue').innerText = isNaN(light) ? '--' : light + ' lx';
+
+            document.getElementById('bulb1Status').innerText = bulb1 ? 'ON' : 'OFF';
+            document.getElementById('bulb2Status').innerText = bulb2 ? 'ON' : 'OFF';
+            document.getElementById('buzzerStatus').innerText = buzzer ? 'ON' : 'OFF';
+            document.getElementById('emergencyFlag').innerText = emergency ? 'ACTIVE' : 'CLEAR';
+
+            const ctrlBulb1 = document.getElementById('ctrlBulb1Status');
+            const ctrlBulb2 = document.getElementById('ctrlBulb2Status');
+            const ctrlBuzzer = document.getElementById('ctrlBuzzerStatus');
+
+            if (ctrlBulb1) ctrlBulb1.innerText = bulb1 ? 'ON' : 'OFF';
+            if (ctrlBulb2) ctrlBulb2.innerText = bulb2 ? 'ON' : 'OFF';
+            if (ctrlBuzzer) ctrlBuzzer.innerText = buzzer ? 'ON' : 'OFF';
+
             document.getElementById('lastUpdateTime').innerText = new Date().toLocaleTimeString();
-        } catch (error) {
-            console.error('Fetch error:', error);
+        } else {
+            console.log("No reading found");
         }
+
+    } catch (error) {
+        console.error('Fetch error:', error);
     }
+}
     
     // Manual refresh
     async function manualRefresh() {
