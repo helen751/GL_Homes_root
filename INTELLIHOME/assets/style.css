@@ -1,0 +1,130 @@
+/**
+ * HOME AUTOMATION IoT - Custom Styles
+ * Glassmorphism, animations, dark theme enhancements
+ */
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #0f172a; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+/* Glass card enhancement */
+.glass-card {
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Toggle switch animation */
+input[type="checkbox"] + div {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Emergency pulse */
+@keyframes emergencyPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4); }
+    50% { box-shadow: 0 0 0 20px rgba(220, 38, 38, 0); }
+}
+
+.emergency-pulse {
+    animation: emergencyPulse 2s infinite;
+}
+
+/* Sensor card hover */
+.sensor-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sensor-card:hover {
+    transform: translateY(-2px);
+}
+
+/* Chart container */
+.chart-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+/* Loading shimmer */
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.shimmer {
+    background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+/* Alert badge bounce */
+@keyframes badgeBounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.badge-bounce {
+    animation: badgeBounce 0.3s ease;
+}
+
+/* Smooth number transition */
+.stat-value {
+    transition: color 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .glass-card { margin-bottom: 1rem; }
+}
+
+/* Custom tooltip for charts */
+.chartjs-tooltip {
+    background: rgba(15, 23, 42, 0.9) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 8px !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+/* Emergency overlay animation */
+#emergencyOverlay {
+    transition: opacity 0.5s ease;
+}
+
+#emergencyOverlay:not(.hidden) {
+    opacity: 1;
+}
+
+#emergencyOverlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Connection status dot */
+.status-dot {
+    box-shadow: 0 0 8px currentColor;
+}
+
+/* Button press effect */
+button:active {
+    transform: scale(0.98);
+}
+
+/* Table row animation */
+tbody tr {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: translateX(0); }
+}
