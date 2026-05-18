@@ -6,7 +6,7 @@
 
 // Database credentials - UPDATE THESE FOR YOUR HOSTING
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'home_automation');
+define('DB_NAME', 'glhorgia_wms_home_automation');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 
