@@ -1013,7 +1013,7 @@ else $greeting = "Good evening";
         loadAlerts();
         updateDateTime();
         setInterval(updateDateTime, 1000);
-        refreshIntervalId = setInterval(fetchLiveData, 3000);
+        refreshIntervalId = setInterval(fetchLiveData, 2000);
         document.getElementById('historyDate').value = new Date().toISOString().split('T')[0];
     });
     

@@ -13,7 +13,7 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 // --- Database Connection ---
-$conn = new mysqli("localhost", "root", "", "home_automation");
+$conn = new mysqli("localhost", "glhorgia_admin", "GLHOMES_DB_ADMIN06", "glhorgia_wms_home_automation");
 if ($conn->connect_error) {
     http_response_code(500);
     echo json_encode(['success' => false, 'error' => 'Database connection failed: ' . $conn->connect_error]);
